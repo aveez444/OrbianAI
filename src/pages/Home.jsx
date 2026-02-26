@@ -161,9 +161,9 @@ export default function Home() {
           variants={fadeInUp}
           className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6"
         >
-          We don't just write code.{" "}
+          Built by Visionaries.{" "}
           <span className="text-transparent bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text">
-            We build the future.
+            Driven by Innovation.
           </span>
         </motion.h2>
 
