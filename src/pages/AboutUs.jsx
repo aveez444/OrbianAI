@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 // Images
-import heroNetwork from "../assets/about-hero-ai-network.jpg";
+import heroNetwork from "../assets/abouthero.png";
 import aiArchitecture from "../assets/about-ai-architecture.jpg";
 import dataFlow from "../assets/about-data-flow.jpg";
 import aiBrain from "../assets/about-ai-brain.jpg";
@@ -27,7 +27,7 @@ const milestones = [
   { year: "2019", label: "Founded", desc: "OrbianAI launched with a singular mission: democratize enterprise intelligence." },
   { year: "2021", label: "First Deployment", desc: "Scaled our first autonomous decision engine for a Fortune 500 client." },
   { year: "2022", label: "Series A", desc: "Raised $18M to expand our research division and infrastructure team." },
-  { year: "2024", label: "Global Reach", desc: "Operating across 14 countries with 500+ enterprise deployments." },
+  { year: "2024", label: "Global Reach", desc: "Operating across 10 countries with 100+ enterprise deployments." },
 ];
 
 const values = [
@@ -57,138 +57,105 @@ export default function About() {
   return (
     <main className="bg-[#020617] text-slate-200 selection:bg-emerald-500/30 overflow-x-hidden">
 
-      {/* ============= HERO: SPLIT LAYOUT ============= */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden">
+{/* ============= HERO: ABOUT SECTION ============= */}
+<section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden pt-20 pb-12 lg:pt-0 lg:pb-0">
 
-        {/* Ambient glows */}
-        <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-emerald-500/8 blur-[180px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-500/8 blur-[160px] rounded-full pointer-events-none" />
+  {/* Ambient glows - reduced for mobile */}
+  <div className="absolute top-0 left-0 w-[300px] lg:w-[500px] h-[300px] lg:h-[500px] bg-emerald-500/5 blur-[120px] lg:blur-[180px] rounded-full pointer-events-none" />
+  <div className="absolute bottom-0 right-0 w-[300px] lg:w-[400px] h-[300px] lg:h-[400px] bg-cyan-500/5 blur-[120px] lg:blur-[160px] rounded-full pointer-events-none" />
 
-        {/* Subtle grid */}
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `linear-gradient(rgba(52,211,153,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(52,211,153,0.8) 1px, transparent 1px)`,
-            backgroundSize: "60px 60px",
-          }}
-        />
+  <motion.div style={{ y: heroY, opacity: heroOpacity }} className="w-full">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-20 items-center min-h-screen py-16 lg:py-32">
 
-        <motion.div style={{ y: heroY, opacity: heroOpacity }} className="w-full">
-          <div className="container mx-auto px-6 lg:px-12">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-screen py-32">
+        {/* ---- LEFT: TEXT (Always on top) ---- */}
+        <div className="relative z-10 w-full order-1">
+          <motion.span
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono mb-5"
+          >
+            <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+            ABOUT ORBIANAI
+          </motion.span>
 
-              {/* ---- LEFT: TEXT ---- */}
-              <div className="relative z-10">
-                <motion.span
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.3, duration: 0.6 }}
-                  className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-mono mb-8"
-                >
-                  <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-                  ABOUT ORBIANAI
-                </motion.span>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.7 }}
+            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight lg:leading-[1.05] tracking-tight text-white"
+          >
+            We don't predict
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">
+              the future.
+            </span>
+            <br />
+            <span className="text-slate-400 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-light block mt-1 lg:inline lg:mt-0">
+              We engineer it.
+            </span>
+          </motion.h1>
 
-                <motion.h1
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                  className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-white"
-                >
-                  We don't predict
-                  <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">
-                    the future.
-                  </span>
-                  <br />
-                  <span className="text-slate-400 text-4xl sm:text-5xl lg:text-6xl font-light">
-                    We engineer it.
-                  </span>
-                </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="mt-6 text-slate-400 text-base sm:text-lg leading-relaxed max-w-lg"
+          >
+            OrbianAI was built by researchers and engineers who refused to accept the gap between AI research and real-world deployment. We close that gap — at enterprise scale.
+          </motion.p>
+        </div>
 
-                <motion.p
-                  initial={{ opacity: 0, y: 25 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8, duration: 0.8 }}
-                  className="mt-8 text-slate-400 text-lg leading-relaxed max-w-lg"
-                >
-                  OrbianAI was built by researchers and engineers who refused to accept the gap between AI research and real-world deployment. We close that gap — at enterprise scale.
-                </motion.p>
+        {/* ---- RIGHT: IMAGE COMPOSITION (Mobile: between text and stats) ---- */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.7 }}
+          className="relative w-full order-2"
+        >
+          {/* Main image */}
+          <div className="relative rounded-2xl lg:rounded-3xl overflow-hidden border border-white/8">
+            <img src={heroNetwork} alt="AI neural network" className="w-full h-auto object-cover aspect-[16/9] lg:aspect-[4/3]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/60 via-transparent to-transparent" />
+          </div>
 
-                {/* Stat row */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 1.1, duration: 0.7 }}
-                  className="mt-12 flex flex-wrap gap-10"
-                >
-                  {[
-                    { val: "500+", label: "Enterprise clients" },
-                    { val: "14", label: "Countries" },
-                    { val: "99.97%", label: "Uptime SLA" },
-                  ].map((s, i) => (
-                    <div key={i}>
-                      <div className="text-3xl font-bold text-white tabular-nums">{s.val}</div>
-                      <div className="text-sm text-slate-500 mt-0.5 font-mono uppercase tracking-wider">{s.label}</div>
-                    </div>
-                  ))}
-                </motion.div>
-              </div>
+          {/* Floating badges - simplified for mobile */}
+          <div className="absolute -top-3 -left-3 lg:-top-5 lg:-left-5 px-3 py-2 lg:px-4 lg:py-3 rounded-xl lg:rounded-2xl bg-slate-900/90 backdrop-blur-sm border border-white/10">
+            <span className="text-xs lg:text-sm text-emerald-400 font-medium">Active 24/7</span>
+          </div>
 
-              {/* ---- RIGHT: IMAGE COMPOSITION ---- */}
-              <motion.div
-                initial={{ opacity: 0, x: 60 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4, duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                className="relative hidden lg:block"
-              >
-                {/* Main large image */}
-                <div className="relative rounded-3xl overflow-hidden border border-white/8">
-                  <img src={heroNetwork} alt="AI neural network" className="w-full h-auto object-cover aspect-[4/3]" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/60 via-transparent to-transparent" />
-                </div>
-
-                {/* Floating badge top-left */}
-                <motion.div
-                  animate={floatAnimation.animate}
-                  className="absolute -top-5 -left-5 px-4 py-3 rounded-2xl bg-slate-900/90 backdrop-blur-sm border border-white/10"
-                >
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                    <span className="text-xs text-slate-300 font-mono">SYSTEMS ONLINE</span>
-                  </div>
-                </motion.div>
-
-                {/* Floating badge bottom-right */}
-                <motion.div
-                  animate={floatAnimation.animate}
-                  transition={{ delay: 1.5 }}
-                  className="absolute -bottom-5 -right-5 px-5 py-4 rounded-2xl bg-slate-900/90 backdrop-blur-sm border border-white/10"
-                >
-                  <div className="text-2xl font-bold text-white">2019</div>
-                  <div className="text-xs text-slate-400 font-mono">FOUNDED</div>
-                </motion.div>
-
-                {/* Corner accent */}
-                <div className="absolute -top-4 -right-4 w-20 h-20 border-t-2 border-r-2 border-emerald-500/30 rounded-tr-2xl" />
-                <div className="absolute -bottom-4 -left-4 w-20 h-20 border-b-2 border-l-2 border-cyan-500/30 rounded-bl-2xl" />
-              </motion.div>
-
-              {/* Mobile: hero image */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.8 }}
-                className="lg:hidden relative rounded-2xl overflow-hidden border border-white/8"
-              >
-                <img src={heroNetwork} alt="AI neural network" className="w-full h-auto object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/50 to-transparent" />
-              </motion.div>
-
-            </div>
+          <div className="absolute -bottom-3 -right-3 lg:-bottom-5 lg:-right-5 px-3 py-2 lg:px-5 lg:py-4 rounded-xl lg:rounded-2xl bg-slate-900/90 backdrop-blur-sm border border-white/10">
+            <div className="text-lg lg:text-2xl font-bold text-white">2019</div>
+            <div className="text-[10px] lg:text-xs text-slate-400">FOUNDED</div>
           </div>
         </motion.div>
-      </section>
+
+        {/* ---- STATS (Mobile: below image, Desktop: part of left column) ---- */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="w-full order-3 lg:order-1 lg:col-start-1 lg:row-start-2 lg:mt-6"
+        >
+          <div className="grid grid-cols-3 gap-3 sm:gap-6 lg:gap-10">
+            {[
+              { val: "100+", label: "Enterprise clients" },
+              { val: "10", label: "Countries" },
+              { val: "99.97%", label: "Uptime SLA" },
+            ].map((s, i) => (
+              <div key={i} className="text-center lg:text-left">
+                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white tabular-nums">{s.val}</div>
+                <div className="text-[10px] sm:text-xs text-slate-500 mt-0.5 font-mono uppercase tracking-wider">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+      </div>
+    </div>
+  </motion.div>
+</section>
 
       {/* ============= MISSION STATEMENT ============= */}
       <section className="py-24 relative">

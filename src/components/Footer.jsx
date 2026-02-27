@@ -1,5 +1,6 @@
 // Footer.jsx
 import { Link } from "react-router-dom";
+import logo from "../assets/logo2.png"; // your big logo image
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -28,10 +29,17 @@ export default function Footer() {
           {/* Brand - larger column */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block group">
-              <h2 className="text-3xl font-bold text-white mb-2">
-                Orbian<span className="text-emerald-400">AI</span>
-              </h2>
-              <span className="block w-20 h-1 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-full group-hover:w-32 transition-all duration-300"></span>
+              <div className="flex items-center gap-3">
+                <img 
+                  src={logo} 
+                  alt="OrbianAI logo" 
+                  className="h-20 w-18 object-contain"
+                />
+                <h2 className="text-3xl font-bold text-white">
+                  Orbian<span className="text-emerald-400">AI</span>
+                </h2>
+              </div>
+              <span className="block w-20 h-1 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-full group-hover:w-32 transition-all duration-300 mt-2"></span>
             </Link>
             <p className="mt-6 text-slate-400 leading-relaxed max-w-md">
               Building intelligent systems that transform businesses through

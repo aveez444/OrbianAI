@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import heroDashboard from "../assets/hero-dashboard5.png";
-import aboutTeam from "../assets/image7.jpg";
+import heroDashboard from "../assets/Heronew.png";
+import aboutTeam from "../assets/image7.png";
 import servicesBg from "../assets/services-bg.png";
 import whyUsImg from "../assets/why-us.png";
+import { Link } from "react-router-dom";
 
 // Animation variants
 const fadeInUp = {
@@ -41,7 +42,7 @@ export default function Home() {
 </motion.div>
 
 {/* Dark Overlay for Readability */}
-<div className="absolute inset-0 bg-gradient-to-r from-[#020617] via-[#020617]/60 to-[#020617]/60 z-10" />
+<div className="absolute inset-0 bg-gradient-to-r from-[#020617] via-[#020617]/30 to-[#020617]/20 z-10" />
 
 {/* Subtle Glow Accent */}
 <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-emerald-500/10 blur-[120px] z-10" />
@@ -90,14 +91,18 @@ export default function Home() {
       transition={{ delay: 1.2, duration: 0.8 }}
       className="mt-10 flex flex-wrap gap-4"
     >
+    <Link to="/contact">
       <button className="group relative px-8 py-4 bg-emerald-500 text-[#020617] font-bold rounded-xl overflow-hidden transition-all hover:scale-105 hover:shadow-xl hover:shadow-emerald-500/25">
         <span className="relative z-10">Start Transformation</span>
         <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
       </button>
+    </Link>
 
+    <Link to="/services">
       <button className="px-8 py-4 border border-slate-700 hover:border-emerald-500/50 rounded-xl font-medium transition-all backdrop-blur-sm hover:bg-white/5">
         Explore Solutions
       </button>
+    </Link>
     </motion.div>
 
   </div>
@@ -390,192 +395,173 @@ export default function Home() {
 </section>
 
 {/* ================= WHY US SECTION ================= */}
-<section className="relative py-20 sm:py-28 lg:py-32 bg-[#020617] overflow-hidden">
-  {/* Abstract background pattern */}
-  <div className="absolute inset-0 opacity-20">
+<section className="relative py-16 sm:py-20 lg:py-28 bg-[#020617] overflow-hidden">
+  {/* Abstract background pattern - simplified for mobile */}
+  <div className="absolute inset-0 opacity-10">
     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
     <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
-    <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(16, 185, 129, 0.1)" strokeWidth="0.5" />
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#grid)" />
-    </svg>
   </div>
 
   <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     
-    {/* Header with perspective */}
+    {/* Header */}
     <motion.div 
-      className="max-w-3xl mx-auto text-center mb-16 lg:mb-20"
-      initial={{ opacity: 0, y: 30 }}
+      className="max-w-3xl mx-auto text-center mb-12 lg:mb-16"
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
     >
-      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
         Why Industry Leaders 
-        <span className="block text-emerald-400">Choose Our Infrastructure</span>
+        <span className="block text-emerald-400 mt-1">Choose Our Infrastructure</span>
       </h2>
-      <p className="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto">
+      <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
         We don't just build AI systems — we engineer the foundation for the next decade of innovation.
       </p>
     </motion.div>
 
-    {/* Main content: Split screen with diagonal cut */}
-    <div className="relative">
-      {/* Decorative diagonal line */}
-      <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-emerald-500/30 to-transparent hidden lg:block" />
+    {/* Mobile-optimized grid */}
+    <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
       
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        
-        {/* Left side - Statistics with visual flair */}
-        <motion.div 
-          className="space-y-8"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          {/* Main stat card */}
-          <div className="relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-3xl blur-xl opacity-20" />
-            <div className="relative bg-slate-900/90 backdrop-blur-sm rounded-3xl p-8 border border-slate-800">
-              <div className="flex items-start justify-between">
-                <div>
-                  <p className="text-emerald-400 font-mono text-sm mb-2">TRACK RECORD</p>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-7xl font-bold text-white">98%</span>
-                    <span className="text-slate-400">success rate</span>
-                  </div>
-                  <p className="text-slate-400 mt-2">Across 500+ enterprise deployments</p>
-                </div>
-                <div className="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center">
-                  <span className="text-3xl">📊</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Stats grid */}
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-800 hover:border-emerald-500/30 transition-all">
-              <span className="text-3xl font-bold text-white">10x</span>
-              <p className="text-slate-400 text-sm mt-1">Faster deployment</p>
-            </div>
-            <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-800 hover:border-blue-500/30 transition-all">
-              <span className="text-3xl font-bold text-white">Zero</span>
-              <p className="text-slate-400 text-sm mt-1">Security breaches</p>
-            </div>
-            <div className="col-span-2 bg-gradient-to-r from-slate-900 to-slate-800/50 rounded-2xl p-6 border border-slate-800">
-              <div className="flex items-center gap-4">
-                <div className="flex -space-x-2">
-                  {[1,2,3,4].map((i) => (
-                    <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-400 to-blue-400 border-2 border-slate-900" />
-                  ))}
-                </div>
-                <p className="text-slate-300">
-                  <span className="text-white font-semibold">50+ AI engineers</span> ready to deploy
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Tech stack badges */}
-          <div className="flex flex-wrap gap-2">
-            {['TensorFlow', 'PyTorch', 'Kubernetes', 'AWS', 'Azure', 'GCP'].map((tech) => (
-              <span key={tech} className="px-4 py-2 bg-white/5 rounded-full text-sm text-slate-300 border border-white/10">
-                {tech}
-              </span>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Right side - Image and features */}
-        <motion.div 
-          className="space-y-6"
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          {/* Image card */}
-          <div className="relative rounded-3xl overflow-hidden group">
-            <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent z-10" />
-            <div className="absolute top-4 right-4 z-20">
-              <span className="px-4 py-2 bg-black/50 backdrop-blur-sm rounded-full text-emerald-400 text-sm border border-emerald-500/30">
-                ⚡ Live production
-              </span>
-            </div>
-            <img 
-              src={whyUsImg} 
-              alt="AI Infrastructure"
-              className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-700"
-            />
-            
-            {/* Image overlay content */}
-            <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-emerald-500/20 backdrop-blur-sm flex items-center justify-center">
-                  <span className="text-emerald-400 text-xl">⚡</span>
-                </div>
-                <div>
-                  <p className="text-white font-semibold">Real-time inference</p>
-                  <p className="text-slate-300 text-sm">&lt;10ms latency worldwide</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Feature list */}
-          <div className="bg-slate-900/30 backdrop-blur-sm rounded-3xl p-8 border border-slate-800">
-            <h3 className="text-xl font-bold text-white mb-6">What sets us apart</h3>
-            <div className="space-y-4">
-              {[
-                { icon: '🚀', title: 'Zero-downtime deployments', desc: 'Blue-green deployments with instant rollback' },
-                { icon: '🔒', title: 'Military-grade encryption', desc: 'End-to-end encryption for all data in transit' },
-                { icon: '🌐', title: 'Global edge network', desc: 'Deploy to 20+ regions with one click' },
-              ].map((item, idx) => (
-                <div key={idx} className="flex gap-4 group hover:bg-white/5 p-3 rounded-xl transition-all">
-                  <span className="text-2xl">{item.icon}</span>
-                  <div>
-                    <h4 className="text-white font-semibold group-hover:text-emerald-400 transition-colors">
-                      {item.title}
-                    </h4>
-                    <p className="text-slate-400 text-sm">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Bottom CTA banner */}
+      {/* Left side - Statistics */}
       <motion.div 
-        className="mt-16 p-8 rounded-3xl bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-emerald-500/20"
+        className="order-2 lg:order-1 space-y-6"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.3 }}
+        transition={{ duration: 0.5 }}
       >
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 className="text-2xl font-bold text-white mb-2">Ready to scale your AI infrastructure?</h3>
-            <p className="text-slate-400">Join 500+ companies already building on our platform</p>
+        {/* Main stat card */}
+        <div className="relative">
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-2xl blur opacity-15" />
+          <div className="relative bg-slate-900/90 backdrop-blur-sm rounded-2xl p-6 border border-slate-800">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-emerald-400 text-xs font-medium mb-1 uppercase tracking-wider">Track Record</p>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-5xl sm:text-6xl font-bold text-white">98%</span>
+                  <span className="text-slate-400 text-sm">success rate</span>
+                </div>
+                <p className="text-slate-400 text-sm mt-1">Across 500+ enterprise deployments</p>
+              </div>
+              <div className="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-2xl">
+                
+              </div>
+            </div>
           </div>
-          <button className="group relative px-8 py-4 bg-emerald-500 rounded-xl font-semibold text-white overflow-hidden hover:shadow-lg hover:shadow-emerald-500/25 transition-all whitespace-nowrap">
-            <span className="relative z-10 flex items-center gap-2">
-              Start building
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+        </div>
+
+        {/* Stats grid */}
+        <div className="grid grid-cols-2 gap-3">
+          <div className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-5 border border-slate-800">
+            <span className="text-2xl sm:text-3xl font-bold text-white block">10x</span>
+            <p className="text-slate-400 text-xs sm:text-sm">Faster deployment</p>
+          </div>
+          <div className="bg-slate-900/50 backdrop-blur-sm rounded-xl p-5 border border-slate-800">
+            <span className="text-2xl sm:text-3xl font-bold text-white block">Zero</span>
+            <p className="text-slate-400 text-xs sm:text-sm">Security breaches</p>
+          </div>
+          <div className="col-span-2 bg-gradient-to-r from-slate-900 to-slate-800/50 rounded-xl p-5 border border-slate-800">
+            <div className="flex items-center gap-3">
+              <div className="flex -space-x-2">
+                {[1,2,3,4].map((i) => (
+                  <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-400 to-blue-400 border-2 border-slate-900" />
+                ))}
+              </div>
+              <p className="text-slate-300 text-sm">
+                <span className="text-white font-semibold">50+ AI engineers</span> ready to deploy
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Tech stack badges */}
+        <div className="flex flex-wrap gap-2">
+          {['TensorFlow', 'PyTorch', 'Kubernetes', 'AWS', 'Azure', 'GCP'].map((tech) => (
+            <span key={tech} className="px-3 py-1.5 bg-white/5 rounded-full text-xs text-slate-300 border border-white/10">
+              {tech}
             </span>
-          </button>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Right side - Image and features (moved above stats on mobile) */}
+      <motion.div 
+        className="order-1 lg:order-2 space-y-6"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        {/* Image card */}
+        <div className="relative rounded-2xl overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent z-10" />
+          <div className="absolute top-3 right-3 z-20">
+            <span className="px-3 py-1 bg-black/50 backdrop-blur-sm rounded-full text-emerald-400 text-xs border border-emerald-500/30">
+              Live production
+            </span>
+          </div>
+          <img 
+            src={whyUsImg} 
+            alt="AI Infrastructure"
+            className="w-full h-[280px] sm:h-[320px] object-cover"
+          />
+          
+          {/* Image overlay content */}
+          <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
+            <div className="flex items-center gap-3">
+            
+              <div>
+                <p className="text-white font-medium text-sm">Real-time inference</p>
+                <p className="text-slate-300 text-xs">&lt;10ms latency worldwide</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Feature list */}
+        <div className="bg-slate-900/30 backdrop-blur-sm rounded-2xl p-6 border border-slate-800">
+          <h3 className="text-lg font-semibold text-white mb-4">What sets us apart</h3>
+          <div className="space-y-4">
+            {[
+              { title: 'Zero-downtime deployments', desc: 'Blue-green deployments with instant rollback' },
+              { title: 'Military-grade encryption', desc: 'End-to-end encryption for all data in transit' },
+              { title: 'Global edge network', desc: 'Deploy to 20+ regions with one click' },
+            ].map((item, idx) => (
+              <div key={idx} className="flex gap-3">
+                <span className="text-xl shrink-0">{item.icon}</span>
+                <div>
+                  <h4 className="text-white font-medium text-sm">{item.title}</h4>
+                  <p className="text-slate-400 text-xs">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </motion.div>
     </div>
+
+    {/* Bottom CTA banner */}
+    <motion.div 
+      className="mt-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-emerald-500/20"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.2 }}
+    >
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="text-center sm:text-left">
+          <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">Ready to scale your AI infrastructure?</h3>
+          <p className="text-slate-400 text-sm">Join 500+ companies already building on our platform</p>
+        </div>
+        <Link to="/contact">
+        <button className="w-full sm:w-auto px-6 py-3 bg-emerald-500 rounded-lg font-medium text-white hover:bg-emerald-600 transition-colors text-sm whitespace-nowrap">
+          Start building →
+        </button>
+        </Link>
+      </div>
+    </motion.div>
   </div>
 </section>
 
