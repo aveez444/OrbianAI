@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroDashboard from "../assets/Heronew.png";
+import heroDashboard from "../assets/Heronew1.png";
 import aboutTeam from "../assets/image7.png";
 import servicesBg from "../assets/services-bg.png";
 import whyUsImg from "../assets/why-us.png";
