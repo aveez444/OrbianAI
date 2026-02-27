@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 // Images
-import heroNetwork from "../assets/abouthero.png";
+import heroNetwork from "../assets/abouthero1.png";
 import aiArchitecture from "../assets/about-ai-architecture.jpg";
 import dataFlow from "../assets/about-data-flow.jpg";
 import aiBrain from "../assets/about-ai-brain.jpg";
