@@ -17,7 +17,7 @@ const capabilities = [
   {
     number: "02",
     title: "Cloud Migration & Modernization",
-    body: "Lift-and-shift isn't strategy. We assess, plan, and execute migrations that actually modernize your workloads — containerization, serverless refactoring, and database re-platforming with zero downtime.",
+    body: "Lift-and-shift isn't strategy. We assess, plan, and execute migrations that actually modernize your workloads  containerization, serverless refactoring, and database re-platforming with zero downtime.",
     tags: ["Migration", "Containerization", "Serverless", "Re-platforming"],
   },
   {
@@ -29,7 +29,7 @@ const capabilities = [
   {
     number: "04",
     title: "FinOps & Cost Optimization",
-    body: "Cloud waste is silent profit leak. We implement tagging strategies, rightsizing, spot instances, and commitment discounts — then build dashboards so you never guess what you'll pay next month.",
+    body: "Cloud waste is silent profit leak. We implement tagging strategies, rightsizing, spot instances, and commitment discounts  then build dashboards so you never guess what you'll pay next month.",
     tags: ["FinOps", "Rightsizing", "Spot Instances", "Reserved Capacity"],
   },
 ];
@@ -82,7 +82,7 @@ const differentiators = [
   },
   {
     title: "We optimize costs before you ask",
-    body: "Right-sizing, spot integration, and commitment planning are part of our standard delivery. We don't wait for you to notice the bill is too high — we prevent it.",
+    body: "Right-sizing, spot integration, and commitment planning are part of our standard delivery. We don't wait for you to notice the bill is too high  we prevent it.",
   },
 ];
 
@@ -152,7 +152,7 @@ export default function CloudServices() {
             transition={{ delay: 0.4 }}
             className="inline-flex items-center gap-2 mb-6"
           >
-            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">06 — CLOUD INFRASTRUCTURE</span>
+            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">06  CLOUD INFRASTRUCTURE</span>
           </motion.div>
 
           <motion.h1
@@ -176,7 +176,7 @@ export default function CloudServices() {
             transition={{ delay: 0.8 }}
             className="mt-6 text-slate-400 text-lg max-w-xl leading-relaxed"
           >
-            Multi-cloud architecture, migration, and optimization. Secure, cost-effective infrastructure across AWS, Azure, or GCP — designed to scale without surprises.
+            Multi-cloud architecture, migration, and optimization. Secure, cost-effective infrastructure across AWS, Azure, or GCP  designed to scale without surprises.
           </motion.p>
 
           <motion.div
@@ -236,7 +236,7 @@ export default function CloudServices() {
               "The cloud doesn't save you money automatically.{" "}
               <span className="text-white font-semibold">It saves you money when architected right</span>{" "}
               and monitored continuously. Otherwise, it's just someone else's computer{" "}
-              <span className="text-emerald-400">— with a surprise bill.</span>"
+              <span className="text-emerald-400"> with a surprise bill.</span>"
             </p>
             <div className="mt-6 flex items-center gap-3">
               <div className="w-8 h-px bg-emerald-500/50" />
@@ -277,13 +277,15 @@ export default function CloudServices() {
                   </h3>
                 </div>
                 <div className="lg:col-span-5">
-                  <p className="text-slate-400 text-sm leading-relaxed">{cap.body}</p>
+                  <p className="text-white text-base lg:text-lg leading-relaxed">
+                    {cap.body}
+                  </p>
                 </div>
                 <div className="lg:col-span-3 flex flex-wrap gap-2 lg:justify-end items-start">
                   {cap.tags.map((tag, ti) => (
                     <span
                       key={ti}
-                      className="text-xs font-mono text-slate-500 border border-slate-800 px-2.5 py-1 rounded-full group-hover:border-slate-700 group-hover:text-slate-400 transition-colors"
+                      className="text-sm font-mono text-white border border-slate-700 px-3 py-1.5 rounded-full transition-all duration-300 group-hover:border-emerald-500 group-hover:text-emerald-300"
                     >
                       {tag}
                     </span>
@@ -307,7 +309,7 @@ export default function CloudServices() {
               />
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent" />
               <div className="absolute top-5 right-5 bg-[#030c18]/80 backdrop-blur-sm border border-slate-700/50 rounded-lg px-3 py-2">
-                <span className="font-mono text-xs text-slate-400">Multi-Region Kubernetes — Case Example</span>
+                <span className="font-mono text-xs text-slate-400">Multi-Region Kubernetes  Case Example</span>
               </div>
             </div>
           </RevealText>
@@ -328,7 +330,7 @@ export default function CloudServices() {
             {[...techStack, ...techStack].map((tech, i) => (
               <span
                 key={i}
-                className="inline-flex items-center gap-2 text-sm font-mono text-slate-500 px-4 py-2 border border-slate-800/80 rounded-full bg-[#060f1e] flex-shrink-0"
+                className="inline-flex items-center gap-2 text-sm font-mono text-emerald-500 px-4 py-2 border border-slate-800/80 rounded-full bg-[#060f1e] flex-shrink-0"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/60" />
                 {tech}
@@ -413,7 +415,7 @@ export default function CloudServices() {
                 </span>
               </h2>
               <p className="text-slate-400 text-base leading-relaxed mb-10 max-w-lg mx-auto">
-                Whether you're planning a migration, fighting rising costs, or building from scratch — let's talk about your cloud strategy.
+                Whether you're planning a migration, fighting rising costs, or building from scratch  let's talk about your cloud strategy.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

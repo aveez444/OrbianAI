@@ -23,7 +23,7 @@ const capabilities = [
   {
     number: "03",
     title: "Real-time Analytics",
-    body: "Process and visualize data as it flows. Stream processing, anomaly detection, and live dashboards that react instantly to changing conditions — perfect for operations and monitoring.",
+    body: "Process and visualize data as it flows. Stream processing, anomaly detection, and live dashboards that react instantly to changing conditions  perfect for operations and monitoring.",
     tags: ["Kafka", "Flink", "Spark Streaming", "Redis", "ClickHouse"],
   },
   {
@@ -43,7 +43,7 @@ const process = [
   {
     phase: "Solution Design",
     duration: "Week 2–3",
-    desc: "Architecture decisions, tool selection, and success metrics. We define exactly how we'll transform your data into insights — and how we'll measure impact.",
+    desc: "Architecture decisions, tool selection, and success metrics. We define exactly how we'll transform your data into insights  and how we'll measure impact.",
   },
   {
     phase: "Development",
@@ -75,7 +75,7 @@ const stats = [
 const differentiators = [
   {
     title: "Explainable AI",
-    body: "Black-box models aren't acceptable for critical decisions. We build models you can interpret and explain — because trust matters as much as accuracy.",
+    body: "Black-box models aren't acceptable for critical decisions. We build models you can interpret and explain  because trust matters as much as accuracy.",
   },
   {
     title: "Data Quality First",
@@ -153,7 +153,7 @@ export default function DataAnalytics() {
             transition={{ delay: 0.4 }}
             className="inline-flex items-center gap-2 mb-6"
           >
-            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">03 — DATA & INTELLIGENCE</span>
+            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">03  DATA & INTELLIGENCE</span>
           </motion.div>
 
           <motion.h1
@@ -278,13 +278,15 @@ export default function DataAnalytics() {
                   </h3>
                 </div>
                 <div className="lg:col-span-5">
-                  <p className="text-slate-400 text-sm leading-relaxed">{cap.body}</p>
+                  <p className="text-white text-base lg:text-lg leading-relaxed">
+  {cap.body}
+</p>
                 </div>
                 <div className="lg:col-span-3 flex flex-wrap gap-2 lg:justify-end items-start">
                   {cap.tags.map((tag, ti) => (
                     <span
                       key={ti}
-                      className="text-xs font-mono text-slate-500 border border-slate-800 px-2.5 py-1 rounded-full group-hover:border-slate-700 group-hover:text-slate-400 transition-colors"
+                      className="text-sm font-mono text-white border border-slate-700 px-3 py-1.5 rounded-full transition-all duration-300 group-hover:border-emerald-500 group-hover:text-emerald-300"
                     >
                       {tag}
                     </span>
@@ -308,7 +310,7 @@ export default function DataAnalytics() {
               />
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent" />
               <div className="absolute top-5 right-5 bg-[#030c18]/80 backdrop-blur-sm border border-slate-700/50 rounded-lg px-3 py-2">
-                <span className="font-mono text-xs text-slate-400">Real-time Analytics Dashboard — Case Example</span>
+                <span className="font-mono text-xs text-slate-400">Real-time Analytics Dashboard  Case Example</span>
               </div>
             </div>
           </RevealText>
@@ -329,7 +331,7 @@ export default function DataAnalytics() {
             {[...techStack, ...techStack].map((tech, i) => (
               <span
                 key={i}
-                className="inline-flex items-center gap-2 text-sm font-mono text-slate-500 px-4 py-2 border border-slate-800/80 rounded-full bg-[#060f1e] flex-shrink-0"
+                className="inline-flex items-center gap-2 text-sm font-mono text-emerald-500 px-4 py-2 border border-slate-800/80 rounded-full bg-[#060f1e] flex-shrink-0"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/60" />
                 {tech}
@@ -414,7 +416,7 @@ export default function DataAnalytics() {
                 </span>
               </h2>
               <p className="text-slate-400 text-base leading-relaxed mb-10 max-w-lg mx-auto">
-                Tell us about your data challenges and we'll show you what's possible — with no pressure, just honest conversation about what works.
+                Tell us about your data challenges and we'll show you what's possible  with no pressure, just honest conversation about what works.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

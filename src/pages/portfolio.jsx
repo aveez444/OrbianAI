@@ -31,8 +31,8 @@ const PROJECTS = [
     category: "Enterprise SaaS",
     year: "2024",
     image: vehicleaxisImg,
-    shortDesc: "End-to-end platform for multi-location vehicle dealerships — inventory, sales pipeline, service scheduling, and F&I automation in one unified system.",
-    fullDesc: "VehicleAxis is a comprehensive dealership management platform engineered to unify every operational layer of modern vehicle retail. From real-time inventory syndication across 40+ listing portals to automated F&I document generation and digital contracting, the system eliminates the operational fragmentation that costs dealerships hours per deal. Built for multi-rooftop groups, it surfaces live performance dashboards per location, per salesperson, and per vehicle category — enabling management decisions grounded in actual data rather than intuition. The service module integrates OEM warranty lookup, parts ordering, and technician scheduling into a single workflow, reducing RO cycle time by an average of 31%. Role-based access, SSO, and a full audit trail make compliance straightforward.",
+    shortDesc: "End-to-end platform for multi-location vehicle dealerships  inventory, sales pipeline, service scheduling, and F&I automation in one unified system.",
+    fullDesc: "VehicleAxis is a comprehensive dealership management platform engineered to unify every operational layer of modern vehicle retail. From real-time inventory syndication across 40+ listing portals to automated F&I document generation and digital contracting, the system eliminates the operational fragmentation that costs dealerships hours per deal. Built for multi-rooftop groups, it surfaces live performance dashboards per location, per salesperson, and per vehicle category  enabling management decisions grounded in actual data rather than intuition. The service module integrates OEM warranty lookup, parts ordering, and technician scheduling into a single workflow, reducing RO cycle time by an average of 31%. Role-based access, SSO, and a full audit trail make compliance straightforward.",
     stack: ["React", "Node.js", "PostgreSQL", "Redis", "AWS", "WebSockets"],
     highlights: ["Multi-location inventory sync", "Automated F&I documents", "Real-time sales dashboards", "OEM warranty integration", "Digital contracting"],
     impact: ["31% reduction in RO cycle time", "40+ listing portals synced", "Zero paper F&I documents"],
@@ -46,7 +46,7 @@ const PROJECTS = [
     category: "Full-Stack Web App",
     year: "2024",
     image: nexuscrmImg,
-    shortDesc: "Unified CRM and SCM platform that connects customer relationship data with supplier chain visibility — from lead to fulfillment in one operational view.",
+    shortDesc: "Unified CRM and SCM platform that connects customer relationship data with supplier chain visibility  from lead to fulfillment in one operational view.",
     fullDesc: "NexusCRM bridges the gap that most enterprises accept as inevitable: the disconnection between who bought something and how it gets to them. By fusing CRM pipeline data with live supply chain telemetry, NexusCRM gives account managers and operations teams a shared source of truth. Sales reps see real inventory availability before promising delivery dates. Operations teams see demand forecasts derived from the active deal pipeline. The platform includes AI-assisted lead scoring, automated follow-up sequences, supplier performance tracking, PO management, and a predictive reorder engine that cuts stockouts by surfacing risk 3–4 weeks before they materialize. Role-based dashboards surface exactly the right metrics for every function without requiring a separate BI tool.",
     stack: ["Next.js", "Python", "Django", "PostgreSQL", "Celery", "Docker", "GCP"],
     highlights: ["Unified CRM + SCM view", "AI lead scoring", "Predictive reorder engine", "Supplier performance tracking", "Automated deal follow-ups"],
@@ -61,8 +61,8 @@ const PROJECTS = [
     category: "AI / Conversational AI",
     year: "2024",
     image: telagentImg,
-    shortDesc: "Autonomous AI voice and chat agent purpose-built for telecommunications companies — qualifying leads, scheduling demos, and handling tier-1 support without human escalation.",
-    fullDesc: "TelAgent is a multi-modal AI agent system built specifically for telecom operators and ISPs. Leveraging large language models fine-tuned on telecom sales scripts and support documentation, TelAgent engages inbound prospects across voice (via SIP integration), SMS, and web chat simultaneously. The agent qualifies leads using a dynamic scoring rubric — understanding plan requirements, location feasibility, existing provider pain points, and budget range — before booking demos directly into rep calendars through calendar API integration. For tier-1 support, TelAgent resolves billing inquiries, resets accounts, and troubleshoots connectivity issues against live account data with sub-second API calls. Escalation triggers are fully configurable. Every session is transcribed, scored, and surfaced in a manager dashboard for continuous prompt refinement. Client deployments reported a 68% reduction in cost-per-qualified-lead in 90 days.",
+    shortDesc: "Autonomous AI voice and chat agent purpose-built for telecommunications companies  qualifying leads, scheduling demos, and handling tier-1 support without human escalation.",
+    fullDesc: "TelAgent is a multi-modal AI agent system built specifically for telecom operators and ISPs. Leveraging large language models fine-tuned on telecom sales scripts and support documentation, TelAgent engages inbound prospects across voice (via SIP integration), SMS, and web chat simultaneously. The agent qualifies leads using a dynamic scoring rubric  understanding plan requirements, location feasibility, existing provider pain points, and budget range  before booking demos directly into rep calendars through calendar API integration. For tier-1 support, TelAgent resolves billing inquiries, resets accounts, and troubleshoots connectivity issues against live account data with sub-second API calls. Escalation triggers are fully configurable. Every session is transcribed, scored, and surfaced in a manager dashboard for continuous prompt refinement. Client deployments reported a 68% reduction in cost-per-qualified-lead in 90 days.",
     stack: ["Python", "LangChain", "OpenAI", "Twilio", "FastAPI", "Redis", "PostgreSQL"],
     highlights: ["Voice + SMS + chat simultaneously", "Real-time lead scoring", "Calendar API booking", "Live account data queries", "Manager analytics dashboard"],
     impact: ["68% reduction in cost-per-lead", "Tier-1 support without escalation", "Sub-second live account queries"],
@@ -76,8 +76,8 @@ const PROJECTS = [
     category: "AI / Healthcare",
     year: "2023",
     image: medicoreImg,
-    shortDesc: "Clinical AI system for patient triage, diagnostic assistance, and care coordination — reducing physician cognitive load while keeping clinicians firmly in control.",
-    fullDesc: "MediCore AI is a clinical decision support system designed to reduce the cognitive burden on physicians during high-volume patient intake and ongoing care management. The system ingests patient history, lab results, imaging reports, and vital streams to generate structured triage recommendations, differential diagnosis suggestions ranked by probability, and care pathway recommendations — each with traceable evidence citations from peer-reviewed literature. Critically, MediCore AI is architected as an advisory layer: every output is presented to the clinician with full reasoning chains, uncertainty scores, and one-click dismissal. HIPAA compliance is foundational — all PHI is encrypted at rest and in transit, with role-based access, full audit logs, and on-premise deployment options for health systems with data residency requirements. Integrations with Epic, Cerner, and HL7 FHIR APIs enable deployment without disrupting existing workflows.",
+    shortDesc: "Clinical AI system for patient triage, diagnostic assistance, and care coordination  reducing physician cognitive load while keeping clinicians firmly in control.",
+    fullDesc: "MediCore AI is a clinical decision support system designed to reduce the cognitive burden on physicians during high-volume patient intake and ongoing care management. The system ingests patient history, lab results, imaging reports, and vital streams to generate structured triage recommendations, differential diagnosis suggestions ranked by probability, and care pathway recommendations  each with traceable evidence citations from peer-reviewed literature. Critically, MediCore AI is architected as an advisory layer: every output is presented to the clinician with full reasoning chains, uncertainty scores, and one-click dismissal. HIPAA compliance is foundational  all PHI is encrypted at rest and in transit, with role-based access, full audit logs, and on-premise deployment options for health systems with data residency requirements. Integrations with Epic, Cerner, and HL7 FHIR APIs enable deployment without disrupting existing workflows.",
     stack: ["Python", "PyTorch", "FastAPI", "PostgreSQL", "HL7 FHIR", "AWS", "Docker"],
     highlights: ["Differential diagnosis engine", "Evidence-cited recommendations", "Epic & Cerner integration", "HIPAA-compliant architecture", "On-premise deployment option"],
     impact: ["Traceable clinical reasoning", "HL7 FHIR interoperability", "Full PHI audit trail"],
@@ -92,7 +92,7 @@ const PROJECTS = [
     year: "2023",
     image: blogaiImg,
     shortDesc: "AI-powered publishing platform that curates, generates, and personalizes news, sentiment analysis, and interest-matched reports for readers and enterprise teams.",
-    fullDesc: "BlogAI reimagines content consumption for an era of information overload. The platform continuously ingests news feeds, RSS streams, social signals, and earnings reports across configurable topic clusters. A sentiment analysis pipeline assigns directional scores and confidence intervals to every article — surfacing not just what happened, but how the market, public, or community feels about it. Individual readers receive a personalized feed calibrated by reading history, explicit interest tags, and implicit engagement signals. Enterprise teams get branded digest reports generated on schedule — covering their industry verticals, competitor mentions, and regulatory developments — delivered as polished PDFs or pushed to Slack and Teams. The content generation layer uses retrieval-augmented generation to produce original summaries and analysis grounded in the ingested corpus, reducing hallucination risk significantly. Publishers can deploy BlogAI as a white-labeled audience engagement tool.",
+    fullDesc: "BlogAI reimagines content consumption for an era of information overload. The platform continuously ingests news feeds, RSS streams, social signals, and earnings reports across configurable topic clusters. A sentiment analysis pipeline assigns directional scores and confidence intervals to every article  surfacing not just what happened, but how the market, public, or community feels about it. Individual readers receive a personalized feed calibrated by reading history, explicit interest tags, and implicit engagement signals. Enterprise teams get branded digest reports generated on schedule  covering their industry verticals, competitor mentions, and regulatory developments  delivered as polished PDFs or pushed to Slack and Teams. The content generation layer uses retrieval-augmented generation to produce original summaries and analysis grounded in the ingested corpus, reducing hallucination risk significantly. Publishers can deploy BlogAI as a white-labeled audience engagement tool.",
     stack: ["Python", "FastAPI", "React", "OpenAI", "Pinecone", "Kafka", "PostgreSQL", "Redis"],
     highlights: ["Real-time sentiment scoring", "Personalized reader feeds", "Automated enterprise digests", "RAG-based content generation", "Slack/Teams delivery"],
     impact: ["Covers news + sentiment in one view", "Scheduled branded digest reports", "RAG reduces hallucination risk"],
@@ -106,8 +106,8 @@ const PROJECTS = [
     category: "Data / Analytics",
     year: "2023",
     image: luminabiImg,
-    shortDesc: "Self-serve BI platform that turns business analysts into data engineers — natural language queries, automated insight generation, and enterprise-grade governance.",
-    fullDesc: "LuminaBI is a business intelligence platform engineered for the analyst who shouldn't need to wait for a data engineer. Connect any data source — relational databases, data warehouses, REST APIs, flat files, or cloud storage — and the semantic layer automatically maps relationships, infers metrics, and builds a queryable business glossary. Analysts query in plain English: 'Show me revenue by region compared to last quarter, excluding cancelled orders.' The query engine translates intent to SQL, executes against the warehouse, and returns visualizations with auto-generated narrative summaries. For power users, a full SQL editor and Python notebook integration are available. The governance layer enforces row-level security, column masking for PII, and query cost controls by user group. Scheduled reports, anomaly alerts, and a public-facing embed SDK round out the platform. Enterprise clients have replaced three separate tools — a legacy BI tool, a separate alerting service, and ad-hoc analyst requests — with LuminaBI alone.",
+    shortDesc: "Self-serve BI platform that turns business analysts into data engineers  natural language queries, automated insight generation, and enterprise-grade governance.",
+    fullDesc: "LuminaBI is a business intelligence platform engineered for the analyst who shouldn't need to wait for a data engineer. Connect any data source  relational databases, data warehouses, REST APIs, flat files, or cloud storage  and the semantic layer automatically maps relationships, infers metrics, and builds a queryable business glossary. Analysts query in plain English: 'Show me revenue by region compared to last quarter, excluding cancelled orders.' The query engine translates intent to SQL, executes against the warehouse, and returns visualizations with auto-generated narrative summaries. For power users, a full SQL editor and Python notebook integration are available. The governance layer enforces row-level security, column masking for PII, and query cost controls by user group. Scheduled reports, anomaly alerts, and a public-facing embed SDK round out the platform. Enterprise clients have replaced three separate tools  a legacy BI tool, a separate alerting service, and ad-hoc analyst requests  with LuminaBI alone.",
     stack: ["Python", "dbt", "Snowflake", "React", "D3.js", "FastAPI", "Airflow", "PostgreSQL"],
     highlights: ["Natural language to SQL", "Auto-generated insight summaries", "Row-level security governance", "Anomaly alerting", "Embeddable SDK"],
     impact: ["Replaced 3 separate tools", "NL queries in plain English", "PII column masking built-in"],
@@ -122,7 +122,7 @@ const PROJECTS = [
     year: "2022",
     image: datavaultImg,
     shortDesc: "Scalable cloud data warehouse solution with automated ETL pipelines, data quality monitoring, and real-time streaming ingestion for enterprise-scale data operations.",
-    fullDesc: "DataVault is a cloud-native data warehouse platform designed to handle petabyte-scale data operations without compromising on latency or cost efficiency. The platform provides a unified interface for batch ETL and real-time streaming ingestion, enabling organizations to build a single, reliable data foundation regardless of source system complexity. Automated data quality checks run at every pipeline stage — flagging schema drift, null anomalies, and referential integrity violations before bad data reaches analysts. The orchestration layer is built on Airflow with a visual DAG builder that lets data engineers design complex pipeline dependencies without writing YAML. A built-in data catalog with automated lineage tracking gives every stakeholder visibility into where data comes from, how it transforms, and where it ends up. Cost controls, query optimization recommendations, and usage-based alerting prevent warehouse bill shock at scale.",
+    fullDesc: "DataVault is a cloud-native data warehouse platform designed to handle petabyte-scale data operations without compromising on latency or cost efficiency. The platform provides a unified interface for batch ETL and real-time streaming ingestion, enabling organizations to build a single, reliable data foundation regardless of source system complexity. Automated data quality checks run at every pipeline stage  flagging schema drift, null anomalies, and referential integrity violations before bad data reaches analysts. The orchestration layer is built on Airflow with a visual DAG builder that lets data engineers design complex pipeline dependencies without writing YAML. A built-in data catalog with automated lineage tracking gives every stakeholder visibility into where data comes from, how it transforms, and where it ends up. Cost controls, query optimization recommendations, and usage-based alerting prevent warehouse bill shock at scale.",
     stack: ["Python", "Apache Spark", "Airflow", "Snowflake", "Kafka", "dbt", "Terraform", "AWS"],
     highlights: ["Petabyte-scale ingestion", "Automated data quality checks", "Visual DAG builder", "Automated data lineage", "Cost optimization engine"],
     impact: ["Schema drift detection automated", "Visual pipeline design", "Full data lineage tracking"],
@@ -481,13 +481,11 @@ export default function Portfolio() {
             className="flex flex-col md:flex-row md:items-end gap-8 md:gap-16"
           >
             <p className="text-slate-400 text-lg max-w-md leading-relaxed">
-              A curated collection of full-stack systems, AI-native applications, and enterprise platforms — designed with precision, built to scale.
+              A curated collection of full-stack systems, AI-native applications, and enterprise platforms  designed with precision, built to scale.
             </p>
             <div className="flex gap-12 md:ml-auto">
               {[
-                { num: "7", label: "Projects" },
-                { num: "4+", label: "Years" },
-                { num: "AI", label: "Native" },
+              
               ].map(({ num, label }) => (
                 <div key={label}>
                   <div className="text-3xl font-bold text-white tabular-nums">{num}</div>
@@ -524,7 +522,7 @@ export default function Portfolio() {
       <section className="relative border-y border-emerald-900/30 bg-emerald-950/10 py-8 overflow-hidden">
         <div className="flex items-center gap-16 whitespace-nowrap">
           <motion.div
-            className="flex items-center gap-16 text-emerald-600/50 font-mono text-xs tracking-widest uppercase"
+            className="flex items-center gap-16 text-emerald-300/80 font-mono text-xs tracking-widest uppercase"
             animate={{ x: ["0%", "-50%"] }}
             transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
           >
@@ -549,7 +547,7 @@ export default function Portfolio() {
         <FadeIn className="flex items-end justify-between mb-4">
           <div>
             <span className="font-mono text-xs text-emerald-400/60 tracking-widest uppercase block mb-3">
-              — Portfolio
+               Portfolio
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">
               Selected Projects
@@ -590,7 +588,7 @@ export default function Portfolio() {
             </span>
           </h2>
           <p className="text-slate-400 max-w-md mx-auto mb-10 leading-relaxed">
-            From AI-native systems to enterprise platforms — let's turn your idea into something that ships and scales.
+            From AI-native systems to enterprise platforms  let's turn your idea into something that ships and scales.
           </p>
           <motion.a
             href="mailto:hello@example.com"

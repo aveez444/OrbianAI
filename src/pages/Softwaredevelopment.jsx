@@ -11,25 +11,25 @@ const capabilities = [
   {
     number: "01",
     title: "Microservices & Distributed Systems",
-    body: "We decompose monoliths into independently deployable services that teams can own and scale in isolation. Event-driven architectures, message queues, and service meshes — designed for fault tolerance from day one.",
+    body: "We decompose monoliths into independently deployable services that teams can own and scale in isolation. Event-driven architectures, message queues, and service meshes  designed for fault tolerance from day one.",
     tags: ["Kafka", "RabbitMQ", "gRPC", "Docker", "Kubernetes"],
   },
   {
     number: "02",
     title: "API Design & Development",
-    body: "APIs are products. We design contracts first, then build robust REST and GraphQL layers with versioning, rate limiting, and documentation baked in — not bolted on after.",
+    body: "APIs are products. We design contracts first, then build robust REST and GraphQL layers with versioning, rate limiting, and documentation baked in  not bolted on after.",
     tags: ["REST", "GraphQL", "OpenAPI", "OAuth 2.0", "Webhooks"],
   },
   {
     number: "03",
     title: "Legacy Modernization",
-    body: "We've rescued systems that haven't been touched in a decade. Strangler fig migrations, incremental rewrites, and database modernization — keeping the lights on while we rebuild the engine.",
+    body: "We've rescued systems that haven't been touched in a decade. Strangler fig migrations, incremental rewrites, and database modernization  keeping the lights on while we rebuild the engine.",
     tags: ["Strangler Fig", "Data Migration", "Refactoring", "Re-platforming"],
   },
   {
     number: "04",
     title: "DevOps & CI/CD",
-    body: "Code that can't be deployed reliably isn't finished. We set up pipelines that give your team confidence — automated testing, staged rollouts, rollback strategies, and full observability.",
+    body: "Code that can't be deployed reliably isn't finished. We set up pipelines that give your team confidence  automated testing, staged rollouts, rollback strategies, and full observability.",
     tags: ["GitHub Actions", "Terraform", "ArgoCD", "Prometheus", "Datadog"],
   },
 ];
@@ -43,12 +43,12 @@ const process = [
   {
     phase: "System Design",
     duration: "Week 2–3",
-    desc: "Architecture diagrams, ADRs (Architecture Decision Records), and data models. Every decision is documented with context — so your future team understands the why.",
+    desc: "Architecture diagrams, ADRs (Architecture Decision Records), and data models. Every decision is documented with context  so your future team understands the why.",
   },
   {
     phase: "Engineering Sprints",
     duration: "Week 3–16+",
-    desc: "Two-week sprints with working software at every demo. No dark periods. You see real, tested, deployed code — not progress bars.",
+    desc: "Two-week sprints with working software at every demo. No dark periods. You see real, tested, deployed code  not progress bars.",
   },
   {
     phase: "Hardening & Handoff",
@@ -74,11 +74,11 @@ const stats = [
 const differentiators = [
   {
     title: "We write ADRs, not just code",
-    body: "Architecture Decision Records mean your team always understands why the system is built the way it is — not just how. Knowledge lives in the repo, not in someone's head.",
+    body: "Architecture Decision Records mean your team always understands why the system is built the way it is  not just how. Knowledge lives in the repo, not in someone's head.",
   },
   {
     title: "Security is never a phase",
-    body: "Threat modeling, OWASP compliance, secrets management, and dependency scanning are part of every sprint — not a checkbox at the end.",
+    body: "Threat modeling, OWASP compliance, secrets management, and dependency scanning are part of every sprint  not a checkbox at the end.",
   },
   {
     title: "Observability from day one",
@@ -153,7 +153,7 @@ export default function SoftwareDevelopment() {
             transition={{ delay: 0.4 }}
             className="inline-flex items-center gap-2 mb-6"
           >
-            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">02 — DIGITAL PRESENCE</span>
+            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">02  DIGITAL PRESENCE</span>
           </motion.div>
 
           <motion.h1
@@ -177,7 +177,7 @@ export default function SoftwareDevelopment() {
             transition={{ delay: 0.8 }}
             className="mt-6 text-slate-400 text-lg max-w-xl leading-relaxed"
           >
-            Mission-critical software built with the discipline of a team that's shipped systems handling millions of requests — and kept them running.
+            Mission-critical software built with the discipline of a team that's shipped systems handling millions of requests  and kept them running.
           </motion.p>
 
           <motion.div
@@ -278,13 +278,15 @@ export default function SoftwareDevelopment() {
                   </h3>
                 </div>
                 <div className="lg:col-span-5">
-                  <p className="text-slate-400 text-sm leading-relaxed">{cap.body}</p>
+                  <p className="text-white text-base lg:text-lg leading-relaxed">
+                    {cap.body}
+                  </p>
                 </div>
                 <div className="lg:col-span-3 flex flex-wrap gap-2 lg:justify-end items-start">
                   {cap.tags.map((tag, ti) => (
                     <span
                       key={ti}
-                      className="text-xs font-mono text-slate-500 border border-slate-800 px-2.5 py-1 rounded-full group-hover:border-slate-700 group-hover:text-slate-400 transition-colors"
+                      className="text-sm font-mono text-white border border-slate-700 px-3 py-1.5 rounded-full transition-all duration-300 group-hover:border-emerald-500 group-hover:text-emerald-300"
                     >
                       {tag}
                     </span>
@@ -308,7 +310,7 @@ export default function SoftwareDevelopment() {
               />
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent" />
               <div className="absolute top-5 right-5 bg-[#030c18]/80 backdrop-blur-sm border border-slate-700/50 rounded-lg px-3 py-2">
-                <span className="font-mono text-xs text-slate-400">Distributed System Architecture — Case Example</span>
+                <span className="font-mono text-xs text-slate-400">Distributed System Architecture  Case Example</span>
               </div>
             </div>
           </RevealText>
@@ -329,7 +331,7 @@ export default function SoftwareDevelopment() {
             {[...techStack, ...techStack].map((tech, i) => (
               <span
                 key={i}
-                className="inline-flex items-center gap-2 text-sm font-mono text-slate-500 px-4 py-2 border border-slate-800/80 rounded-full bg-[#060f1e] flex-shrink-0"
+                className="inline-flex items-center gap-2 text-sm font-mono text-emerald-500 px-4 py-2 border border-slate-800/80 rounded-full bg-[#060f1e] flex-shrink-0"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/60" />
                 {tech}
@@ -414,7 +416,7 @@ export default function SoftwareDevelopment() {
                 </span>
               </h2>
               <p className="text-slate-400 text-base leading-relaxed mb-10 max-w-lg mx-auto">
-                Whether you're starting from scratch or untangling years of technical debt — we've been there. Let's talk through your situation.
+                Whether you're starting from scratch or untangling years of technical debt  we've been there. Let's talk through your situation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

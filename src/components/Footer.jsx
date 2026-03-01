@@ -33,11 +33,8 @@ export default function Footer() {
                 <img 
                   src={logo} 
                   alt="OrbianAI logo" 
-                  className="h-20 w-18 object-contain"
+                  className="h-28 w-26 object-contain"
                 />
-                <h2 className="text-3xl font-bold text-white">
-                  Orbian<span className="text-emerald-400">AI</span>
-                </h2>
               </div>
               <span className="block w-20 h-1 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-full group-hover:w-32 transition-all duration-300 mt-2"></span>
             </Link>

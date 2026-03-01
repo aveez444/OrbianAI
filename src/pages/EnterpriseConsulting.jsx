@@ -29,7 +29,7 @@ const capabilities = [
   {
     number: "04",
     title: "Digital Transformation",
-    body: "Technology alone doesn't transform businesses—strategy does. We help you reimagine processes, orchestrate change, and align technology investments with measurable business outcomes.",
+    body: "Technology alone doesn't transform businessesstrategy does. We help you reimagine processes, orchestrate change, and align technology investments with measurable business outcomes.",
     tags: ["Process Optimization", "Change Management", "Enterprise Architecture", "Cloud Strategy", "M&A Integration"],
   },
 ];
@@ -48,7 +48,7 @@ const process = [
   {
     phase: "Execution Support",
     duration: "Month 2–6+",
-    desc: "Hands-on guidance through implementation. We review designs, validate configurations, and ensure alignment with enterprise standards—without taking over the work.",
+    desc: "Hands-on guidance through implementation. We review designs, validate configurations, and ensure alignment with enterprise standardswithout taking over the work.",
   },
   {
     phase: "Governance & Enablement",
@@ -74,7 +74,7 @@ const stats = [
 const differentiators = [
   {
     title: "Vendor-agnostic guidance",
-    body: "We don't resell software—we advise on the best path forward. Whether you're extending existing systems or considering new platforms, our recommendations are driven by your needs, not commissions.",
+    body: "We don't resell softwarewe advise on the best path forward. Whether you're extending existing systems or considering new platforms, our recommendations are driven by your needs, not commissions.",
   },
   {
     title: "Technical depth meets business context",
@@ -152,7 +152,7 @@ export default function EnterpriseConsulting() {
             transition={{ delay: 0.4 }}
             className="inline-flex items-center gap-2 mb-6"
           >
-            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">05 — ENTERPRISE ADVISORY</span>
+            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">05  ENTERPRISE ADVISORY</span>
           </motion.div>
 
           <motion.h1
@@ -235,7 +235,7 @@ export default function EnterpriseConsulting() {
             <p className="text-2xl sm:text-3xl lg:text-4xl font-light text-slate-300 leading-[1.4]">
               "Enterprise software is just infrastructure.{" "}
               <span className="text-white font-semibold">Strategy is what makes it valuable</span>{" "}
-              — the difference between paying for licenses and{" "}
+               the difference between paying for licenses and{" "}
               <span className="text-emerald-400">unlocking competitive advantage</span>."
             </p>
             <div className="mt-6 flex items-center gap-3">
@@ -277,13 +277,15 @@ export default function EnterpriseConsulting() {
                   </h3>
                 </div>
                 <div className="lg:col-span-5">
-                  <p className="text-slate-400 text-sm leading-relaxed">{cap.body}</p>
+                  <p className="text-white text-base lg:text-lg leading-relaxed">
+                    {cap.body}
+                  </p>
                 </div>
                 <div className="lg:col-span-3 flex flex-wrap gap-2 lg:justify-end items-start">
                   {cap.tags.map((tag, ti) => (
                     <span
                       key={ti}
-                      className="text-xs font-mono text-slate-500 border border-slate-800 px-2.5 py-1 rounded-full group-hover:border-slate-700 group-hover:text-slate-400 transition-colors"
+                      className="text-sm font-mono text-white border border-slate-700 px-3 py-1.5 rounded-full transition-all duration-300 group-hover:border-emerald-500 group-hover:text-emerald-300"
                     >
                       {tag}
                     </span>
@@ -307,7 +309,7 @@ export default function EnterpriseConsulting() {
               />
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent" />
               <div className="absolute top-5 right-5 bg-[#030c18]/80 backdrop-blur-sm border border-slate-700/50 rounded-lg px-3 py-2">
-                <span className="font-mono text-xs text-slate-400">Enterprise Architecture Review — Case Study</span>
+                <span className="font-mono text-xs text-slate-400">Enterprise Architecture Review  Case Study</span>
               </div>
             </div>
           </RevealText>
@@ -328,7 +330,7 @@ export default function EnterpriseConsulting() {
             {[...techStack, ...techStack].map((tech, i) => (
               <span
                 key={i}
-                className="inline-flex items-center gap-2 text-sm font-mono text-slate-500 px-4 py-2 border border-slate-800/80 rounded-full bg-[#060f1e] flex-shrink-0"
+                className="inline-flex items-center gap-2 text-sm font-mono text-emerald-500 px-4 py-2 border border-slate-800/80 rounded-full bg-[#060f1e] flex-shrink-0"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/60" />
                 {tech}
@@ -413,7 +415,7 @@ export default function EnterpriseConsulting() {
                 </span>
               </h2>
               <p className="text-slate-400 text-base leading-relaxed mb-10 max-w-lg mx-auto">
-                Tell us about your enterprise landscape and strategic goals. We'll provide an honest assessment and clear path forward—no vendor bias, just expert guidance.
+                Tell us about your enterprise landscape and strategic goals. We'll provide an honest assessment and clear path forwardno vendor bias, just expert guidance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

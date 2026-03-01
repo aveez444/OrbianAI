@@ -1,5 +1,5 @@
 // src/components/Navbar.jsx
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/logo2.png"; // your big logo image
@@ -57,6 +57,20 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setServicesOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownRef]);
+
   const linkBase =
     "relative px-3 py-2 text-sm font-medium text-slate-300 hover:text-emerald-300 transition-colors";
 
@@ -71,21 +85,15 @@ export default function Navbar() {
           {/* Logo + Brand */}
           <Link to="/" className="flex items-center gap-2 sm:gap-3">
             <div className="relative">
-                <div className="absolute -inset-2 rounded-2xl bg-emerald-500/10 blur-md" />
-                <img
+
+              <img
                 src={logo}
                 alt="OrbianAI logo"
-                className="relative h-18 w-16 sm:h-16 sm:w-16 lg:h-20 lg:w-20 object-contain"
-                />
+                className="relative h-28 w-26  object-contain"
+              />
             </div>
 
-            <span className="text-lg sm:text-xl lg:text-2xl font-semibold tracking-tight text-white">
-                Orbian
-                <span className="bg-gradient-to-r from-emerald-300 to-emerald-500 bg-clip-text text-transparent">
-                AI
-                </span>
-            </span>
-            </Link>
+          </Link>
 
           {/* Desktop links */}
           <div className="hidden lg:flex items-center gap-2">
@@ -94,15 +102,15 @@ export default function Navbar() {
                 <div
                   key={item.label}
                   className="relative"
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
+                  ref={dropdownRef}
                 >
                   <button
                     type="button"
+                    onClick={() => setServicesOpen((prev) => !prev)}
                     className={`${linkBase} flex items-center gap-1`}
                   >
                     <span>Services</span>
-                    <span className="text-xs text-slate-500">▾</span>
+                    <span className={`text-xs text-slate-500 transition-transform ${servicesOpen ? "rotate-180" : ""}`}>▾</span>
                   </button>
 
                   {/* Desktop mega dropdown: 3x3 grid */}
@@ -113,42 +121,42 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 8 }}
                         transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
-                        className="absolute left-1/2 top-full mt-4 -translate-x-1/2 w-[580px] rounded-2xl border border-emerald-500/20 bg-[#020617]/95 shadow-2xl shadow-emerald-500/20 backdrop-blur-xl p-4"
+                        className="absolute left-1/2 top-full mt-4 -translate-x-1/2 w-[760px] rounded-2xl border border-emerald-500/20 bg-[#020617]/95 shadow-2xl shadow-emerald-500/20 backdrop-blur-xl p-6"
                       >
-                        <div className="mb-3 flex items-center justify-between px-1">
+                        <div className="mb-4 flex items-center justify-between px-2">
                           <div>
-                            <p className="text-xs font-mono text-emerald-400 tracking-[0.15em]">
+                            <p className="text-sm font-mono text-emerald-400 tracking-[0.15em]">
                               SERVICES
                             </p>
-                            <p className="text-sm text-slate-400">
+                            <p className="text-base text-slate-400 mt-1">
                               Choose where OrbianAI plugs into your stack.
                             </p>
                           </div>
                         </div>
 
-                        <div className="grid grid-cols-3 gap-3 mt-2">
+                        <div className="grid grid-cols-3 gap-4 mt-2">
                           {services.map((svc) => (
                             <NavLink
                               key={svc.label}
                               to={svc.to}
+                              onClick={() => setServicesOpen(false)}
                               className={({ isActive }) =>
-                                `group flex flex-col rounded-xl border border-white/5 bg-slate-950/60 p-3 hover:border-emerald-500/40 hover:bg-slate-900/80 transition-colors ${
-                                  isActive ? "border-emerald-400/60" : ""
+                                `group flex flex-col rounded-xl border border-white/5 bg-slate-950/60 p-5 hover:border-emerald-500/40 hover:bg-slate-900/80 transition-colors ${isActive ? "border-emerald-400/60" : ""
                                 }`
                               }
                             >
-                              <span className="text-xs font-mono uppercase tracking-[0.14em] text-emerald-400 mb-1">
+                              <span className="text-xs font-mono uppercase tracking-[0.14em] text-emerald-400 mb-2">
                                 {svc.tag}
                               </span>
-                              <span className="text-sm font-semibold text-white mb-1">
+                              <span className="text-[17px] font-bold text-white mb-2">
                                 {svc.label}
                               </span>
-                              <span className="text-xs text-slate-500 leading-snug">
+                              <span className="text-[13px] text-slate-400 leading-relaxed">
                                 {svc.desc}
                               </span>
-                              <span className="mt-2 text-[11px] text-emerald-300/80 inline-flex items-center gap-1">
+                              <span className="mt-4 text-xs font-medium text-emerald-300/90 inline-flex items-center gap-1.5">
                                 Explore
-                                <span className="transition-transform group-hover:translate-x-0.5">
+                                <span className="transition-transform group-hover:translate-x-1">
                                   →
                                 </span>
                               </span>
@@ -162,10 +170,9 @@ export default function Navbar() {
                             to="/services"
                             onClick={() => setServicesOpen(false)}
                             className={({ isActive }) =>
-                              `flex items-center justify-between rounded-lg px-3 py-2 text-sm transition-colors ${
-                                isActive 
-                                  ? "bg-emerald-500/15 text-emerald-300" 
-                                  : "text-slate-300 hover:bg-slate-800/70"
+                              `flex items-center justify-between rounded-lg px-3 py-2 text-sm transition-colors ${isActive
+                                ? "bg-emerald-500/15 text-emerald-300"
+                                : "text-slate-300 hover:bg-slate-800/70"
                               }`
                             }
                           >
@@ -182,8 +189,7 @@ export default function Navbar() {
                   key={item.label}
                   to={item.to}
                   className={({ isActive }) =>
-                    `${linkBase} ${
-                      isActive ? activeClass : ""
+                    `${linkBase} ${isActive ? activeClass : ""
                     }`
                   }
                 >
@@ -195,18 +201,7 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex">
-            <Link
-              to="/contact"
-              className="group relative inline-flex items-center gap-2 rounded-xl border border-emerald-500/40 bg-emerald-500 text-[#020617] px-4 py-2 text-sm font-semibold shadow-lg shadow-emerald-500/25 hover:scale-[1.03] transition-transform"
-            >
-              <span>Let&apos;s talk</span>
-              <span className="relative">
-                <span className="group-hover:translate-x-1 inline-block transition-transform">
-                  ↗
-                </span>
-              </span>
-              <span className="pointer-events-none absolute -inset-px rounded-xl bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </Link>
+         
           </div>
 
           {/* MOBILE: logo, name, hamburger */}
@@ -222,19 +217,16 @@ export default function Navbar() {
             >
               <span className="sr-only">Open main menu</span>
               <span
-                className={`block h-0.5 w-5 rounded-full bg-slate-100 transition-transform ${
-                  mobileOpen ? "translate-y-1.5 rotate-45" : ""
-                }`}
+                className={`block h-0.5 w-5 rounded-full bg-slate-100 transition-transform ${mobileOpen ? "translate-y-1.5 rotate-45" : ""
+                  }`}
               />
               <span
-                className={`block h-0.5 w-5 rounded-full bg-slate-100 transition-all ${
-                  mobileOpen ? "opacity-0" : "my-[5px]"
-                }`}
+                className={`block h-0.5 w-5 rounded-full bg-slate-100 transition-all ${mobileOpen ? "opacity-0" : "my-[5px]"
+                  }`}
               />
               <span
-                className={`block h-0.5 w-5 rounded-full bg-slate-100 transition-transform ${
-                  mobileOpen ? "-translate-y-1.5 -rotate-45" : ""
-                }`}
+                className={`block h-0.5 w-5 rounded-full bg-slate-100 transition-transform ${mobileOpen ? "-translate-y-1.5 -rotate-45" : ""
+                  }`}
               />
             </button>
           </div>
@@ -255,7 +247,7 @@ export default function Navbar() {
             />
             {/* Panel */}
             <motion.div
-             className="fixed top-0 right-0 z-40 h-screen w-full bg-[#020617] border-l border-emerald-500/20 shadow-2xl shadow-emerald-500/30 flex flex-col"
+              className="fixed top-0 right-0 z-40 h-screen w-full bg-[#020617] border-l border-emerald-500/20 shadow-2xl shadow-emerald-500/30 flex flex-col"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -273,7 +265,7 @@ export default function Navbar() {
                     <span className="text-base font-semibold text-white">
                       OrbianAI
                     </span>
-                
+
                   </div>
                 </div>
                 <button
@@ -298,9 +290,8 @@ export default function Navbar() {
                       >
                         <span>Services</span>
                         <span
-                          className={`text-xs transition-transform ${
-                            mobileServicesOpen ? "rotate-180" : ""
-                          }`}
+                          className={`text-xs transition-transform ${mobileServicesOpen ? "rotate-180" : ""
+                            }`}
                         >
                           ▾
                         </span>
@@ -320,10 +311,9 @@ export default function Navbar() {
                                 to={svc.to}
                                 onClick={() => setMobileOpen(false)}
                                 className={({ isActive }) =>
-                                  `flex flex-col rounded-md px-2 py-2 text-xs ${
-                                    isActive
-                                      ? "bg-emerald-500/15 text-emerald-300 border border-emerald-500/40"
-                                      : "text-slate-300 hover:bg-slate-800/70"
+                                  `flex flex-col rounded-md px-2 py-2 text-xs ${isActive
+                                    ? "bg-emerald-500/15 text-emerald-300 border border-emerald-500/40"
+                                    : "text-slate-300 hover:bg-slate-800/70"
                                   }`
                                 }
                               >
@@ -342,10 +332,9 @@ export default function Navbar() {
                                 to="/services"
                                 onClick={() => setMobileOpen(false)}
                                 className={({ isActive }) =>
-                                  `flex items-center justify-between rounded-md px-2 py-2 text-sm ${
-                                    isActive
-                                      ? "bg-emerald-500/15 text-emerald-300"
-                                      : "text-slate-200 hover:bg-slate-800/70"
+                                  `flex items-center justify-between rounded-md px-2 py-2 text-sm ${isActive
+                                    ? "bg-emerald-500/15 text-emerald-300"
+                                    : "text-slate-200 hover:bg-slate-800/70"
                                   }`
                                 }
                               >
@@ -363,10 +352,9 @@ export default function Navbar() {
                       to={item.to}
                       onClick={() => setMobileOpen(false)}
                       className={({ isActive }) =>
-                        `block rounded-lg px-2 py-2 text-sm font-medium ${
-                          isActive
-                            ? "bg-emerald-500/15 text-emerald-300 border border-emerald-500/40"
-                            : "text-slate-200 hover:bg-slate-900/80"
+                        `block rounded-lg px-2 py-2 text-sm font-medium ${isActive
+                          ? "bg-emerald-500/15 text-emerald-300 border border-emerald-500/40"
+                          : "text-slate-200 hover:bg-slate-900/80"
                         }`
                       }
                     >

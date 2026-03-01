@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 
-// Images — you’ll need to download and place these in your assets folder
+// Images  you’ll need to download and place these in your assets folder
 // 1. A minimalist office / team collaboration shot (well-lit, modern)   → contact-office.jpg
 // 2. Abstract tech pattern (you mentioned contact-pattern.png)          → contact-pattern.png
 import officeImage from "../assets/contact-office.png";        // <-- DOWNLOAD: modern office/team image
@@ -147,7 +147,7 @@ export default function Contact() {
               </span>
             </h1>
             <p className="text-slate-400 text-lg lg:text-xl max-w-2xl leading-relaxed">
-              Whether you're evaluating enterprise AI, have a technical question, or just want to explore what's possible — we're here.
+              Whether you're evaluating enterprise AI, have a technical question, or just want to explore what's possible  we're here.
             </p>
           </motion.div>
         </div>
@@ -328,28 +328,28 @@ export default function Contact() {
                 city: "San Francisco", 
                 address: "548 Market St", 
                 detail: "Suite 101",
-                time: "8:30 AM — 6:00 PM PT",
+                time: "8:30 AM  6:00 PM PT",
                 region: "west coast"
               },
               { 
                 city: "New York", 
                 address: "20 W 34th St", 
                 detail: "12th Floor",
-                time: "9:00 AM — 7:00 PM ET",
+                time: "9:00 AM  7:00 PM ET",
                 region: "east coast"
               },
               { 
                 city: "London", 
                 address: "25 Cabot Square", 
                 detail: "Canary Wharf",
-                time: "9:00 AM — 5:30 PM GMT",
+                time: "9:00 AM  5:30 PM GMT",
                 region: "europe"
               },
               { 
                 city: "Singapore", 
                 address: "80 Robinson Rd", 
                 detail: "#16-00",
-                time: "9:00 AM — 6:00 PM SGT",
+                time: "9:00 AM  6:00 PM SGT",
                 region: "asia pacific"
               },
             ].map((loc, i) => (
@@ -400,7 +400,7 @@ export default function Contact() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-center text-slate-600 text-sm mt-12 font-mono"
           >
-            * All offices are operational — reach out to the one closest to you.
+            * All offices are operational  reach out to the one closest to you.
           </motion.p>
         </div>
       </section>

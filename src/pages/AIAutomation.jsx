@@ -11,7 +11,7 @@ const capabilities = [
   {
     number: "01",
     title: "Intelligent Process Automation",
-    body: "We automate complex, repetitive workflows using AI that adapts to changing inputs. From document processing to data extraction and decision logic — we turn manual effort into autonomous systems.",
+    body: "We automate complex, repetitive workflows using AI that adapts to changing inputs. From document processing to data extraction and decision logic  we turn manual effort into autonomous systems.",
     tags: ["RPA", "Document AI", "Workflow Automation", "Decision Engines"],
   },
   {
@@ -23,13 +23,13 @@ const capabilities = [
   {
     number: "03",
     title: "AI-Powered Customer Experience",
-    body: "Chatbots that actually help. Voice agents that sound human. Recommendation engines that convert. We build conversational and predictive interfaces that feel intelligent — because they are.",
+    body: "Chatbots that actually help. Voice agents that sound human. Recommendation engines that convert. We build conversational and predictive interfaces that feel intelligent  because they are.",
     tags: ["Chatbots", "Voice AI", "Recommendations", "Sentiment Analysis"],
   },
   {
     number: "04",
     title: "Custom Model Deployment",
-    body: "Your data never leaves your control. We deploy models on your infrastructure — cloud or on-prem — with MLOps pipelines for monitoring, retraining, and versioning. AI you can trust and maintain.",
+    body: "Your data never leaves your control. We deploy models on your infrastructure  cloud or on-prem  with MLOps pipelines for monitoring, retraining, and versioning. AI you can trust and maintain.",
     tags: ["MLOps", "Docker", "Kubernetes", "Hugging Face", "ONNX"],
   },
 ];
@@ -38,7 +38,7 @@ const process = [
   {
     phase: "Discovery & Opportunity Mapping",
     duration: "Week 1–2",
-    desc: "We identify where AI can deliver real ROI — not just hype. Process audits, data readiness assessments, and a roadmap of what to automate vs. augment.",
+    desc: "We identify where AI can deliver real ROI  not just hype. Process audits, data readiness assessments, and a roadmap of what to automate vs. augment.",
   },
   {
     phase: "Prototype & Validation",
@@ -78,7 +78,7 @@ const differentiators = [
   },
   {
     title: "Your data stays yours",
-    body: "We never train on customer data without consent. Models are deployed in your environment or VPC — no third-party APIs if you don't want them.",
+    body: "We never train on customer data without consent. Models are deployed in your environment or VPC  no third-party APIs if you don't want them.",
   },
   {
     title: "Built to evolve",
@@ -152,7 +152,7 @@ export default function AIAutomation() {
             transition={{ delay: 0.4 }}
             className="inline-flex items-center gap-2 mb-6"
           >
-            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">03 — INTELLIGENT AUTOMATION</span>
+            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">03  INTELLIGENT AUTOMATION</span>
           </motion.div>
 
           <motion.h1
@@ -176,7 +176,7 @@ export default function AIAutomation() {
             transition={{ delay: 0.8 }}
             className="mt-6 text-slate-400 text-lg max-w-xl leading-relaxed"
           >
-            We move beyond chatbots and demos — delivering production-ready AI that automates real work, integrates with your stack, and drives measurable ROI.
+            We move beyond chatbots and demos  delivering production-ready AI that automates real work, integrates with your stack, and drives measurable ROI.
           </motion.p>
 
           <motion.div
@@ -233,7 +233,7 @@ export default function AIAutomation() {
         <div className="container mx-auto px-5 lg:px-12">
           <RevealText className="max-w-4xl">
             <p className="text-2xl sm:text-3xl lg:text-4xl font-light text-slate-300 leading-[1.4]">
-              "AI isn't magic — it's engineering. The difference between{" "}
+              "AI isn't magic  it's engineering. The difference between{" "}
               <span className="text-white font-semibold">a prototype and production</span>{" "}
               is data strategy, model observability, and integration discipline.{" "}
               <span className="text-emerald-400">That's where we live.</span>"
@@ -277,13 +277,15 @@ export default function AIAutomation() {
                   </h3>
                 </div>
                 <div className="lg:col-span-5">
-                  <p className="text-slate-400 text-sm leading-relaxed">{cap.body}</p>
+                  <p className="text-white text-base lg:text-lg leading-relaxed">
+                    {cap.body}
+                  </p>
                 </div>
                 <div className="lg:col-span-3 flex flex-wrap gap-2 lg:justify-end items-start">
                   {cap.tags.map((tag, ti) => (
                     <span
                       key={ti}
-                      className="text-xs font-mono text-slate-500 border border-slate-800 px-2.5 py-1 rounded-full group-hover:border-slate-700 group-hover:text-slate-400 transition-colors"
+                      className="text-sm font-mono text-white border border-slate-700 px-3 py-1.5 rounded-full transition-all duration-300 group-hover:border-emerald-500 group-hover:text-emerald-300"
                     >
                       {tag}
                     </span>
@@ -307,7 +309,7 @@ export default function AIAutomation() {
               />
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent" />
               <div className="absolute top-5 right-5 bg-[#030c18]/80 backdrop-blur-sm border border-slate-700/50 rounded-lg px-3 py-2">
-                <span className="font-mono text-xs text-slate-400">LLM Pipeline — Production Architecture</span>
+                <span className="font-mono text-xs text-slate-400">LLM Pipeline  Production Architecture</span>
               </div>
             </div>
           </RevealText>
@@ -328,7 +330,7 @@ export default function AIAutomation() {
             {[...techStack, ...techStack].map((tech, i) => (
               <span
                 key={i}
-                className="inline-flex items-center gap-2 text-sm font-mono text-slate-500 px-4 py-2 border border-slate-800/80 rounded-full bg-[#060f1e] flex-shrink-0"
+                className="inline-flex items-center gap-2 text-sm font-mono text-emerald-500 px-4 py-2 border border-slate-800/80 rounded-full bg-[#060f1e] flex-shrink-0"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/60" />
                 {tech}
@@ -413,7 +415,7 @@ export default function AIAutomation() {
                 </span>
               </h2>
               <p className="text-slate-400 text-base leading-relaxed mb-10 max-w-lg mx-auto">
-                Tell us about the work you want to automate. We'll give you a straight answer on whether AI is the right solution — and what it would take to build it.
+                Tell us about the work you want to automate. We'll give you a straight answer on whether AI is the right solution  and what it would take to build it.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

@@ -11,13 +11,13 @@ const capabilities = [
   {
     number: "01",
     title: "Frontend Engineering",
-    body: "Pixel-perfect interfaces built with React and Next.js. We obsess over performance — sub-second load times, smooth 60fps interactions, and Lighthouse scores that impress.",
+    body: "Pixel-perfect interfaces built with React and Next.js. We obsess over performance  sub-second load times, smooth 60fps interactions, and Lighthouse scores that impress.",
     tags: ["React", "Next.js", "TypeScript", "Tailwind"],
   },
   {
     number: "02",
     title: "Backend & API Layer",
-    body: "Robust server architecture that scales under pressure. RESTful and GraphQL APIs, microservices, real-time capabilities — built to handle whatever volume your growth demands.",
+    body: "Robust server architecture that scales under pressure. RESTful and GraphQL APIs, microservices, real-time capabilities  built to handle whatever volume your growth demands.",
     tags: ["Node.js", "GraphQL", "REST", "WebSockets"],
   },
   {
@@ -37,7 +37,7 @@ const capabilities = [
 const process = [
   { phase: "Discovery", duration: "Week 1–2", desc: "Deep-dive into your goals, users, and tech constraints. We map the full scope before a single line of code is written." },
   { phase: "Architecture", duration: "Week 2–3", desc: "System design, tech stack decisions, and database schema. We document every decision so you always understand your own product." },
-  { phase: "Build", duration: "Week 4–12", desc: "Iterative sprints with weekly demos. You see real, deployed progress — not slide decks. Feedback is continuous, not batched." },
+  { phase: "Build", duration: "Week 4–12", desc: "Iterative sprints with weekly demos. You see real, deployed progress  not slide decks. Feedback is continuous, not batched." },
   { phase: "Launch & Scale", duration: "Ongoing", desc: "Deployment, performance tuning, and monitoring setup. We stay on until you're confident, then remain available as your product evolves." },
 ];
 
@@ -86,14 +86,14 @@ export default function WebAppDevelopment() {
       {/* ── HERO ── */}
       <section ref={heroRef} className="relative min-h-screen flex flex-col justify-end overflow-hidden">
 
-        {/* Parallax image — full bleed */}
+        {/* Parallax image  full bleed */}
         <motion.div style={{ y: heroY }} className="absolute inset-0">
           <img
             src={heroImage}
             alt="Web development workspace"
             className="w-full h-full object-cover object-center"
           />
-          {/* Dark overlay — heavier at bottom, lighter at top so image reads */}
+          {/* Dark overlay  heavier at bottom, lighter at top so image reads */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#030c18] via-[#030c18]/70 to-[#030c18]/30" />
           {/* Subtle emerald atmosphere at bottom */}
           <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-emerald-950/30 to-transparent" />
@@ -111,7 +111,7 @@ export default function WebAppDevelopment() {
           <span className="text-slate-300">Web & App Development</span>
         </motion.div>
 
-        {/* Hero content — pinned to bottom */}
+        {/* Hero content  pinned to bottom */}
         <motion.div
           style={{ opacity: heroOpacity }}
           className="relative z-10 container mx-auto px-5 lg:px-12 pb-16 lg:pb-24"
@@ -122,7 +122,7 @@ export default function WebAppDevelopment() {
             transition={{ delay: 0.4 }}
             className="inline-flex items-center gap-2 mb-6"
           >
-            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">01 — DIGITAL PRESENCE</span>
+            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">01  DIGITAL PRESENCE</span>
           </motion.div>
 
           <motion.h1
@@ -146,7 +146,7 @@ export default function WebAppDevelopment() {
             transition={{ delay: 0.8 }}
             className="mt-6 text-slate-400 text-lg max-w-xl leading-relaxed"
           >
-            We engineer web experiences that don't just look exceptional — they perform, convert, and scale with your ambitions.
+            We engineer web experiences that don't just look exceptional  they perform, convert, and scale with your ambitions.
           </motion.p>
 
           <motion.div
@@ -254,7 +254,9 @@ export default function WebAppDevelopment() {
 
                 {/* Body */}
                 <div className="lg:col-span-5">
-                  <p className="text-slate-400 text-sm leading-relaxed">{cap.body}</p>
+                  <p className="text-white text-base lg:text-lg leading-relaxed">
+                    {cap.body}
+                  </p>
                 </div>
 
                 {/* Tags */}
@@ -262,7 +264,7 @@ export default function WebAppDevelopment() {
                   {cap.tags.map((tag, ti) => (
                     <span
                       key={ti}
-                      className="text-xs font-mono text-slate-500 border border-slate-800 px-2.5 py-1 rounded-full group-hover:border-slate-700 group-hover:text-slate-400 transition-colors"
+                      className="text-sm font-mono text-white border border-slate-700 px-3 py-1.5 rounded-full transition-all duration-300 group-hover:border-emerald-500 group-hover:text-emerald-300"
                     >
                       {tag}
                     </span>
@@ -288,7 +290,7 @@ export default function WebAppDevelopment() {
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent" />
               {/* Corner label */}
               <div className="absolute top-5 right-5 bg-[#030c18]/80 backdrop-blur-sm border border-slate-700/50 rounded-lg px-3 py-2">
-                <span className="font-mono text-xs text-slate-400">Enterprise Portal — Case Example</span>
+                <span className="font-mono text-xs text-slate-400">Enterprise Portal  Case Example</span>
               </div>
             </div>
           </RevealText>
@@ -309,7 +311,7 @@ export default function WebAppDevelopment() {
             {[...techStack, ...techStack].map((tech, i) => (
               <span
                 key={i}
-                className="inline-flex items-center gap-2 text-sm font-mono text-slate-500 px-4 py-2 border border-slate-800/80 rounded-full bg-[#060f1e] flex-shrink-0"
+                className="inline-flex items-center gap-2 text-sm font-mono text-emerald-500 px-4 py-2 border border-slate-800/80 rounded-full bg-[#060f1e] flex-shrink-0"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/60" />
                 {tech}
@@ -331,7 +333,7 @@ export default function WebAppDevelopment() {
 
           {/* Timeline-style layout */}
           <div className="relative">
-            {/* Vertical line — desktop only */}
+            {/* Vertical line  desktop only */}
             <div className="hidden lg:block absolute left-[140px] top-0 bottom-0 w-px bg-slate-800/60" />
 
             <div className="space-y-0">
@@ -350,7 +352,7 @@ export default function WebAppDevelopment() {
                     <span className="font-mono text-xs text-emerald-500/70 lg:text-right">{step.duration}</span>
                   </div>
 
-                  {/* Dot on timeline — desktop */}
+                  {/* Dot on timeline  desktop */}
                   <div className="hidden lg:flex absolute left-[134px] top-1/2 -translate-y-1/2 w-3 h-3 rounded-full border-2 border-slate-700 bg-[#030c18] group-hover:border-emerald-500 group-hover:bg-emerald-500/20 transition-all" />
 
                   {/* Content */}
@@ -389,7 +391,7 @@ export default function WebAppDevelopment() {
               },
               {
                 title: "Obsessive about performance",
-                body: "We benchmark every build. Core Web Vitals, bundle sizes, time-to-interactive — we treat perf as a feature, not an afterthought.",
+                body: "We benchmark every build. Core Web Vitals, bundle sizes, time-to-interactive  we treat perf as a feature, not an afterthought.",
               },
             ].map((item, i) => (
               <RevealText key={i} delay={i * 0.1} className="bg-[#060f1e] p-8 lg:p-10">
@@ -415,7 +417,7 @@ export default function WebAppDevelopment() {
                 </span>
               </h2>
               <p className="text-slate-400 text-base leading-relaxed mb-10 max-w-lg mx-auto">
-                Tell us about your project and we'll respond within 24 hours with a clear path forward — no sales fluff, no NDAs before a conversation.
+                Tell us about your project and we'll respond within 24 hours with a clear path forward  no sales fluff, no NDAs before a conversation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

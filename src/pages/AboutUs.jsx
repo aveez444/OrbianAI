@@ -24,27 +24,27 @@ const floatAnimation = {
 };
 
 const milestones = [
-  { year: "2019", label: "Founded", desc: "OrbianAI launched with a singular mission: democratize enterprise intelligence." },
-  { year: "2021", label: "First Deployment", desc: "Scaled our first autonomous decision engine for a Fortune 500 client." },
-  { year: "2022", label: "Series A", desc: "Raised $18M to expand our research division and infrastructure team." },
-  { year: "2024", label: "Global Reach", desc: "Operating across 10 countries with 100+ enterprise deployments." },
+  { year: "Vision", desc: "OrbianAI launched with a singular mission: democratize enterprise intelligence." },
+  { year: "Identifying the Gap", desc: "Organizations worldwide struggled with siloed data, inefficient workflows, and reactive decision-making. True intelligence was missing from business operations." },
+  { year: "Building the Engine", desc: "We engineered a scalable AI infrastructure that integrates automation, analytics, and predictive modeling into one unified decision ecosystem." },
+  { year: "Driving Industry Transformation", desc: "OrbianAI is pioneering the shift toward self-optimizing enterprises  empowering industries to operate with precision, agility, and continuous intelligence." },
 ];
 
 const values = [
   {
     num: "01",
     title: "Precision over hype",
-    body: "We build systems that work in production, not just demos. Every model we ship is stress-tested against real-world chaos.",
+    body: "We build systems that work in production. Every model we ship is stress-tested against real-world chaos.",
   },
   {
     num: "02",
     title: "Transparency by design",
-    body: "AI should be explainable. We engineer interpretability into every layer so your teams always understand what's happening.",
+    body: "AI should be explainable. We engineer interpretability into every layer so your team always understand what's happening.",
   },
   {
     num: "03",
     title: "Relentless research",
-    body: "We allocate 30% of our engineering bandwidth to fundamental research. The future doesn't wait — neither do we.",
+    body: "We allocate 30% of our engineering bandwidth to fundamental research. The future doesn't wait  neither do we.",
   },
 ];
 
@@ -103,7 +103,7 @@ export default function About() {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="mt-6 text-slate-400 text-base sm:text-lg leading-relaxed max-w-lg"
           >
-            OrbianAI was built by researchers and engineers who refused to accept the gap between AI research and real-world deployment. We close that gap — at enterprise scale.
+            OrbianAI was built by researchers and engineers who refused to accept the gap between AI research and real-world deployment. We close that gap  at enterprise scale.
           </motion.p>
         </div>
 
@@ -119,39 +119,10 @@ export default function About() {
             <img src={heroNetwork} alt="AI neural network" className="w-full h-auto object-cover aspect-[16/9] lg:aspect-[4/3]" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/60 via-transparent to-transparent" />
           </div>
-
-          {/* Floating badges - simplified for mobile */}
-          <div className="absolute -top-3 -left-3 lg:-top-5 lg:-left-5 px-3 py-2 lg:px-4 lg:py-3 rounded-xl lg:rounded-2xl bg-slate-900/90 backdrop-blur-sm border border-white/10">
-            <span className="text-xs lg:text-sm text-emerald-400 font-medium">Active 24/7</span>
-          </div>
-
-          <div className="absolute -bottom-3 -right-3 lg:-bottom-5 lg:-right-5 px-3 py-2 lg:px-5 lg:py-4 rounded-xl lg:rounded-2xl bg-slate-900/90 backdrop-blur-sm border border-white/10">
-            <div className="text-lg lg:text-2xl font-bold text-white">2019</div>
-            <div className="text-[10px] lg:text-xs text-slate-400">FOUNDED</div>
-          </div>
+        
         </motion.div>
 
-        {/* ---- STATS (Mobile: below image, Desktop: part of left column) ---- */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-          className="w-full order-3 lg:order-1 lg:col-start-1 lg:row-start-2 lg:mt-6"
-        >
-          <div className="grid grid-cols-3 gap-3 sm:gap-6 lg:gap-10">
-            {[
-              { val: "100+", label: "Enterprise clients" },
-              { val: "10", label: "Countries" },
-              { val: "99.97%", label: "Uptime SLA" },
-            ].map((s, i) => (
-              <div key={i} className="text-center lg:text-left">
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white tabular-nums">{s.val}</div>
-                <div className="text-[10px] sm:text-xs text-slate-500 mt-0.5 font-mono uppercase tracking-wider">{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
+     
       </div>
     </div>
   </motion.div>
@@ -170,7 +141,7 @@ export default function About() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
                 actually works
               </span>{" "}
-              — reliably, at scale, every time.
+               reliably, at scale, every time.
             </h2>
             <p className="mt-6 text-slate-400 text-lg leading-relaxed">
               Most AI products are impressive in sandboxes. We build for production. For the messy, high-stakes environments where your business actually runs. Our infrastructure handles the complexity so your teams can focus on the outcomes.
@@ -308,7 +279,7 @@ export default function About() {
               <h2 className="text-5xl lg:text-6xl font-bold text-white leading-none">Core<br />Capabilities</h2>
             </div>
             <p className="text-slate-500 text-sm max-w-xs leading-relaxed sm:text-right">
-              Six domains. One unified platform. Every capability engineered to work together — not in silos.
+              Six domains. One unified platform. Every capability engineered to work together  not in silos.
             </p>
           </motion.div>
 
@@ -319,7 +290,7 @@ export default function About() {
                 num: "01",
                 title: "Enterprise AI Architecture",
                 tags: ["LLM Integration", "Model Routing", "Fine-tuning"],
-                desc: "We design end-to-end AI systems — from model selection and training pipelines to serving infrastructure — tailored to your data, compliance requirements, and scale targets.",
+                desc: "We design end-to-end AI systems  from model selection and training pipelines to serving infrastructure  tailored to your data, compliance requirements, and scale targets.",
               },
               {
                 num: "02",
@@ -331,7 +302,7 @@ export default function About() {
                 num: "03",
                 title: "Autonomous Decision Systems",
                 tags: ["Agents", "Workflow Automation", "Policy Engines"],
-                desc: "Move beyond dashboards. Our autonomous systems act on insight — routing, approving, escalating — so your teams focus on exceptions, not operations.",
+                desc: "Move beyond dashboards. Our autonomous systems act on insight  routing, approving, escalating  so your teams focus on exceptions, not operations.",
               },
               {
                 num: "04",
@@ -349,7 +320,7 @@ export default function About() {
                 num: "06",
                 title: "Edge & Cloud Deployment",
                 tags: ["Multi-cloud", "Edge Inference", "Kubernetes"],
-                desc: "Deploy where your users are. From cloud-native clusters to edge devices with constrained compute — our inference stack runs lean and fast, anywhere.",
+                desc: "Deploy where your users are. From cloud-native clusters to edge devices with constrained compute  our inference stack runs lean and fast, anywhere.",
               },
             ].map((item, i) => (
               <motion.div
@@ -457,7 +428,7 @@ export default function About() {
                 </span>
               </h2>
               <p className="text-slate-400 text-lg mb-10 leading-relaxed">
-                From training to inference, our stack is purpose-built for reliability, speed, and scale. We don't bolt AI onto existing infrastructure — we architect it from first principles.
+                From training to inference, our stack is purpose-built for reliability, speed, and scale. We don't bolt AI onto existing infrastructure  we architect it from first principles.
               </p>
 
               <div className="space-y-5">
@@ -522,7 +493,7 @@ export default function About() {
                 <span className="text-emerald-400 font-mono text-xs uppercase tracking-widest mb-2 block">Deep Research</span>
                 <h3 className="text-2xl font-bold text-white mb-2">30% of bandwidth dedicated to R&D</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  Our research arm operates like an independent lab — publishing, questioning, and pushing AI boundaries without the pressure of shipping features.
+                  Our research arm operates like an independent lab  publishing, questioning, and pushing AI boundaries without the pressure of shipping features.
                 </p>
               </div>
             </motion.div>
@@ -603,14 +574,14 @@ export default function About() {
               transition={{ duration: 0.9 }}
             >
               <span className="text-emerald-400 font-mono text-sm block mb-4 tracking-widest uppercase">What's Next</span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight lg:leading-[1.30]">
                 Where tomorrow's
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
                   intelligence is born.
                 </span>
               </h2>
               <p className="text-slate-400 text-lg mb-10 leading-relaxed">
-                Our innovation lab runs parallel to our product engineering. We explore what's coming — so when the world is ready, we already are.
+                Our innovation lab runs parallel to our product engineering. We explore what's coming  so when the world is ready, we already are.
               </p>
 
               <div className="space-y-5">

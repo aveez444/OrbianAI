@@ -11,7 +11,7 @@ const capabilities = [
   {
     number: "01",
     title: "Modern Data Warehouse Architecture",
-    body: "Design and implementation of cloud-native data warehouses that scale with your data. We help you choose the right architecture—whether it's Kimball, Inmon, or Data Vault—and build it to last.",
+    body: "Design and implementation of cloud-native data warehouses that scale with your data. We help you choose the right architecturewhether it's Kimball, Inmon, or Data Vaultand build it to last.",
     tags: ["Snowflake", "BigQuery", "Redshift", "Databricks", "Synapse"],
   },
   {
@@ -48,7 +48,7 @@ const process = [
   {
     phase: "Warehouse Build",
     duration: "Week 4–16+",
-    desc: "Iterative construction of schemas, pipelines, and transformations. We deliver working increments—you see data flowing and transformations working long before final delivery.",
+    desc: "Iterative construction of schemas, pipelines, and transformations. We deliver working incrementsyou see data flowing and transformations working long before final delivery.",
   },
   {
     phase: "Optimization & Handoff",
@@ -74,7 +74,7 @@ const stats = [
 const differentiators = [
   {
     title: "Documentation is code",
-    body: "Every data model, transformation, and pipeline is documented in the repo—not a wiki. Data lineage, definitions, and business logic live alongside the code that implements them.",
+    body: "Every data model, transformation, and pipeline is documented in the reponot a wiki. Data lineage, definitions, and business logic live alongside the code that implements them.",
   },
   {
     title: "Cost-aware by design",
@@ -82,7 +82,7 @@ const differentiators = [
   },
   {
     title: "SLA-guaranteed pipelines",
-    body: "Failed pipelines are inevitable—data loss isn't. We build idempotent pipelines with dead-letter queues, alerting, and automatic retries. When something breaks, you know immediately.",
+    body: "Failed pipelines are inevitabledata loss isn't. We build idempotent pipelines with dead-letter queues, alerting, and automatic retries. When something breaks, you know immediately.",
   },
 ];
 
@@ -152,7 +152,7 @@ export default function DataWarehouse() {
             transition={{ delay: 0.4 }}
             className="inline-flex items-center gap-2 mb-6"
           >
-            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">04 — DATA INFRASTRUCTURE</span>
+            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">04  DATA INFRASTRUCTURE</span>
           </motion.div>
 
           <motion.h1
@@ -233,7 +233,7 @@ export default function DataWarehouse() {
         <div className="container mx-auto px-5 lg:px-12">
           <RevealText className="max-w-4xl">
             <p className="text-2xl sm:text-3xl lg:text-4xl font-light text-slate-300 leading-[1.4]">
-              "A data warehouse isn't just storage—it's the{" "}
+              "A data warehouse isn't just storageit's the{" "}
               <span className="text-white font-semibold">central nervous system</span>{" "}
               of your data operations. When it's built right, every dashboard, report, and model draws from the same{" "}
               <span className="text-emerald-400">single source of truth</span>."
@@ -277,13 +277,15 @@ export default function DataWarehouse() {
                   </h3>
                 </div>
                 <div className="lg:col-span-5">
-                  <p className="text-slate-400 text-sm leading-relaxed">{cap.body}</p>
+                  <p className="text-white text-base lg:text-lg leading-relaxed">
+                    {cap.body}
+                  </p>
                 </div>
                 <div className="lg:col-span-3 flex flex-wrap gap-2 lg:justify-end items-start">
                   {cap.tags.map((tag, ti) => (
                     <span
                       key={ti}
-                      className="text-xs font-mono text-slate-500 border border-slate-800 px-2.5 py-1 rounded-full group-hover:border-slate-700 group-hover:text-slate-400 transition-colors"
+                      className="text-sm font-mono text-white border border-slate-700 px-3 py-1.5 rounded-full transition-all duration-300 group-hover:border-emerald-500 group-hover:text-emerald-300"
                     >
                       {tag}
                     </span>
@@ -307,7 +309,7 @@ export default function DataWarehouse() {
               />
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent" />
               <div className="absolute top-5 right-5 bg-[#030c18]/80 backdrop-blur-sm border border-slate-700/50 rounded-lg px-3 py-2">
-                <span className="font-mono text-xs text-slate-400">Modern Data Stack — Reference Architecture</span>
+                <span className="font-mono text-xs text-slate-400">Modern Data Stack  Reference Architecture</span>
               </div>
             </div>
           </RevealText>
@@ -328,7 +330,7 @@ export default function DataWarehouse() {
             {[...techStack, ...techStack].map((tech, i) => (
               <span
                 key={i}
-                className="inline-flex items-center gap-2 text-sm font-mono text-slate-500 px-4 py-2 border border-slate-800/80 rounded-full bg-[#060f1e] flex-shrink-0"
+                className="inline-flex items-center gap-2 text-sm font-mono text-emerald-500 px-4 py-2 border border-slate-800/80 rounded-full bg-[#060f1e] flex-shrink-0"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/60" />
                 {tech}

@@ -180,7 +180,7 @@ export default function Home() {
           <p>
             Every line of code we write is driven by a singular belief: that technology should 
             amplify human potential, not replace it. Our team of engineers, researchers, and 
-            visionaries came together with a shared mission—to build AI that doesn't just process 
+            visionaries came together with a shared missionto build AI that doesn't just process 
             data, but truly understands it.
           </p>
           
@@ -194,7 +194,7 @@ export default function Home() {
           <p>
             From our early days experimenting with neural networks to now architecting 
             enterprise-scale AI systems, we've always believed that technology should serve people, 
-            not the other way around. Every solution we build is a testament to this philosophy—elegant, 
+            not the other way around. Every solution we build is a testament to this philosophyelegant, 
             intuitive, and built to evolve with your business.
           </p>
         </motion.div>
@@ -290,7 +290,7 @@ export default function Home() {
           title: "AI Engineering", 
           desc: "Custom ML pipelines and automation frameworks for enterprise-scale deployment. We build production-ready AI systems that deliver consistent, reliable results.",
           stats: "15+ Projects Delivered",
-          color: "emerald"
+          color: "blue"
         },
         { 
           title: "Cloud Infrastructure", 
@@ -302,7 +302,7 @@ export default function Home() {
           title: "Data Intelligence", 
           desc: "Advanced analytics and forecasting models for real-time decision making. Transform raw data into actionable insights with our AI-powered analytics.",
           stats: "10B+ Data Points Processed",
-          color: "purple"
+          color: "blue"
         }
       ].map((service, idx) => (
         <motion.div
@@ -385,10 +385,16 @@ export default function Home() {
       transition={{ delay: 0.5 }}
     >
       <div className="inline-flex items-center gap-4 p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-        <span className="text-slate-300">Ready to transform your infrastructure?</span>
-        <button className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-blue-500 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 transform hover:scale-105">
+        <span className="text-slate-300">
+          Ready to transform your infrastructure?
+        </span>
+
+        <Link
+          to="/contact"
+          className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-blue-500 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 transform hover:scale-105 inline-block"
+        >
           Schedule a Consultation
-        </button>
+        </Link>
       </div>
     </motion.div>
   </div>
@@ -417,7 +423,7 @@ export default function Home() {
         <span className="block text-emerald-400 mt-1">Choose Our Infrastructure</span>
       </h2>
       <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
-        We don't just build AI systems — we engineer the foundation for the next decade of innovation.
+        We don't just build AI systems  we engineer the foundation for the next decade of innovation.
       </p>
     </motion.div>
 

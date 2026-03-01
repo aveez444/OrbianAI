@@ -1,4 +1,4 @@
-// Services.jsx — Redesigned
+// Services.jsx  Redesigned
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 
@@ -112,7 +112,7 @@ const MarqueeStrip = () => {
   );
 };
 
-// ─── Digital Presence — Tall split layout ────────────────────────────────────
+// ─── Digital Presence  Tall split layout ────────────────────────────────────
 const DigitalPresenceSection = ({ services, filter }) => {
   if (filter !== "all" && filter !== "Digital Presence") return null;
   const ds = services.filter((s) => s.category === "Digital Presence");
@@ -129,7 +129,7 @@ const DigitalPresenceSection = ({ services, filter }) => {
         >
           <div>
             <p className="text-emerald-400 font-mono text-xs tracking-[0.25em] mb-3">
-              01 — DIGITAL PRESENCE
+              01  DIGITAL PRESENCE
             </p>
             <h2 className="text-4xl sm:text-5xl font-bold text-white leading-[1.05]">
               Build your<br />
@@ -139,7 +139,7 @@ const DigitalPresenceSection = ({ services, filter }) => {
             </h2>
           </div>
           <p className="text-slate-500 text-sm max-w-xs leading-relaxed">
-            From first impression to enterprise portal — we craft experiences that perform.
+            From first impression to enterprise portal  we craft experiences that perform.
           </p>
         </motion.div>
 
@@ -162,7 +162,7 @@ const DigitalPresenceSection = ({ services, filter }) => {
                 alt={service.title}
                 className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
               />
-              {/* Dark overlay gradient — heavier at bottom */}
+              {/* Dark overlay gradient  heavier at bottom */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#030c18] via-[#030c18]/60 to-transparent" />
               {/* Subtle accent tint on hover */}
               <div
@@ -214,7 +214,7 @@ const DigitalPresenceSection = ({ services, filter }) => {
   );
 };
 
-// ─── Data & Intelligence — Staggered editorial layout ────────────────────────
+// ─── Data & Intelligence  Staggered editorial layout ────────────────────────
 const DataIntelligenceSection = ({ services, filter }) => {
   if (filter !== "all" && filter !== "Data & Intelligence") return null;
   const ds = services.filter((s) => s.category === "Data & Intelligence");
@@ -239,7 +239,7 @@ const DataIntelligenceSection = ({ services, filter }) => {
           className="mb-14"
         >
           <p className="text-emerald-400 font-mono text-xs tracking-[0.25em] mb-3">
-            02 — DATA & INTELLIGENCE
+            02  DATA & INTELLIGENCE
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-white leading-[1.05]">
             Transform data into<br />
@@ -263,7 +263,7 @@ const DataIntelligenceSection = ({ services, filter }) => {
                 transition={{ delay: i * 0.1 }}
                 className={`group flex flex-col ${flip ? "md:flex-row-reverse" : "md:flex-row"} rounded-2xl overflow-hidden border border-slate-800/60 bg-[#060f1e] hover:border-slate-700 transition-colors cursor-pointer`}
               >
-                {/* Image — fixed aspect, fills side */}
+                {/* Image  fixed aspect, fills side */}
                 <div className="relative md:w-[45%] flex-shrink-0 overflow-hidden" style={{ minHeight: "280px" }}>
                   <img
                     src={service.image}
@@ -318,7 +318,7 @@ const DataIntelligenceSection = ({ services, filter }) => {
   );
 };
 
-// ─── Infrastructure — Overlapping feature + side stack ───────────────────────
+// ─── Infrastructure  Overlapping feature + side stack ───────────────────────
 const InfrastructureSection = ({ services, filter }) => {
   if (filter !== "all" && filter !== "Infrastructure & Consulting") return null;
   const ds = services.filter((s) => s.category === "Infrastructure & Consulting");
@@ -334,7 +334,7 @@ const InfrastructureSection = ({ services, filter }) => {
           className="mb-14"
         >
           <p className="text-emerald-400 font-mono text-xs tracking-[0.25em] mb-3">
-            03 — INFRASTRUCTURE & CONSULTING
+            03  INFRASTRUCTURE & CONSULTING
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-white leading-[1.05]">
             Scale with confidence,<br />
@@ -356,7 +356,7 @@ const InfrastructureSection = ({ services, filter }) => {
               transition={{ delay: i * 0.15 }}
               className="group block rounded-2xl overflow-hidden border border-slate-800/60 bg-[#060f1e] hover:border-slate-700 transition-colors cursor-pointer"
             >
-              {/* Image top half — tall enough to show content */}
+              {/* Image top half  tall enough to show content */}
               <div className="relative overflow-hidden" style={{ height: "260px" }}>
                 <img
                   src={service.image}
@@ -429,7 +429,7 @@ const InfrastructureSection = ({ services, filter }) => {
 // ─── Why OrbianAI ─────────────────────────────────────────────────────────────
 const WhyOrbianAISection = () => {
   const reasons = [
-    { number: "01", title: "Engineering excellence", description: "Not just consultants — we're builders. Our team averages 10+ years in production engineering.", stat: "150+", statLabel: "Engineers" },
+    { number: "01", title: "Engineering excellence", description: "Not just consultants  we're builders. Our team averages 10+ years in production engineering.", stat: "150+", statLabel: "Engineers" },
     { number: "02", title: "True partnership", description: "We embed with your team until you're self-sufficient. No handoffs, no disappearances.", stat: "98%", statLabel: "Retention" },
     { number: "03", title: "Future-proof architecture", description: "We build for tomorrow. Your solution scales, adapts, and evolves with your business.", stat: "99.99%", statLabel: "Uptime SLA" },
     { number: "04", title: "Research-driven", description: "30% of our bandwidth goes to R&D. You get cutting-edge without the bleeding edge.", stat: "24/7", statLabel: "Support" },
@@ -560,7 +560,7 @@ export default function Services() {
               transition={{ delay: 0.7 }}
               className="mt-8 text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed"
             >
-              From web presence to AI automation — enterprise-grade solutions that don't just work, they outperform.
+              From web presence to AI automation  enterprise-grade solutions that don't just work, they outperform.
             </motion.p>
 
             <motion.div
