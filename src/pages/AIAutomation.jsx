@@ -29,7 +29,7 @@ const capabilities = [
   {
     number: "04",
     title: "Custom Model Deployment",
-    body: "Your data never leaves your control. We deploy models on your infrastructure  cloud or on-prem  with MLOps pipelines for monitoring, retraining, and versioning. AI you can trust and maintain.",
+    body: "Your data never leaves your control. We deploy models on your services  cloud or on-prem  with MLOps pipelines for monitoring, retraining, and versioning. AI you can trust and maintain.",
     tags: ["MLOps", "Docker", "Kubernetes", "Hugging Face", "ONNX"],
   },
 ];

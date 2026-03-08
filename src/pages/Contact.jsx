@@ -42,10 +42,10 @@ export default function Contact() {
   return (
     <main className="bg-[#020617] text-slate-200 selection:bg-emerald-500/30 overflow-x-hidden">
 
-     {/* ========== SECTION 1: INTRO BANNER (ABOVE HERO) ========== */}
-     <section className="relative pt-40 pb-16 overflow-hidden">
+      {/* ========== SECTION 1: INTRO BANNER (ABOVE HERO) ========== */}
+      <section className="relative pt-40 pb-16 overflow-hidden">
         {/* Pattern overlay - more subtle but larger scale */}
-        <div 
+        <div
           className="absolute inset-0 opacity-[0.03] pointer-events-none"
           style={{
             backgroundImage: `url(${patternImage})`,
@@ -53,10 +53,10 @@ export default function Contact() {
             backgroundRepeat: 'repeat',
           }}
         />
-        
+
         {/* Ambient glow for depth */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-emerald-500/5 blur-[180px] rounded-full pointer-events-none" />
-        
+
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -77,8 +77,8 @@ export default function Contact() {
                 <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
               </span>
             </motion.div>
-            
-            <motion.h2 
+
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
@@ -89,14 +89,14 @@ export default function Contact() {
                 that matters.
               </span>
             </motion.h2>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-xl sm:text-2xl text-slate-400 max-w-2xl font-light leading-relaxed"
             >
-              Every conversation starts here. Tell us about your work, 
+              Every conversation starts here. Tell us about your work,
               your questions, or what you're trying to solve.
             </motion.p>
 
@@ -107,7 +107,7 @@ export default function Contact() {
               transition={{ delay: 0.8, duration: 0.6 }}
               className="mt-12"
             >
-             
+
             </motion.div>
           </motion.div>
         </div>
@@ -276,9 +276,9 @@ export default function Contact() {
                 {/* contact details */}
                 <div className="space-y-5">
                   {[
-                    { icon: "✉️", label: "Email", value: "hello@orbian.ai", link: "mailto:hello@orbian.ai" },
-                    { icon: "📞", label: "Phone", value: "+1 (415) 555 0198", link: "tel:+14155550198" },
-                    { icon: "📍", label: "HQ", value: "San Francisco, CA", link: null },
+                    { icon: "✉️", label: "Email", value: "info@orbianai.com", link: "mailto:info@orbianai.com" },
+                    { icon: "📞", label: "Phone", value: "+91 99607 78674", link: "tel:+919960778674" },
+                    { icon: "📍", label: "HQ", value: "India", link: null },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-4 p-4 rounded-2xl bg-slate-900/30 border border-white/5 backdrop-blur-sm">
                       <span className="text-2xl">{item.icon}</span>
@@ -298,110 +298,6 @@ export default function Contact() {
               </div>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-       {/* ========== LOCATIONS / OFFICES ========== */}
-       <section className="relative py-32">
-        {/* Background depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-transparent pointer-events-none" />
-        
-        <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="text-center mb-16"
-          >
-            <span className="text-emerald-400 font-mono text-sm tracking-widest block mb-4">
-              OUR LOCATIONS
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">
-              We're global, just like our clients.
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {[
-              { 
-                city: "San Francisco", 
-                address: "548 Market St", 
-                detail: "Suite 101",
-                time: "8:30 AM  6:00 PM PT",
-                region: "west coast"
-              },
-              { 
-                city: "New York", 
-                address: "20 W 34th St", 
-                detail: "12th Floor",
-                time: "9:00 AM  7:00 PM ET",
-                region: "east coast"
-              },
-              { 
-                city: "London", 
-                address: "25 Cabot Square", 
-                detail: "Canary Wharf",
-                time: "9:00 AM  5:30 PM GMT",
-                region: "europe"
-              },
-              { 
-                city: "Singapore", 
-                address: "80 Robinson Rd", 
-                detail: "#16-00",
-                time: "9:00 AM  6:00 PM SGT",
-                region: "asia pacific"
-              },
-            ].map((loc, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.6 }}
-                className="group relative"
-              >
-                {/* Card background with hover effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                <div className="relative p-6 rounded-2xl border border-white/5 hover:border-emerald-500/20 transition-colors duration-300">
-                  {/* City with accent line */}
-                  <div className="flex items-center gap-3 mb-4">
-                    <h3 className="text-xl font-bold text-white">{loc.city}</h3>
-                    <div className="h-px flex-1 bg-gradient-to-r from-emerald-500/40 to-transparent" />
-                  </div>
-                  
-                  {/* Address */}
-                  <div className="space-y-1 mb-4">
-                    <p className="text-slate-300 text-sm">{loc.address}</p>
-                    <p className="text-slate-500 text-sm">{loc.detail}</p>
-                  </div>
-                  
-                  {/* Region tag */}
-                  <span className="inline-block px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 text-xs font-mono text-slate-400 mb-4">
-                    {loc.region}
-                  </span>
-                  
-                  {/* Hours */}
-                  <div className="flex items-center gap-2 text-xs text-slate-600 border-t border-white/5 pt-4">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/40" />
-                    {loc.time}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Bottom note */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-center text-slate-600 text-sm mt-12 font-mono"
-          >
-            * All offices are operational  reach out to the one closest to you.
-          </motion.p>
         </div>
       </section>
 
@@ -428,7 +324,7 @@ export default function Contact() {
             </a>
           </motion.div>
         </div>
-      </section>
-    </main>
+      </section >
+    </main >
   );
 }

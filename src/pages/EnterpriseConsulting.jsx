@@ -233,7 +233,7 @@ export default function EnterpriseConsulting() {
         <div className="container mx-auto px-5 lg:px-12">
           <RevealText className="max-w-4xl">
             <p className="text-2xl sm:text-3xl lg:text-4xl font-light text-slate-300 leading-[1.4]">
-              "Enterprise software is just infrastructure.{" "}
+              "Enterprise software is just services.{" "}
               <span className="text-white font-semibold">Strategy is what makes it valuable</span>{" "}
                the difference between paying for licenses and{" "}
               <span className="text-emerald-400">unlocking competitive advantage</span>."

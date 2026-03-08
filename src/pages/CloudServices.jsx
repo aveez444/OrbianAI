@@ -11,7 +11,7 @@ const capabilities = [
   {
     number: "01",
     title: "Multi-Cloud Architecture",
-    body: "We design cloud-native infrastructure that's truly vendor-agnostic. Avoid lock-in, leverage each provider's strengths, and maintain portability across AWS, Azure, and GCP with consistent governance.",
+    body: "We design cloud-native services that's truly vendor-agnostic. Avoid lock-in, leverage each provider's strengths, and maintain portability across AWS, Azure, and GCP with consistent governance.",
     tags: ["AWS", "Azure", "GCP", "Hybrid", "Multi-region"],
   },
   {
@@ -38,17 +38,17 @@ const process = [
   {
     phase: "Discovery & Assessment",
     duration: "Week 1–2",
-    desc: "We audit your existing infrastructure, analyze cost patterns, security posture, and performance bottlenecks. You get a heatmap of risks and opportunities before we recommend anything.",
+    desc: "We audit your existing services, analyze cost patterns, security posture, and performance bottlenecks. You get a heatmap of risks and opportunities before we recommend anything.",
   },
   {
     phase: "Architecture Design",
     duration: "Week 3–4",
-    desc: "Infrastructure as code templates, network topology, security controls, and disaster recovery strategy. Every resource is documented and version-controlled from day zero.",
+    desc: "services as code templates, network topology, security controls, and disaster recovery strategy. Every resource is documented and version-controlled from day zero.",
   },
   {
     phase: "Migration & Implementation",
     duration: "Week 5–16+",
-    desc: "Phased migration with zero-downtime cutovers. We run parallel until you're confident, then decommission legacy with surgical precision. You see working infrastructure at every step.",
+    desc: "Phased migration with zero-downtime cutovers. We run parallel until you're confident, then decommission legacy with surgical precision. You see working services at every step.",
   },
   {
     phase: "Operational Handoff",
@@ -73,7 +73,7 @@ const stats = [
 
 const differentiators = [
   {
-    title: "Infrastructure as code, always",
+    title: "services as code, always",
     body: "No click-ops, no undocumented manual changes. Every resource is defined in code, reviewed, and versioned. Your cloud becomes reproducible, auditable, and disaster-recoverable.",
   },
   {
@@ -122,7 +122,7 @@ export default function CloudServices() {
         <motion.div style={{ y: heroY }} className="absolute inset-0">
           <img
             src={heroImage}
-            alt="Cloud infrastructure visualization"
+            alt="Cloud services visualization"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#030c18] via-[#030c18]/70 to-[#030c18]/30" />
@@ -152,7 +152,7 @@ export default function CloudServices() {
             transition={{ delay: 0.4 }}
             className="inline-flex items-center gap-2 mb-6"
           >
-            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">06  CLOUD INFRASTRUCTURE</span>
+            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">06  CLOUD services</span>
           </motion.div>
 
           <motion.h1
@@ -164,7 +164,7 @@ export default function CloudServices() {
             <span className="text-white">Cloud</span>
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-300 to-green-400">
-              Infrastructure
+              services
             </span>
             <br />
             <span className="text-white/90">& Consulting</span>
@@ -176,7 +176,7 @@ export default function CloudServices() {
             transition={{ delay: 0.8 }}
             className="mt-6 text-slate-400 text-lg max-w-xl leading-relaxed"
           >
-            Multi-cloud architecture, migration, and optimization. Secure, cost-effective infrastructure across AWS, Azure, or GCP  designed to scale without surprises.
+            Multi-cloud architecture, migration, and optimization. Secure, cost-effective services across AWS, Azure, or GCP  designed to scale without surprises.
           </motion.p>
 
           <motion.div
@@ -411,7 +411,7 @@ export default function CloudServices() {
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.0] mb-6">
                 Ready to transform
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-400 mt-1">
-                  your cloud infrastructure?
+                  your cloud services?
                 </span>
               </h2>
               <p className="text-slate-400 text-base leading-relaxed mb-10 max-w-lg mx-auto">

@@ -6,7 +6,7 @@ import heroNetwork from "../assets/abouthero1.png";
 import aiArchitecture from "../assets/about-ai-architecture.jpg";
 import dataFlow from "../assets/about-data-flow.jpg";
 import aiBrain from "../assets/about-ai-brain.jpg";
-import innovation from "../assets/about-innovation.png";
+import founderImage from "../assets/founder (1).png";
 import teamAbstract from "../assets/about-team-abstract.png";
 
 const fadeInUp = {
@@ -26,7 +26,7 @@ const floatAnimation = {
 const milestones = [
   { year: "Vision", desc: "OrbianAI launched with a singular mission: democratize enterprise intelligence." },
   { year: "Identifying the Gap", desc: "Organizations worldwide struggled with siloed data, inefficient workflows, and reactive decision-making. True intelligence was missing from business operations." },
-  { year: "Building the Engine", desc: "We engineered a scalable AI infrastructure that integrates automation, analytics, and predictive modeling into one unified decision ecosystem." },
+  { year: "Building the Engine", desc: "We engineered a scalable AI services that integrates automation, analytics, and predictive modeling into one unified decision ecosystem." },
   { year: "Driving Industry Transformation", desc: "OrbianAI is pioneering the shift toward self-optimizing enterprises  empowering industries to operate with precision, agility, and continuous intelligence." },
 ];
 
@@ -57,76 +57,76 @@ export default function About() {
   return (
     <main className="bg-[#020617] text-slate-200 selection:bg-emerald-500/30 overflow-x-hidden">
 
-{/* ============= HERO: ABOUT SECTION ============= */}
-<section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden pt-20 pb-12 lg:pt-0 lg:pb-0">
+      {/* ============= HERO: ABOUT SECTION ============= */}
+      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden pt-20 pb-12 lg:pt-0 lg:pb-0">
 
-  {/* Ambient glows - reduced for mobile */}
-  <div className="absolute top-0 left-0 w-[300px] lg:w-[500px] h-[300px] lg:h-[500px] bg-emerald-500/5 blur-[120px] lg:blur-[180px] rounded-full pointer-events-none" />
-  <div className="absolute bottom-0 right-0 w-[300px] lg:w-[400px] h-[300px] lg:h-[400px] bg-cyan-500/5 blur-[120px] lg:blur-[160px] rounded-full pointer-events-none" />
+        {/* Ambient glows - reduced for mobile */}
+        <div className="absolute top-0 left-0 w-[300px] lg:w-[500px] h-[300px] lg:h-[500px] bg-emerald-500/5 blur-[120px] lg:blur-[180px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-[300px] lg:w-[400px] h-[300px] lg:h-[400px] bg-cyan-500/5 blur-[120px] lg:blur-[160px] rounded-full pointer-events-none" />
 
-  <motion.div style={{ y: heroY, opacity: heroOpacity }} className="w-full">
-    <div className="container mx-auto px-4 sm:px-6 lg:px-12">
-      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-20 items-center min-h-screen py-16 lg:py-32">
+        <motion.div style={{ y: heroY, opacity: heroOpacity }} className="w-full">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-12">
+            <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-20 items-center min-h-screen py-16 lg:py-32">
 
-        {/* ---- LEFT: TEXT (Always on top) ---- */}
-        <div className="relative z-10 w-full order-1">
-          <motion.span
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono mb-5"
-          >
-            <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-            ABOUT ORBIANAI
-          </motion.span>
+              {/* ---- LEFT: TEXT (Always on top) ---- */}
+              <div className="relative z-10 w-full order-1">
+                <motion.span
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2, duration: 0.5 }}
+                  className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono mb-5"
+                >
+                  <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+                  ABOUT ORBIANAI
+                </motion.span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.7 }}
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight lg:leading-[1.05] tracking-tight text-white"
-          >
-            We don't predict
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">
-              the future.
-            </span>
-            <br />
-            <span className="text-slate-400 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-light block mt-1 lg:inline lg:mt-0">
-              We engineer it.
-            </span>
-          </motion.h1>
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3, duration: 0.7 }}
+                  className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight lg:leading-[1.05] tracking-tight text-white"
+                >
+                  We don't predict
+                  <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">
+                    the future.
+                  </span>
+                  <br />
+                  <span className="text-slate-400 text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-light block mt-1 lg:inline lg:mt-0">
+                    We engineer it.
+                  </span>
+                </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="mt-6 text-slate-400 text-base sm:text-lg leading-relaxed max-w-lg"
-          >
-            OrbianAI was built by researchers and engineers who refused to accept the gap between AI research and real-world deployment. We close that gap  at enterprise scale.
-          </motion.p>
-        </div>
+                <motion.p
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.6 }}
+                  className="mt-6 text-slate-400 text-base sm:text-lg leading-relaxed max-w-lg"
+                >
+                  OrbianAI was built by researchers and engineers who refused to accept the gap between AI research and real-world deployment. We close that gap  at enterprise scale.
+                </motion.p>
+              </div>
 
-        {/* ---- RIGHT: IMAGE COMPOSITION (Mobile: between text and stats) ---- */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.7 }}
-          className="relative w-full order-2"
-        >
-          {/* Main image */}
-          <div className="relative rounded-2xl lg:rounded-3xl overflow-hidden border border-white/8">
-            <img src={heroNetwork} alt="AI neural network" className="w-full h-auto object-cover aspect-[16/9] lg:aspect-[4/3]" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/60 via-transparent to-transparent" />
+              {/* ---- RIGHT: IMAGE COMPOSITION (Mobile: between text and stats) ---- */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.7 }}
+                className="relative w-full order-2"
+              >
+                {/* Main image */}
+                <div className="relative rounded-2xl lg:rounded-3xl overflow-hidden border border-white/8">
+                  <img src={heroNetwork} alt="AI neural network" className="w-full h-auto object-cover aspect-[16/9] lg:aspect-[4/3]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/60 via-transparent to-transparent" />
+                </div>
+
+              </motion.div>
+
+
+            </div>
           </div>
-        
         </motion.div>
-
-     
-      </div>
-    </div>
-  </motion.div>
-</section>
+      </section>
 
       {/* ============= MISSION STATEMENT ============= */}
       <section className="py-24 relative">
@@ -141,10 +141,10 @@ export default function About() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
                 actually works
               </span>{" "}
-               reliably, at scale, every time.
+              reliably, at scale, every time.
             </h2>
             <p className="mt-6 text-slate-400 text-lg leading-relaxed">
-              Most AI products are impressive in sandboxes. We build for production. For the messy, high-stakes environments where your business actually runs. Our infrastructure handles the complexity so your teams can focus on the outcomes.
+              Most AI products are impressive in sandboxes. We build for production. For the messy, high-stakes environments where your business actually runs. Our services handles the complexity so your teams can focus on the outcomes.
             </p>
           </motion.div>
         </div>
@@ -242,9 +242,8 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15, duration: 0.8 }}
-                className={`p-8 lg:p-10 relative group hover:bg-white/[0.03] transition-colors duration-300 ${
-                  i < values.length - 1 ? "border-b lg:border-b-0 lg:border-r border-white/8" : ""
-                }`}
+                className={`p-8 lg:p-10 relative group hover:bg-white/[0.03] transition-colors duration-300 ${i < values.length - 1 ? "border-b lg:border-b-0 lg:border-r border-white/8" : ""
+                  }`}
               >
                 {/* hover line */}
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
@@ -258,117 +257,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* ============= CORE CAPABILITIES ============= */}
-      <section className="py-24 relative overflow-hidden">
 
-        {/* Ambient glow */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-emerald-500/6 blur-[160px] rounded-full pointer-events-none" />
-
-        <div className="container mx-auto px-6 lg:px-12">
-
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16 pb-8 border-b border-white/8"
-          >
-            <div>
-              <span className="text-emerald-400 font-mono text-sm tracking-widest uppercase block mb-3">What We Do</span>
-              <h2 className="text-5xl lg:text-6xl font-bold text-white leading-none">Core<br />Capabilities</h2>
-            </div>
-            <p className="text-slate-500 text-sm max-w-xs leading-relaxed sm:text-right">
-              Six domains. One unified platform. Every capability engineered to work together  not in silos.
-            </p>
-          </motion.div>
-
-          {/* Capability rows */}
-          <div className="divide-y divide-white/8">
-            {[
-              {
-                num: "01",
-                title: "Enterprise AI Architecture",
-                tags: ["LLM Integration", "Model Routing", "Fine-tuning"],
-                desc: "We design end-to-end AI systems  from model selection and training pipelines to serving infrastructure  tailored to your data, compliance requirements, and scale targets.",
-              },
-              {
-                num: "02",
-                title: "Predictive Intelligence",
-                tags: ["Forecasting", "Anomaly Detection", "Risk Modeling"],
-                desc: "Turn your historical data into forward-looking insight. Our predictive models are built for accuracy in messy, real-world environments where clean data is a luxury.",
-              },
-              {
-                num: "03",
-                title: "Autonomous Decision Systems",
-                tags: ["Agents", "Workflow Automation", "Policy Engines"],
-                desc: "Move beyond dashboards. Our autonomous systems act on insight  routing, approving, escalating  so your teams focus on exceptions, not operations.",
-              },
-              {
-                num: "04",
-                title: "Data Pipeline Engineering",
-                tags: ["ETL/ELT", "Real-time Streaming", "Data Mesh"],
-                desc: "AI is only as good as its data. We build reliable, observable pipelines that ingest, transform, and serve data at the speed your models demand.",
-              },
-              {
-                num: "05",
-                title: "AI Security & Governance",
-                tags: ["Explainability", "Audit Trails", "Bias Monitoring"],
-                desc: "Every model we ship comes with guardrails. We embed interpretability, drift detection, and compliance tooling so you can trust what's running in production.",
-              },
-              {
-                num: "06",
-                title: "Edge & Cloud Deployment",
-                tags: ["Multi-cloud", "Edge Inference", "Kubernetes"],
-                desc: "Deploy where your users are. From cloud-native clusters to edge devices with constrained compute  our inference stack runs lean and fast, anywhere.",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ delay: i * 0.07, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="group grid grid-cols-12 gap-4 lg:gap-8 py-7 items-start hover:bg-white/[0.02] transition-colors duration-300 -mx-4 px-4 rounded-xl cursor-default"
-              >
-                {/* Number */}
-                <div className="col-span-2 sm:col-span-1">
-                  <span className="text-slate-700 font-mono text-sm group-hover:text-emerald-500/60 transition-colors duration-300">
-                    {item.num}
-                  </span>
-                </div>
-
-                {/* Title */}
-                <div className="col-span-10 sm:col-span-4">
-                  <h3 className="text-xl lg:text-2xl font-bold text-white leading-tight group-hover:text-emerald-50 transition-colors duration-300">
-                    {item.title}
-                  </h3>
-                </div>
-
-                {/* Tags */}
-                <div className="col-span-12 sm:col-span-3 flex flex-wrap gap-2 sm:pt-1">
-                  {item.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs font-mono text-slate-500 border border-slate-800 group-hover:border-emerald-500/20 group-hover:text-emerald-400/70 px-2.5 py-1 rounded-full transition-colors duration-300"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Description */}
-                <div className="col-span-12 sm:col-span-4">
-                  <p className="text-slate-500 text-sm leading-relaxed group-hover:text-slate-400 transition-colors duration-300">
-                    {item.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-        </div>
-      </section>
 
       {/* ============= TECHNOLOGY SECTION (like Innovation Lab) ============= */}
       <section className="relative py-24">
@@ -422,13 +311,13 @@ export default function About() {
             >
               <span className="text-emerald-400 font-mono text-sm block mb-4 tracking-widest uppercase">Technology</span>
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Infrastructure built for
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
+                services built for
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 pb-2">
                   the intelligence era.
                 </span>
               </h2>
               <p className="text-slate-400 text-lg mb-10 leading-relaxed">
-                From training to inference, our stack is purpose-built for reliability, speed, and scale. We don't bolt AI onto existing infrastructure  we architect it from first principles.
+                From training to inference, our stack is purpose-built for reliability, speed, and scale. We don't bolt AI onto existing services  we architect it from first principles.
               </p>
 
               <div className="space-y-5">
@@ -490,10 +379,10 @@ export default function About() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/60 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
-                <span className="text-emerald-400 font-mono text-xs uppercase tracking-widest mb-2 block">Deep Research</span>
-                <h3 className="text-2xl font-bold text-white mb-2">30% of bandwidth dedicated to R&D</h3>
+                <span className="text-emerald-400 font-mono text-xs uppercase tracking-widest mb-2 block">Innovation Focused</span>
+                <h3 className="text-2xl font-bold text-white mb-2">Committed to Continuous Improvement</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  Our research arm operates like an independent lab  publishing, questioning, and pushing AI boundaries without the pressure of shipping features.
+                  Our team constantly explores the latest developments to ensure your systems remain cutting-edge and reliable over the long term.
                 </p>
               </div>
             </motion.div>
@@ -514,9 +403,9 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/60 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <span className="text-cyan-400 font-mono text-xs uppercase tracking-widest mb-2 block">Collaboration</span>
-                <h3 className="text-2xl font-bold text-white mb-2">Embedded in your team from day one</h3>
+                <h3 className="text-2xl font-bold text-white mb-2">Dedicated Partnership and Support</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  We don't hand off and disappear. Our engineers work alongside yours until the system is trusted, adopted, and scaling.
+                  We work closely with your organization, providing ongoing support to ensure the technology is fully trusted, adopted, and scaling successfully.
                 </p>
               </div>
             </motion.div>
@@ -538,74 +427,51 @@ export default function About() {
               className="relative"
             >
               <div className="relative rounded-3xl overflow-hidden border border-white/8">
-                <img src={innovation} alt="Innovation" className="w-full h-auto object-cover aspect-[4/3]" />
+                <img src={founderImage} alt="Founder" className="w-full h-auto object-cover max-h-[600px] object-top" />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/20 via-transparent to-cyan-500/15 mix-blend-overlay" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/40 to-transparent" />
 
                 <motion.div
                   animate={floatAnimation.animate}
                   transition={{ delay: 0.8 }}
-                  className="absolute top-8 left-8 px-4 py-3 rounded-2xl bg-black/50 backdrop-blur-sm border border-white/10"
+                  className="absolute bottom-8 right-8 px-5 py-3 rounded-2xl bg-black/50 backdrop-blur-sm border border-white/10"
                 >
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                    <span className="text-xs text-white font-mono">15+ ACTIVE PROJECTS</span>
+                    <span className="text-xs text-white font-mono">VISIONARY LEADERSHIP</span>
                   </div>
-                </motion.div>
-
-                <motion.div
-                  animate={floatAnimation.animate}
-                  transition={{ delay: 2 }}
-                  className="absolute bottom-8 right-8 px-5 py-3 rounded-2xl bg-black/50 backdrop-blur-sm border border-white/10"
-                >
-                  <div className="text-xl font-bold text-white">2025</div>
-                  <div className="text-xs text-slate-400 font-mono">NEXT MILESTONE</div>
                 </motion.div>
               </div>
 
               <div className="absolute -top-3 -left-3 w-16 h-16 border-t-2 border-l-2 border-emerald-500/30 rounded-tl-xl" />
             </motion.div>
 
-            {/* Right: content + research progress */}
+            {/* Right: content */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9 }}
             >
-              <span className="text-emerald-400 font-mono text-sm block mb-4 tracking-widest uppercase">What's Next</span>
+              <span className="text-emerald-400 font-mono text-sm block mb-4 tracking-widest uppercase">Leadership</span>
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight lg:leading-[1.30]">
-                Where tomorrow's
+                Meet Our
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-                  intelligence is born.
+                  Founder
                 </span>
               </h2>
-              <p className="text-slate-400 text-lg mb-10 leading-relaxed">
-                Our innovation lab runs parallel to our product engineering. We explore what's coming  so when the world is ready, we already are.
+              <p className="text-slate-400 text-lg mb-8 leading-relaxed">
+                "Our vision has always been to simplify the complex and deliver intelligent solutions that genuinely empower organizations. Building trust through reliable execution is at the heart of everything we do."
               </p>
 
-              <div className="space-y-5">
-                {[
-                  { area: "Quantum Machine Learning", progress: 75, eta: "2025 Q2" },
-                  { area: "Neuromorphic Computing", progress: 60, eta: "2025 Q4" },
-                  { area: "Autonomous Reasoning", progress: 85, eta: "2025 Q1" },
-                ].map((r, i) => (
-                  <div key={i} className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span className="text-slate-300">{r.area}</span>
-                      <span className="text-emerald-400 font-mono">{r.eta}</span>
-                    </div>
-                    <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${r.progress}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1.2, delay: i * 0.2, ease: [0.22, 1, 0.36, 1] }}
-                        className="h-full bg-gradient-to-r from-emerald-500 to-cyan-400 rounded-full"
-                      />
-                    </div>
-                  </div>
-                ))}
+              <div className="flex items-center gap-4 mt-8">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-400 flex items-center justify-center">
+                  <span className="font-bold text-white text-lg">O</span>
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold text-lg">Our Founder</h4>
+                  <p className="text-emerald-400 font-mono text-sm">Founder & CEO</p>
+                </div>
               </div>
             </motion.div>
 

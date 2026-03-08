@@ -122,7 +122,7 @@ export default function DataWarehouse() {
         <motion.div style={{ y: heroY }} className="absolute inset-0">
           <img
             src={heroImage}
-            alt="Data warehouse infrastructure"
+            alt="Data warehouse services"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#030c18] via-[#030c18]/65 to-[#030c18]/25" />
@@ -152,7 +152,7 @@ export default function DataWarehouse() {
             transition={{ delay: 0.4 }}
             className="inline-flex items-center gap-2 mb-6"
           >
-            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">04  DATA INFRASTRUCTURE</span>
+            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">04  DATA services</span>
           </motion.div>
 
           <motion.h1

@@ -58,7 +58,7 @@ const allServices = [
     accent: "#34d399",
   },
   {
-    id: "ai-automation",
+    id: "ai-service",
     category: "Data & Intelligence",
     index: "05",
     title: "AI Automation",
@@ -426,57 +426,7 @@ const InfrastructureSection = ({ services, filter }) => {
   );
 };
 
-// ─── Why OrbianAI ─────────────────────────────────────────────────────────────
-const WhyOrbianAISection = () => {
-  const reasons = [
-    { number: "01", title: "Engineering excellence", description: "Not just consultants  we're builders. Our team averages 10+ years in production engineering.", stat: "150+", statLabel: "Engineers" },
-    { number: "02", title: "True partnership", description: "We embed with your team until you're self-sufficient. No handoffs, no disappearances.", stat: "98%", statLabel: "Retention" },
-    { number: "03", title: "Future-proof architecture", description: "We build for tomorrow. Your solution scales, adapts, and evolves with your business.", stat: "99.99%", statLabel: "Uptime SLA" },
-    { number: "04", title: "Research-driven", description: "30% of our bandwidth goes to R&D. You get cutting-edge without the bleeding edge.", stat: "24/7", statLabel: "Support" },
-  ];
 
-  return (
-    <section className="py-24 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#04111f] to-[#030c18]" />
-      <div className="container mx-auto px-5 lg:px-12 relative">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-14"
-        >
-          <span className="text-emerald-400 font-mono text-xs tracking-[0.25em] block mb-3">WHY ORBIANAI</span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white">
-            More than a vendor.
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-              A true extension of your team.
-            </span>
-          </h2>
-        </motion.div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-slate-800/40 rounded-2xl overflow-hidden">
-          {reasons.map((reason, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group relative bg-[#060f1e] p-8 hover:bg-[#081424] transition-colors"
-            >
-              <div className="text-4xl font-bold text-white mb-1 tabular-nums">{reason.stat}</div>
-              <div className="text-xs font-mono text-slate-600 mb-5">{reason.statLabel}</div>
-              <div className="text-xs font-mono text-emerald-600 mb-2">{reason.number}</div>
-              <h3 className="text-base font-semibold text-white mb-2">{reason.title}</h3>
-              <p className="text-slate-500 text-xs leading-relaxed">{reason.description}</p>
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-emerald-500/40 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
 
 // ─── Main Component ────────────────────────────────────────────────────────────
 export default function Services() {
@@ -585,9 +535,6 @@ export default function Services() {
               className="mt-14 flex flex-wrap justify-center gap-10"
             >
               {[
-                { value: "50+", label: "Enterprise Clients" },
-                { value: "98%", label: "Client Retention" },
-                { value: "24/7", label: "Support" },
               ].map((stat, i) => (
                 <div key={i} className="text-center">
                   <div className="text-3xl font-bold text-white tabular-nums">{stat.value}</div>
@@ -640,8 +587,6 @@ export default function Services() {
       <DataIntelligenceSection services={allServices} filter={activeFilter} />
       <InfrastructureSection services={allServices} filter={activeFilter} />
 
-      {/* ── Why ── */}
-      <WhyOrbianAISection />
 
       {/* ── CTA ── */}
       <section className="py-20">

@@ -22,89 +22,89 @@ const jobListings = [
     id: 1,
     title: "Senior Backend Engineer",
     department: "Engineering",
-    location: "San Francisco, CA (Remote)",
+    location: "Remote",
     type: "Full-time",
     experience: "5+ years",
     description: "Design and build scalable backend systems, microservices, and APIs that power our AI-driven solutions.",
     requirements: ["Go/Python", "PostgreSQL", "Kubernetes", "Distributed systems"],
-    applyUrl: "https://forms.gle/example-backend-1",
+    applyUrl: "https://docs.google.com/forms/d/1eeqiTsqE4w_l-HCM4AHYsqFpSkum5APL6MhqE-S05tA/edit",
   },
   {
     id: 2,
     title: "Frontend Developer",
     department: "Engineering",
-    location: "New York, NY (Hybrid)",
+    location: "Remote",
     type: "Full-time",
     experience: "3+ years",
     description: "Create responsive, performant web applications with modern React and cutting-edge UI architectures.",
     requirements: ["React/Next.js", "TypeScript", "Tailwind CSS", "State management"],
-    applyUrl: "https://forms.gle/example-frontend-2",
+    applyUrl: "https://docs.google.com/forms/d/e/1FAIpQLScHoYnkpqtD7BDtGPKakJv-VqtBhtAghESpwixqeT2o0ULNLw/viewform?usp=publish-editor",
   },
   {
     id: 3,
-    title: "Cloud Infrastructure Architect",
-    department: "Infrastructure",
-    location: "Remote (US)",
+    title: "Cloud services Architect",
+    department: "services",
+    location: "Remote",
     type: "Full-time",
     experience: "7+ years",
     description: "Design and implement multi-cloud strategies, optimize costs, and ensure high availability across AWS/Azure/GCP.",
     requirements: ["AWS/Azure/GCP", "Terraform", "Kubernetes", "Networking"],
-    applyUrl: "https://forms.gle/example-cloud-3",
+    applyUrl: "https://docs.google.com/forms/d/e/1FAIpQLSd3_zhe70-AKvmF38WtwaLFJqxMChucCcNthVEqF4rEgYSDHg/viewform?usp=publish-editor",
   },
   {
     id: 4,
     title: "Data Engineer",
     department: "Data & Analytics",
-    location: "San Francisco, CA (Remote)",
+    location: "Remote",
     type: "Full-time",
     experience: "4+ years",
     description: "Build and maintain data pipelines, warehouses, and ETL processes that power our analytics platform.",
     requirements: ["Python", "Spark", "Airflow", "Snowflake/BigQuery"],
-    applyUrl: "https://forms.gle/example-data-4",
+    applyUrl: "https://docs.google.com/forms/d/e/1FAIpQLSf6dPr8VT-8yiPzwyamHA04QXThcGwsbuhw2LlDfl0auC3g8w/viewform?usp=publish-editor",
   },
   {
     id: 5,
     title: "AI/ML Engineer",
     department: "AI & Automation",
-    location: "Remote (Global)",
+    location: "Remote",
     type: "Full-time",
     experience: "4+ years",
     description: "Develop and deploy machine learning models, LLM integrations, and intelligent automation solutions.",
     requirements: ["PyTorch/TF", "LLMs", "Python", "ML Ops"],
-    applyUrl: "https://forms.gle/example-ai-5",
+    applyUrl: "https://docs.google.com/forms/d/1eeqiTsqE4w_l-HCM4AHYsqFpSkum5APL6MhqE-S05tA/edit",
   },
   {
     id: 6,
     title: "DevOps Engineer",
-    department: "Infrastructure",
-    location: "Remote (US)",
+    department: "services",
+    location: "Remote",
     type: "Full-time",
     experience: "3+ years",
     description: "Streamline deployment processes, manage CI/CD pipelines, and ensure system reliability and performance.",
     requirements: ["CI/CD", "Docker", "Kubernetes", "Monitoring"],
-    applyUrl: "https://forms.gle/example-devops-6",
+    applyUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdabszeZMTOgJ7izMJ6UjxFgO7gAK-XnqMQxg3gmjfLJnWohQ/viewform?usp=publish-editor",
   },
   {
     id: 7,
     title: "Security Engineer",
     department: "Security",
-    location: "Remote (US)",
+    location: "Remote",
     type: "Full-time",
     experience: "5+ years",
-    description: "Implement security best practices, conduct audits, and protect infrastructure from emerging threats.",
+    description: "Implement security best practices, conduct audits, and protect services from emerging threats.",
     requirements: ["Application security", "IAM", "Penetration testing", "Compliance"],
-    applyUrl: "https://forms.gle/example-security-7",
+    applyUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdnU19y0SQv0neQvrX1woIKHTHcM26yklCFvCASduSKSww9DQ/viewform?usp=publish-editor",
   },
   {
     id: 8,
     title: "Technical Product Manager",
     department: "Product",
-    location: "San Francisco, CA (Hybrid)",
+    location: "Remote",
     type: "Full-time",
     experience: "6+ years",
     description: "Bridge the gap between engineering and business, define roadmaps, and deliver enterprise-grade products.",
     requirements: ["Technical background", "Agile", "User research", "Go-to-market"],
-    applyUrl: "https://forms.gle/example-pm-8",
+    applyUrl: "https://docs.google.com/forms/d/e/1FAIpQLSd-ealYf-S2l5VNLxDlbciiDrCN_mvcgGGgwbip0IrJocCKbA/viewform?usp=publish-editor",
   },
 ];
 
@@ -112,7 +112,7 @@ const jobListings = [
 const departments = [
   "All Departments",
   "Engineering",
-  "Infrastructure",
+  "services",
   "Data & Analytics",
   "AI & Automation",
   "Security",
@@ -127,8 +127,8 @@ export default function Career() {
   const filteredJobs = jobListings.filter((job) => {
     const matchesDept = selectedDept === "All Departments" || job.department === selectedDept;
     const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         job.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         job.requirements.some(req => req.toLowerCase().includes(searchTerm.toLowerCase()));
+      job.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      job.requirements.some(req => req.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesDept && (searchTerm === "" || matchesSearch);
   });
 
@@ -148,10 +148,10 @@ export default function Career() {
             backgroundSize: "60px 60px",
           }}
         />
-        
+
         {/* Ambient glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-emerald-500/5 blur-[180px] rounded-full pointer-events-none" />
-        
+
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -171,8 +171,8 @@ export default function Career() {
                 <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
               </span>
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
@@ -183,14 +183,14 @@ export default function Career() {
                 with us.
               </span>
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed"
             >
-              We're looking for passionate builders who want to solve complex problems 
+              We're looking for passionate builders who want to solve complex problems
               and create technology that matters.
             </motion.p>
           </motion.div>
@@ -235,11 +235,10 @@ export default function Career() {
                 <button
                   key={dept}
                   onClick={() => setSelectedDept(dept)}
-                  className={`px-4 py-2 rounded-full font-mono text-xs transition-all ${
-                    selectedDept === dept
+                  className={`px-4 py-2 rounded-full font-mono text-xs transition-all ${selectedDept === dept
                       ? "bg-emerald-500 text-[#030c18] font-semibold"
                       : "bg-slate-900/60 text-slate-400 border border-slate-800 hover:border-emerald-500/30 hover:text-slate-300"
-                  }`}
+                    }`}
                 >
                   {dept}
                 </button>
@@ -284,7 +283,7 @@ export default function Career() {
                 className="group relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
+
                 <div className="relative p-6 rounded-2xl border border-slate-800/60 bg-slate-900/20 hover:border-slate-700 transition-colors">
                   <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
                     {/* Left: Job info */}
@@ -295,17 +294,16 @@ export default function Career() {
                           <span className="text-xs font-mono text-emerald-400">{job.department}</span>
                         </span>
                       </div>
-                      
+
                       <div className="flex flex-wrap gap-4 text-sm text-slate-500 mb-3">
                         <span className="flex items-center gap-1">📍 {job.location}</span>
                         <span className="flex items-center gap-1">⏱️ {job.type}</span>
-                        <span className="flex items-center gap-1">🎯 {job.experience}</span>
                       </div>
-                      
+
                       <p className="text-slate-400 text-sm mb-4 max-w-2xl">
                         {job.description}
                       </p>
-                      
+
                       <div className="flex flex-wrap gap-2">
                         {job.requirements.map((req, i) => (
                           <span

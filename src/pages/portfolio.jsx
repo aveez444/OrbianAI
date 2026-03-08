@@ -13,12 +13,12 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 //   datavault.jpg     → data warehouse / server room / pipeline
 
 import vehicleaxisImg from "../assets/portfolio/vehicleaxis.jpg";
-import nexuscrmImg    from "../assets/portfolio/nexuscrm.jpg";
-import telagentImg    from "../assets/portfolio/telagent.jpg";
-import medicoreImg    from "../assets/portfolio/medicore.jpg";
-import blogaiImg      from "../assets/portfolio/blogai.jpg";
-import luminabiImg    from "../assets/portfolio/luminabi.jpg";
-import datavaultImg   from "../assets/portfolio/datavault.jpg";
+import nexuscrmImg from "../assets/portfolio/nexuscrm.jpg";
+import telagentImg from "../assets/portfolio/telagent.jpg";
+import medicoreImg from "../assets/portfolio/medicore.jpg";
+import blogaiImg from "../assets/portfolio/blogai.jpg";
+import luminabiImg from "../assets/portfolio/luminabi.jpg";
+import datavaultImg from "../assets/portfolio/datavault.jpg";
 
 // ─── Project Data ──────────────────────────────────────────────────────────────
 
@@ -265,6 +265,15 @@ function ProjectModal({ project, onClose }) {
               </div>
             </div>
           </div>
+
+          <div className="px-8 pb-8 md:px-10 flex justify-end">
+            <button
+              onClick={onClose}
+              className="px-6 py-2 rounded-lg bg-teal-50 text-slate-900 font-semibold text-sm hover:bg-white transition-colors"
+            >
+              Back
+            </button>
+          </div>
         </motion.div>
       </motion.div>
     </AnimatePresence>
@@ -485,7 +494,7 @@ export default function Portfolio() {
             </p>
             <div className="flex gap-12 md:ml-auto">
               {[
-              
+
               ].map(({ num, label }) => (
                 <div key={label}>
                   <div className="text-3xl font-bold text-white tabular-nums">{num}</div>
@@ -547,7 +556,7 @@ export default function Portfolio() {
         <FadeIn className="flex items-end justify-between mb-4">
           <div>
             <span className="font-mono text-xs text-emerald-400/60 tracking-widest uppercase block mb-3">
-               Portfolio
+              Portfolio
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white">
               Selected Projects

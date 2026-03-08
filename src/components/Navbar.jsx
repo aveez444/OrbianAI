@@ -6,22 +6,22 @@ import logo from "../assets/logo2.png"; // your big logo image
 
 const services = [
   {
-    label: "Web Apps",
-    to: "/services/web-dev",
-    tag: "Frontend & Platforms",
-    desc: "High-performance web experiences.",
-  },
-  {
-    label: "Software",
-    to: "/services/software-dev",
-    tag: "Systems & Products",
-    desc: "Robust custom software builds.",
+    label: "AI Services",
+    to: "/services/ai-service",
+    tag: "Intelligence",
+    desc: "Custom ML pipelines and automation.",
   },
   {
     label: "Data Analytics",
     to: "/services/data-analytics",
     tag: "Insights",
     desc: "Dashboards, metrics, and decisions.",
+  },
+  {
+    label: "Web Apps",
+    to: "/services/web-dev",
+    tag: "Frontend & Platforms",
+    desc: "High-performance web experiences.",
   },
   {
     label: "Data Warehouse",
@@ -56,8 +56,18 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [desktopShowMore, setDesktopShowMore] = useState(false);
+  const [mobileShowMore, setMobileShowMore] = useState(false);
 
   const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    if (!servicesOpen) setDesktopShowMore(false);
+  }, [servicesOpen]);
+
+  useEffect(() => {
+    if (!mobileServicesOpen) setMobileShowMore(false);
+  }, [mobileServicesOpen]);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -121,7 +131,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 8 }}
                         transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
-                        className="absolute left-1/2 top-full mt-4 -translate-x-1/2 w-[760px] rounded-2xl border border-emerald-500/20 bg-[#020617]/95 shadow-2xl shadow-emerald-500/20 backdrop-blur-xl p-6"
+                        className="absolute right-[-100px] sm:right-auto sm:left-1/2 sm:-translate-x-[65%] top-full mt-4 w-[760px] rounded-2xl border border-emerald-500/20 bg-[#020617]/95 shadow-2xl shadow-emerald-500/20 backdrop-blur-xl p-6"
                       >
                         <div className="mb-4 flex items-center justify-between px-2">
                           <div>
@@ -135,7 +145,7 @@ export default function Navbar() {
                         </div>
 
                         <div className="grid grid-cols-3 gap-4 mt-2">
-                          {services.map((svc) => (
+                          {services.slice(0, desktopShowMore ? 6 : 3).map((svc) => (
                             <NavLink
                               key={svc.label}
                               to={svc.to}
@@ -163,6 +173,21 @@ export default function Navbar() {
                             </NavLink>
                           ))}
                         </div>
+
+                        {!desktopShowMore && (
+                          <div className="mt-4 flex justify-center">
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                e.preventDefault();
+                                setDesktopShowMore(true);
+                              }}
+                              className="text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-2"
+                            >
+                              View more services <span className="text-[10px]">▼</span>
+                            </button>
+                          </div>
+                        )}
 
                         {/* ADD THIS DIVIDER AND "VIEW ALL SERVICES" LINK */}
                         <div className="mt-4 pt-3 border-t border-emerald-500/20">
@@ -201,7 +226,7 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex">
-         
+
           </div>
 
           {/* MOBILE: logo, name, hamburger */}
@@ -305,7 +330,7 @@ export default function Navbar() {
                             exit={{ opacity: 0, height: 0 }}
                             className="mt-2 space-y-1 overflow-hidden rounded-lg bg-slate-900/80 border border-slate-800 px-2 py-2"
                           >
-                            {services.map((svc) => (
+                            {services.slice(0, mobileShowMore ? 6 : 3).map((svc) => (
                               <NavLink
                                 key={svc.label}
                                 to={svc.to}
@@ -325,6 +350,21 @@ export default function Navbar() {
                                 </span>
                               </NavLink>
                             ))}
+
+                            {!mobileShowMore && (
+                              <div className="flex justify-center py-1">
+                                <button
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    e.preventDefault();
+                                    setMobileShowMore(true);
+                                  }}
+                                  className="text-[11px] font-medium text-emerald-400 hover:text-emerald-300"
+                                >
+                                  View more services ▼
+                                </button>
+                              </div>
+                            )}
 
                             {/* ADD THIS DIVIDER AND "VIEW ALL SERVICES" LINK FOR MOBILE */}
                             <div className="mt-2 pt-2 border-t border-slate-700">
