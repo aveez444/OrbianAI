@@ -107,32 +107,33 @@ export default function Navbar() {
 
           {/* Desktop links */}
           <div className="hidden lg:flex items-center gap-2">
-            {navLinks.map((item) =>
-              item.hasDropdown ? (
-                <div
-                  key={item.label}
-                  className="relative"
-                  ref={dropdownRef}
-                >
-                  <button
-                    type="button"
-                    onClick={() => setServicesOpen((prev) => !prev)}
-                    className={`${linkBase} flex items-center gap-1`}
-                  >
-                    <span>Services</span>
-                    <span className={`text-xs text-slate-500 transition-transform ${servicesOpen ? "rotate-180" : ""}`}>▾</span>
-                  </button>
+          {navLinks.map((item) =>
+            item.hasDropdown ? (
+          <div
+            key={item.label}
+            className="relative"
+            ref={dropdownRef}
+           
+          >
+            <button
+              type="button"
+              onClick={() => setServicesOpen((prev) => !prev)}
+              className={`${linkBase} flex items-center gap-1`}
+            >
+            <span>Services</span>
+            <span className={`text-xs text-slate-500 transition-transform ${servicesOpen ? "rotate-180" : ""}`}>▾</span>
+          </button>
 
-                  {/* Desktop mega dropdown: 3x3 grid */}
-                  <AnimatePresence>
-                    {servicesOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 8 }}
-                        transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
-                        className="absolute right-[-100px] sm:right-auto sm:left-1/2 sm:-translate-x-[65%] top-full mt-4 w-[760px] rounded-2xl border border-emerald-500/20 bg-[#020617]/95 shadow-2xl shadow-emerald-500/20 backdrop-blur-xl p-6"
-                      >
+      {/* Desktop mega dropdown: 3x3 grid */}
+      <AnimatePresence>
+        {servicesOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 8 }}
+            transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute right-0 top-full mt-4 w-[760px] max-w-[90vw] rounded-2xl border border-emerald-500/20 bg-[#020617]/95 shadow-2xl shadow-emerald-500/20 backdrop-blur-xl p-6"
+          >
                         <div className="mb-4 flex items-center justify-between px-2">
                           <div>
                             <p className="text-sm font-mono text-emerald-400 tracking-[0.15em]">

@@ -1,6 +1,7 @@
 // Career.jsx - Professional dark-themed career page
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -122,6 +123,7 @@ const departments = [
 export default function Career() {
   const [selectedDept, setSelectedDept] = useState("All Departments");
   const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
   // Filter jobs based on department and search
   const filteredJobs = jobListings.filter((job) => {
@@ -369,7 +371,7 @@ export default function Career() {
               We're always looking for exceptional talent. Send us your resume and we'll keep you in mind.
             </p>
             <button
-              onClick={() => window.open("https://forms.gle/example-general", "_blank")}
+              onClick={() => navigate("/contact")}
               className="px-6 py-3 border border-emerald-500/30 text-emerald-400 hover:text-emerald-300 hover:border-emerald-500/50 rounded-xl font-mono text-sm transition-colors"
             >
               General Application →

@@ -153,7 +153,7 @@ export default function SoftwareDevelopment() {
             transition={{ delay: 0.4 }}
             className="inline-flex items-center gap-2 mb-6"
           >
-            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">02  DIGITAL PRESENCE</span>
+           
           </motion.div>
 
           <motion.h1

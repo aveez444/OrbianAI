@@ -152,23 +152,23 @@ export default function DataWarehouse() {
             transition={{ delay: 0.4 }}
             className="inline-flex items-center gap-2 mb-6"
           >
-            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">04  DATA services</span>
+
           </motion.div>
 
           <motion.h1
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.55, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-        className="text-5xl sm:text-6xl lg:text-8xl font-bold leading-[0.92] tracking-tight max-w-5xl"
-        >
-        <span className="text-white">Data</span>
-        <br />
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-300 to-green-400">
-            Warehousing
-        </span>
-        <br />
-        <span className="text-white/90">& Engineering</span>
-        </motion.h1>
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.55, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="text-5xl sm:text-6xl lg:text-8xl font-bold leading-[0.92] tracking-tight max-w-5xl"
+          >
+            <span className="text-white">Data</span>
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-300 to-green-400">
+              Warehousing
+            </span>
+            <br />
+            <span className="text-white/90">& Engineering</span>
+          </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -301,6 +301,7 @@ export default function DataWarehouse() {
       <section className="py-10 lg:py-16">
         <div className="container mx-auto px-5 lg:px-12">
           <RevealText>
+            <h3 className="text-2xl font-bold text-white mb-6 uppercase tracking-wider text-center">Modern Data Stack Reference Architecture</h3>
             <div className="relative rounded-2xl overflow-hidden" style={{ height: "clamp(280px, 50vw, 560px)" }}>
               <img
                 src={featureImage}
@@ -308,9 +309,6 @@ export default function DataWarehouse() {
                 className="w-full h-full object-cover object-center"
               />
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent" />
-              <div className="absolute top-5 right-5 bg-[#030c18]/80 backdrop-blur-sm border border-slate-700/50 rounded-lg px-3 py-2">
-                <span className="font-mono text-xs text-slate-400">Modern Data Stack  Reference Architecture</span>
-              </div>
             </div>
           </RevealText>
         </div>
@@ -364,7 +362,7 @@ export default function DataWarehouse() {
                 >
                   <div className="lg:w-[140px] flex-shrink-0 flex lg:flex-col lg:items-end gap-3 lg:gap-1">
                     <span className="font-mono text-xs text-slate-600">{String(i + 1).padStart(2, "0")}</span>
-                    <span className="font-mono text-xs text-emerald-500/70 lg:text-right">{step.duration}</span>
+                    <span className="font-mono text-[17px] font-bold text-emerald-500/90 lg:text-right">{step.duration}</span>
                   </div>
                   <div className="hidden lg:flex absolute left-[134px] top-1/2 -translate-y-1/2 w-3 h-3 rounded-full border-2 border-slate-700 bg-[#030c18] group-hover:border-emerald-500 group-hover:bg-emerald-500/20 transition-all" />
                   <div className="flex-1 lg:pl-12">

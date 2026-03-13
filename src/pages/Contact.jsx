@@ -277,7 +277,7 @@ export default function Contact() {
                 <div className="space-y-5">
                   {[
                     { icon: "✉️", label: "Email", value: "info@orbianai.com", link: "mailto:info@orbianai.com" },
-                    { icon: "📞", label: "Phone", value: "+91 99607 78674", link: "tel:+919960778674" },
+                    { icon: "📞", label: "Phone", value: "+91 7972489738", link: "tel:+917972489738" },
                     { icon: "📍", label: "HQ", value: "India", link: null },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-4 p-4 rounded-2xl bg-slate-900/30 border border-white/5 backdrop-blur-sm">

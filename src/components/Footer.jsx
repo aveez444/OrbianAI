@@ -110,17 +110,51 @@ export default function Footer() {
               <span className="absolute -bottom-2 left-0 w-12 h-0.5 bg-emerald-500 rounded-full"></span>
             </h3>
             <ul className="space-y-4">
-              {['AI Consulting', 'Development', 'Analytics', 'Cloud', 'Security'].map((item, index) => (
-                <li key={index}>
-                  <Link
-                    to={`/services/${item.toLowerCase()}`}
-                    className="text-slate-400 hover:text-emerald-400 transition-all duration-300 flex items-center gap-2 group"
-                  >
-                    <span className="w-0 group-hover:w-2 h-0.5 bg-emerald-400 transition-all duration-300"></span>
-                    {item}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  to="/services/ai-service"
+                  className="text-slate-400 hover:text-emerald-400 transition-all duration-300 flex items-center gap-2 group"
+                >
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-emerald-400 transition-all duration-300"></span>
+                  AI Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/web-dev"
+                  className="text-slate-400 hover:text-emerald-400 transition-all duration-300 flex items-center gap-2 group"
+                >
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-emerald-400 transition-all duration-300"></span>
+                  Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/data-analytics"
+                  className="text-slate-400 hover:text-emerald-400 transition-all duration-300 flex items-center gap-2 group"
+                >
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-emerald-400 transition-all duration-300"></span>
+                  Analytics
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/cloud"
+                  className="text-slate-400 hover:text-emerald-400 transition-all duration-300 flex items-center gap-2 group"
+                >
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-emerald-400 transition-all duration-300"></span>
+                  Cloud
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/consulting"
+                  className="text-slate-400 hover:text-emerald-400 transition-all duration-300 flex items-center gap-2 group"
+                >
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-emerald-400 transition-all duration-300"></span>
+                  Consulting
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -153,7 +187,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
                 <span className="text-slate-400">
-                  +91 99607 78674
+                  +91 7972489738
                 </span>
               </div>
             </div>

@@ -153,7 +153,7 @@ export default function DataAnalytics() {
             transition={{ delay: 0.4 }}
             className="inline-flex items-center gap-2 mb-6"
           >
-            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">03  DATA & INTELLIGENCE</span>
+
           </motion.div>
 
           <motion.h1
@@ -279,8 +279,8 @@ export default function DataAnalytics() {
                 </div>
                 <div className="lg:col-span-5">
                   <p className="text-white text-base lg:text-lg leading-relaxed">
-  {cap.body}
-</p>
+                    {cap.body}
+                  </p>
                 </div>
                 <div className="lg:col-span-3 flex flex-wrap gap-2 lg:justify-end items-start">
                   {cap.tags.map((tag, ti) => (
@@ -302,6 +302,7 @@ export default function DataAnalytics() {
       <section className="py-10 lg:py-16">
         <div className="container mx-auto px-5 lg:px-12">
           <RevealText>
+            <h3 className="text-2xl font-bold text-white mb-6 uppercase tracking-wider text-center">Real-time Analytics Dashboard Case Example</h3>
             <div className="relative rounded-2xl overflow-hidden" style={{ height: "clamp(280px, 50vw, 560px)" }}>
               <img
                 src={featureImage}
@@ -309,9 +310,6 @@ export default function DataAnalytics() {
                 className="w-full h-full object-cover object-center"
               />
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent" />
-              <div className="absolute top-5 right-5 bg-[#030c18]/80 backdrop-blur-sm border border-slate-700/50 rounded-lg px-3 py-2">
-                <span className="font-mono text-xs text-slate-400">Real-time Analytics Dashboard  Case Example</span>
-              </div>
             </div>
           </RevealText>
         </div>
@@ -365,7 +363,7 @@ export default function DataAnalytics() {
                 >
                   <div className="lg:w-[140px] flex-shrink-0 flex lg:flex-col lg:items-end gap-3 lg:gap-1">
                     <span className="font-mono text-xs text-slate-600">{String(i + 1).padStart(2, "0")}</span>
-                    <span className="font-mono text-xs text-emerald-500/70 lg:text-right">{step.duration}</span>
+                    <span className="font-mono text-[17px] font-bold text-emerald-500/90 lg:text-right">{step.duration}</span>
                   </div>
                   <div className="hidden lg:flex absolute left-[134px] top-1/2 -translate-y-1/2 w-3 h-3 rounded-full border-2 border-slate-700 bg-[#030c18] group-hover:border-emerald-500 group-hover:bg-emerald-500/20 transition-all" />
                   <div className="flex-1 lg:pl-12">

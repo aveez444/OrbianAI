@@ -152,7 +152,7 @@ export default function CloudServices() {
             transition={{ delay: 0.4 }}
             className="inline-flex items-center gap-2 mb-6"
           >
-            <span className="font-mono text-xs text-emerald-400 tracking-[0.2em]">06  CLOUD services</span>
+          
           </motion.div>
 
           <motion.h1
@@ -301,6 +301,7 @@ export default function CloudServices() {
       <section className="py-10 lg:py-16">
         <div className="container mx-auto px-5 lg:px-12">
           <RevealText>
+            <h3 className="text-2xl font-bold text-white mb-6 uppercase tracking-wider text-center">Multi-Region Kubernetes  Case Example</h3>
             <div className="relative rounded-2xl overflow-hidden" style={{ height: "clamp(280px, 50vw, 560px)" }}>
               <img
                 src={featureImage}
@@ -309,7 +310,6 @@ export default function CloudServices() {
               />
               <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent" />
               <div className="absolute top-5 right-5 bg-[#030c18]/80 backdrop-blur-sm border border-slate-700/50 rounded-lg px-3 py-2">
-                <span className="font-mono text-xs text-slate-400">Multi-Region Kubernetes  Case Example</span>
               </div>
             </div>
           </RevealText>
