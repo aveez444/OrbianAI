@@ -1,9 +1,32 @@
 // Footer.jsx
 import { Link } from "react-router-dom";
 import logo from "../assets/logo2.png"; // your big logo image
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [email, setEmail] = useState("");
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const handleSubscribe = () => {
+    if (email && email.includes('@')) {
+      // Here you would typically send this to your API
+      console.log("Subscribing email:", email);
+      
+      // Show success message
+      setShowSuccess(true);
+      setEmail("");
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 5000);
+    } else {
+      // Optional: Add error handling for invalid email
+      alert("Please enter a valid email address");
+    }
+  };
 
   return (
     <footer className="bg-gradient-to-b from-slate-900 to-slate-950 text-slate-300 relative overflow-hidden">
@@ -69,7 +92,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/people/Orbian-AI/61586445421839/"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 rounded-full bg-slate-800/50 flex items-center justify-center text-slate-400 hover:bg-emerald-500 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-emerald-500/25"
@@ -192,24 +215,45 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Newsletter Signup */}
-            <div className="mt-6">
-              <h4 className="text-white text-sm font-medium mb-3">Subscribe to our newsletter</h4>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="flex-1 px-4 py-2 bg-slate-800/50 border border-slate-700 rounded-l-lg focus:outline-none focus:border-emerald-500 text-white placeholder-slate-500"
-                />
-                <button className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 rounded-r-lg transition-colors">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                  </svg>
-                </button>
-              </div>
+        {/* Newsletter Signup */}
+        <div className="mt-6">
+          <h4 className="text-white text-sm font-medium mb-3">Subscribe to our newsletter</h4>
+          <div className="flex">
+            <input
+              type="email"
+              placeholder="Your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="flex-1 px-4 py-2 bg-slate-800/50 border border-slate-700 rounded-l-lg focus:outline-none focus:border-emerald-500 text-white placeholder-slate-500"
+            />
+            <button 
+              onClick={handleSubscribe}
+              className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 rounded-r-lg transition-colors"
+            >
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              </svg>
+            </button>
+          </div>
+          
+          {/* Success Message */}
+          {showSuccess && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="mt-3 text-emerald-400 text-sm flex items-center gap-2"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+              Successfully subscribed! Thank you.
+            </motion.div>
+          )}
+        </div>
             </div>
           </div>
-        </div>
+
 
         {/* Bottom bar */}
         <div className="relative mt-16 pt-8">

@@ -1,4 +1,4 @@
-// Services.jsx  Redesigned
+// Services.jsx - Redesigned with new flow order
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 
@@ -14,31 +14,20 @@ import patternGrid from "../assets/services-pattern.png";
 
 const allServices = [
   {
-    id: "web-dev",
-    category: "Digital Presence",
+    id: "ai-service",
+    category: "Data & Intelligence",
     index: "01",
-    title: "Website & Web App Development",
-    short: "Web & App Dev",
-    description: "Custom web solutions from landing pages to complex enterprise portals. We build responsive, performant applications that load fast and convert visitors.",
-    features: ["React/Next.js", "Headless CMS", "E-commerce", "Portal Dev"],
-    image: webDevImage,
-    accent: "#34d399",
-  },
-  {
-    id: "software-dev",
-    category: "Digital Presence",
-    index: "02",
-    title: "Software Development",
-    short: "Software Dev",
-    description: "End-to-end custom software engineering for mission-critical systems. From microservices to monolithic applications that scale.",
-    features: ["Microservices", "API Development", "Legacy Modernization", "DevOps"],
-    image: softwareImage,
-    accent: "#818cf8",
+    title: "AI Automation",
+    short: "AI Automation",
+    description: "Intelligent automation that learns, adapts, and scales. AI agents and pipelines that handle complex workflows.",
+    features: ["LLM Integration", "RPA", "Workflow Automation", "ML Ops"],
+    image: aiAutomationImage,
+    accent: "#c084fc",
   },
   {
     id: "data-analytics",
     category: "Data & Intelligence",
-    index: "03",
+    index: "02",
     title: "Data Analytics",
     short: "Analytics",
     description: "Uncover hidden patterns and drive decisions with advanced analytics. Turn complex data into clear, actionable insights.",
@@ -49,7 +38,7 @@ const allServices = [
   {
     id: "data-warehouse",
     category: "Data & Intelligence",
-    index: "04",
+    index: "03",
     title: "Data Warehouse",
     short: "Data Warehouse",
     description: "Centralized, scalable data architecture for the modern enterprise. Single source of truth with lightning-fast query performance.",
@@ -58,15 +47,26 @@ const allServices = [
     accent: "#34d399",
   },
   {
-    id: "ai-service",
-    category: "Data & Intelligence",
+    id: "web-dev",
+    category: "Digital Presence",
+    index: "04",
+    title: "Website & Web App Development",
+    short: "Web & App Dev",
+    description: "Custom web solutions from landing pages to complex enterprise portals. We build responsive, performant applications that load fast and convert visitors.",
+    features: ["React/Next.js", "Headless CMS", "E-commerce", "Portal Dev"],
+    image: webDevImage,
+    accent: "#34d399",
+  },
+  {
+    id: "software-dev",
+    category: "Digital Presence",
     index: "05",
-    title: "AI Automation",
-    short: "AI Automation",
-    description: "Intelligent automation that learns, adapts, and scales. AI agents and pipelines that handle complex workflows.",
-    features: ["LLM Integration", "RPA", "Workflow Automation", "ML Ops"],
-    image: aiAutomationImage,
-    accent: "#c084fc",
+    title: "Software Development",
+    short: "Software Dev",
+    description: "End-to-end custom software engineering for mission-critical systems. From microservices to monolithic applications that scale.",
+    features: ["Microservices", "API Development", "Legacy Modernization", "DevOps"],
+    image: softwareImage,
+    accent: "#818cf8",
   },
   {
     id: "cloud",
@@ -112,109 +112,7 @@ const MarqueeStrip = () => {
   );
 };
 
-// ─── Digital Presence  Tall split layout ────────────────────────────────────
-const DigitalPresenceSection = ({ services, filter }) => {
-  if (filter !== "all" && filter !== "Digital Presence") return null;
-  const ds = services.filter((s) => s.category === "Digital Presence");
-
-  return (
-    <section className="py-24 relative">
-      <div className="container mx-auto px-5 lg:px-12">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex items-end justify-between mb-14 flex-wrap gap-4"
-        >
-          <div>
-            <p className="text-emerald-400 font-mono text-xs tracking-[0.25em] mb-3">
-              01  DIGITAL PRESENCE
-            </p>
-            <h2 className="text-4xl sm:text-5xl font-bold text-white leading-[1.05]">
-              Build your<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-                digital foundation.
-              </span>
-            </h2>
-          </div>
-          <p className="text-slate-500 text-sm max-w-xs leading-relaxed">
-            From first impression to enterprise portal  we craft experiences that perform.
-          </p>
-        </motion.div>
-
-        {/* Two tall split panels */}
-        <div className="grid md:grid-cols-2 gap-5">
-          {ds.map((service, i) => (
-            <motion.a
-              key={service.id}
-              href={`/services/${service.id}`}
-              initial={{ opacity: 0, y: 32 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15 }}
-              className="group block relative rounded-2xl overflow-hidden cursor-pointer"
-              style={{ minHeight: "520px" }}
-            >
-              {/* Full-bleed image */}
-              <img
-                src={service.image}
-                alt={service.title}
-                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-              />
-              {/* Dark overlay gradient  heavier at bottom */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030c18] via-[#030c18]/60 to-transparent" />
-              {/* Subtle accent tint on hover */}
-              <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500"
-                style={{ background: `radial-gradient(ellipse at 50% 100%, ${service.accent}55, transparent 70%)` }}
-              />
-
-              {/* Content pinned to bottom */}
-              <div className="absolute inset-x-0 bottom-0 p-7">
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="font-mono text-xs text-slate-500">{service.index}</span>
-                  <span
-                    className="h-px flex-1 max-w-[40px]"
-                    style={{ background: service.accent + "80" }}
-                  />
-                  <span
-                    className="text-xs font-mono px-2.5 py-0.5 rounded-full border"
-                    style={{ color: service.accent, borderColor: service.accent + "50" }}
-                  >
-                    {service.category}
-                  </span>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-slate-400 text-sm leading-relaxed mb-5 max-w-sm">
-                  {service.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-5">
-                  {service.features.map((f, fi) => (
-                    <span key={fi} className="text-xs text-slate-500 border border-slate-700/60 px-2.5 py-1 rounded-full bg-slate-900/50">
-                      {f}
-                    </span>
-                  ))}
-                </div>
-                <span
-                  className="inline-flex items-center gap-2 text-sm font-mono transition-colors"
-                  style={{ color: service.accent }}
-                >
-                  Explore Service
-                  <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
-                </span>
-              </div>
-            </motion.a>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// ─── Data & Intelligence  Staggered editorial layout ────────────────────────
+// ─── Data & Intelligence - New first section with editorial layout ──────────
 const DataIntelligenceSection = ({ services, filter }) => {
   if (filter !== "all" && filter !== "Data & Intelligence") return null;
   const ds = services.filter((s) => s.category === "Data & Intelligence");
@@ -239,7 +137,7 @@ const DataIntelligenceSection = ({ services, filter }) => {
           className="mb-14"
         >
           <p className="text-emerald-400 font-mono text-xs tracking-[0.25em] mb-3">
-            02  DATA & INTELLIGENCE
+            01  DATA & INTELLIGENCE
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-white leading-[1.05]">
             Transform data into<br />
@@ -263,7 +161,7 @@ const DataIntelligenceSection = ({ services, filter }) => {
                 transition={{ delay: i * 0.1 }}
                 className={`group flex flex-col ${flip ? "md:flex-row-reverse" : "md:flex-row"} rounded-2xl overflow-hidden border border-slate-800/60 bg-[#060f1e] hover:border-slate-700 transition-colors cursor-pointer`}
               >
-                {/* Image  fixed aspect, fills side */}
+                {/* Image - fixed aspect, fills side */}
                 <div className="relative md:w-[45%] flex-shrink-0 overflow-hidden" style={{ minHeight: "280px" }}>
                   <img
                     src={service.image}
@@ -318,7 +216,109 @@ const DataIntelligenceSection = ({ services, filter }) => {
   );
 };
 
-// ─── Infrastructure  Overlapping feature + side stack ───────────────────────
+// ─── Digital Presence - New second section with tall split layout ───────────
+const DigitalPresenceSection = ({ services, filter }) => {
+  if (filter !== "all" && filter !== "Digital Presence") return null;
+  const ds = services.filter((s) => s.category === "Digital Presence");
+
+  return (
+    <section className="py-24 relative">
+      <div className="container mx-auto px-5 lg:px-12">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex items-end justify-between mb-14 flex-wrap gap-4"
+        >
+          <div>
+            <p className="text-emerald-400 font-mono text-xs tracking-[0.25em] mb-3">
+              02  DIGITAL PRESENCE
+            </p>
+            <h2 className="text-4xl sm:text-5xl font-bold text-white leading-[1.05]">
+              Build your<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
+                digital foundation.
+              </span>
+            </h2>
+          </div>
+          <p className="text-slate-500 text-sm max-w-xs leading-relaxed">
+            From first impression to enterprise portal - we craft experiences that perform.
+          </p>
+        </motion.div>
+
+        {/* Two tall split panels */}
+        <div className="grid md:grid-cols-2 gap-5">
+          {ds.map((service, i) => (
+            <motion.a
+              key={service.id}
+              href={`/services/${service.id}`}
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15 }}
+              className="group block relative rounded-2xl overflow-hidden cursor-pointer"
+              style={{ minHeight: "520px" }}
+            >
+              {/* Full-bleed image */}
+              <img
+                src={service.image}
+                alt={service.title}
+                className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              />
+              {/* Dark overlay gradient - heavier at bottom */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#030c18] via-[#030c18]/60 to-transparent" />
+              {/* Subtle accent tint on hover */}
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+                style={{ background: `radial-gradient(ellipse at 50% 100%, ${service.accent}55, transparent 70%)` }}
+              />
+
+              {/* Content pinned to bottom */}
+              <div className="absolute inset-x-0 bottom-0 p-7">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="font-mono text-xs text-slate-500">{service.index}</span>
+                  <span
+                    className="h-px flex-1 max-w-[40px]"
+                    style={{ background: service.accent + "80" }}
+                  />
+                  <span
+                    className="text-xs font-mono px-2.5 py-0.5 rounded-full border"
+                    style={{ color: service.accent, borderColor: service.accent + "50" }}
+                  >
+                    {service.category}
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-slate-400 text-sm leading-relaxed mb-5 max-w-sm">
+                  {service.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {service.features.map((f, fi) => (
+                    <span key={fi} className="text-xs text-slate-500 border border-slate-700/60 px-2.5 py-1 rounded-full bg-slate-900/50">
+                      {f}
+                    </span>
+                  ))}
+                </div>
+                <span
+                  className="inline-flex items-center gap-2 text-sm font-mono transition-colors"
+                  style={{ color: service.accent }}
+                >
+                  Explore Service
+                  <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
+                </span>
+              </div>
+            </motion.a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// ─── Infrastructure & Consulting - New third section (unchanged layout) ─────
 const InfrastructureSection = ({ services, filter }) => {
   if (filter !== "all" && filter !== "Infrastructure & Consulting") return null;
   const ds = services.filter((s) => s.category === "Infrastructure & Consulting");
@@ -356,7 +356,7 @@ const InfrastructureSection = ({ services, filter }) => {
               transition={{ delay: i * 0.15 }}
               className="group block rounded-2xl overflow-hidden border border-slate-800/60 bg-[#060f1e] hover:border-slate-700 transition-colors cursor-pointer"
             >
-              {/* Image top half  tall enough to show content */}
+              {/* Image top half - tall enough to show content */}
               <div className="relative overflow-hidden" style={{ height: "260px" }}>
                 <img
                   src={service.image}
@@ -426,8 +426,6 @@ const InfrastructureSection = ({ services, filter }) => {
   );
 };
 
-
-
 // ─── Main Component ────────────────────────────────────────────────────────────
 export default function Services() {
   const heroRef = useRef(null);
@@ -439,14 +437,14 @@ export default function Services() {
 
   const filters = [
     { id: "all", label: "All Services" },
-    { id: "Digital Presence", label: "Digital Presence" },
     { id: "Data & Intelligence", label: "Data & Intelligence" },
+    { id: "Digital Presence", label: "Digital Presence" },
     { id: "Infrastructure & Consulting", label: "Infrastructure" },
   ];
 
   return (
     <main className="bg-[#030c18] text-slate-200 selection:bg-emerald-500/30 overflow-x-hidden">
-      {/* ── Hero ── */}
+      {/* ── Hero (unchanged) ── */}
       <section
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
@@ -510,7 +508,7 @@ export default function Services() {
               transition={{ delay: 0.7 }}
               className="mt-8 text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed"
             >
-              From web presence to AI automation  enterprise-grade solutions that don't just work, they outperform.
+              From AI automation to web presence - enterprise-grade solutions that don't just work, they outperform.
             </motion.p>
 
             <motion.div
@@ -534,13 +532,7 @@ export default function Services() {
               transition={{ delay: 1.1 }}
               className="mt-14 flex flex-wrap justify-center gap-10"
             >
-              {[
-              ].map((stat, i) => (
-                <div key={i} className="text-center">
-                  <div className="text-3xl font-bold text-white tabular-nums">{stat.value}</div>
-                  <div className="text-xs text-slate-500 mt-1 font-mono">{stat.label}</div>
-                </div>
-              ))}
+              {/* Stats removed as in original */}
             </motion.div>
           </div>
         </motion.div>
@@ -561,7 +553,7 @@ export default function Services() {
       {/* ── Marquee ── */}
       <MarqueeStrip />
 
-      {/* ── Filter nav ── */}
+      {/* ── Filter nav (updated order) ── */}
       <div className="sticky top-0 z-40 bg-[#030c18]/85 backdrop-blur-xl border-b border-slate-800/50">
         <div className="container mx-auto px-5 lg:px-12 py-4">
           <div className="flex flex-wrap gap-2 justify-center">
@@ -582,41 +574,45 @@ export default function Services() {
         </div>
       </div>
 
-      {/* ── Sections ── */}
-      <DigitalPresenceSection services={allServices} filter={activeFilter} />
+      {/* ── Sections in new order ── */}
       <DataIntelligenceSection services={allServices} filter={activeFilter} />
+      <DigitalPresenceSection services={allServices} filter={activeFilter} />
       <InfrastructureSection services={allServices} filter={activeFilter} />
-
-
-      {/* ── CTA ── */}
-      <section className="py-20">
-        <div className="container mx-auto px-5 lg:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="relative rounded-2xl overflow-hidden"
+{/* ── CTA (updated with contact links) ── */}
+<section className="py-20">
+  <div className="container mx-auto px-5 lg:px-12">
+    <motion.div
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="relative rounded-2xl overflow-hidden"
+    >
+      <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/15 via-transparent to-cyan-500/15" />
+      <div className="relative bg-[#060f1e] border border-slate-800/60 p-10 lg:p-16 text-center">
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
+          Ready to build something extraordinary?
+        </h2>
+        <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
+          Let's discuss how our services can transform your business.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/contact"
+            className="inline-block px-8 py-4 bg-emerald-500 text-[#030c18] font-bold rounded-xl hover:scale-105 transition-transform hover:shadow-xl hover:shadow-emerald-500/25 text-sm"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/15 via-transparent to-cyan-500/15" />
-            <div className="relative bg-[#060f1e] border border-slate-800/60 p-10 lg:p-16 text-center">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
-                Ready to build something extraordinary?
-              </h2>
-              <p className="text-slate-400 text-base mb-8 max-w-lg mx-auto">
-                Let's discuss how our services can transform your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-emerald-500 text-[#030c18] font-bold rounded-xl hover:scale-105 transition-transform hover:shadow-xl hover:shadow-emerald-500/25 text-sm">
-                  Start a Project
-                </button>
-                <button className="px-8 py-4 border border-slate-700/60 hover:border-emerald-500/40 rounded-xl font-medium transition-all hover:bg-white/[0.03] text-sm">
-                  Contact Sales
-                </button>
-              </div>
-            </div>
-          </motion.div>
+            Start a Project
+          </a>
+          <a
+            href="/contact"
+            className="inline-block px-8 py-4 border border-slate-700/60 hover:border-emerald-500/40 rounded-xl font-medium transition-all hover:bg-white/[0.03] text-sm"
+          >
+            Contact Sales
+          </a>
         </div>
-      </section>
+      </div>
+    </motion.div>
+  </div>
+</section>
     </main>
   );
 }
