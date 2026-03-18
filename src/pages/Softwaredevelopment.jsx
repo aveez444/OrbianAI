@@ -257,7 +257,15 @@ export default function SoftwareDevelopment() {
             </h2>
           </RevealText>
 
-          <div className="space-y-0 divide-y divide-slate-800/50">
+              <div className="space-y-0 divide-y divide-slate-800/50">
+      
+      {/* ADD THIS HEADER ROW */}
+      <div className="hidden lg:grid lg:grid-cols-12 gap-4 lg:gap-8 pb-4 px-5 lg:px-12 text-xs font-mono text-white uppercase tracking-wider">
+        <div className="lg:col-span-1">ID</div>
+        <div className="lg:col-span-3">CAPABILITY</div>
+        <div className="lg:col-span-5">DESCRIPTION</div>
+        <div className="lg:col-span-3 text-right">TECHNOLOGIES</div>
+      </div>
             {capabilities.map((cap, i) => (
               <motion.div
                 key={i}

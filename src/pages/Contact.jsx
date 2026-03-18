@@ -320,7 +320,7 @@ export default function Contact() {
               href="#"
               className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-mono text-sm transition-colors"
             >
-              <span>→ support.orbian.ai</span>
+              <span>→ info@orbianai.com</span>
             </a>
           </motion.div>
         </div>

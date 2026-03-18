@@ -246,56 +246,65 @@ export default function AIAutomation() {
         </div>
       </section>
 
-      {/* ── CAPABILITIES ── */}
-      <section id="capabilities" className="py-20 lg:py-24">
-        <div className="container mx-auto px-5 lg:px-12">
-          <RevealText className="mb-16">
-            <SectionLabel>What We Automate</SectionLabel>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white max-w-2xl leading-tight">
-              Four pillars of our AI automation practice
-            </h2>
-          </RevealText>
+{/* ── CAPABILITIES ── */}
+<section id="capabilities" className="py-20 lg:py-24">
+  <div className="container mx-auto px-5 lg:px-12">
+    <RevealText className="mb-16">
+      <SectionLabel>What We Automate</SectionLabel>
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white max-w-2xl leading-tight">
+        Four pillars of our AI automation practice
+      </h2>
+    </RevealText>
 
-          <div className="space-y-0 divide-y divide-slate-800/50">
-            {capabilities.map((cap, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.6, delay: i * 0.07 }}
-                className="group grid lg:grid-cols-12 gap-4 lg:gap-8 py-10 hover:bg-white/[0.015] -mx-5 lg:-mx-12 px-5 lg:px-12 transition-colors cursor-default"
+    <div className="space-y-0 divide-y divide-slate-800/50">
+      
+      {/* ADD THIS HEADER ROW */}
+      <div className="hidden lg:grid lg:grid-cols-12 gap-4 lg:gap-8 pb-4 px-5 lg:px-12 text-xs font-mono text-white uppercase tracking-wider">
+        <div className="lg:col-span-1">ID</div>
+        <div className="lg:col-span-3">CAPABILITY</div>
+        <div className="lg:col-span-5">DESCRIPTION</div>
+        <div className="lg:col-span-3 text-right">TECHNOLOGIES</div>
+      </div>
+
+      {capabilities.map((cap, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.6, delay: i * 0.07 }}
+          className="group grid lg:grid-cols-12 gap-4 lg:gap-8 py-10 hover:bg-white/[0.015] -mx-5 lg:-mx-12 px-5 lg:px-12 transition-colors cursor-default"
+        >
+          <div className="lg:col-span-1">
+            <span className="font-mono text-xs text-slate-600 group-hover:text-emerald-500 transition-colors">
+              {cap.number}
+            </span>
+          </div>
+          <div className="lg:col-span-3">
+            <h3 className="text-xl font-semibold text-white group-hover:text-emerald-300 transition-colors leading-tight">
+              {cap.title}
+            </h3>
+          </div>
+          <div className="lg:col-span-5">
+            <p className="text-white text-base lg:text-lg leading-relaxed">
+              {cap.body}
+            </p>
+          </div>
+          <div className="lg:col-span-3 flex flex-wrap gap-2 lg:justify-end items-start">
+            {cap.tags.map((tag, ti) => (
+              <span
+                key={ti}
+                className="text-sm font-mono text-white border border-slate-700 px-3 py-1.5 rounded-full transition-all duration-300 group-hover:border-emerald-500 group-hover:text-emerald-300"
               >
-                <div className="lg:col-span-1">
-                  <span className="font-mono text-xs text-slate-600 group-hover:text-emerald-500 transition-colors">
-                    {cap.number}
-                  </span>
-                </div>
-                <div className="lg:col-span-3">
-                  <h3 className="text-xl font-semibold text-white group-hover:text-emerald-300 transition-colors leading-tight">
-                    {cap.title}
-                  </h3>
-                </div>
-                <div className="lg:col-span-5">
-                  <p className="text-white text-base lg:text-lg leading-relaxed">
-                    {cap.body}
-                  </p>
-                </div>
-                <div className="lg:col-span-3 flex flex-wrap gap-2 lg:justify-end items-start">
-                  {cap.tags.map((tag, ti) => (
-                    <span
-                      key={ti}
-                      className="text-sm font-mono text-white border border-slate-700 px-3 py-1.5 rounded-full transition-all duration-300 group-hover:border-emerald-500 group-hover:text-emerald-300"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
+                {tag}
+              </span>
             ))}
           </div>
-        </div>
-      </section>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* ── FEATURE IMAGE ── */}
       <section className="py-10 lg:py-16">

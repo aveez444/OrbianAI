@@ -28,7 +28,7 @@ const jobListings = [
     experience: "5+ years",
     description: "Design and build scalable backend systems, microservices, and APIs that power our AI-driven solutions.",
     requirements: ["Go/Python", "PostgreSQL", "Kubernetes", "Distributed systems"],
-    applyUrl: "https://docs.google.com/forms/d/1eeqiTsqE4w_l-HCM4AHYsqFpSkum5APL6MhqE-S05tA/edit",
+    applyUrl: "https://docs.google.com/forms/d/e/1FAIpQLSd50AEk0zmj6K9XrHvG_wZe1BwzGXI1-lDviAReewUGWh74pA/viewform?usp=header",
   },
   {
     id: 2,

@@ -256,7 +256,16 @@ export default function CloudServices() {
             </h2>
           </RevealText>
 
-          <div className="space-y-0 divide-y divide-slate-800/50">
+              <div className="space-y-0 divide-y divide-slate-800/50">
+      
+      {/* ADD THIS HEADER ROW */}
+      <div className="hidden lg:grid lg:grid-cols-12 gap-4 lg:gap-8 pb-4 px-5 lg:px-12 text-xs font-mono text-white uppercase tracking-wider">
+        <div className="lg:col-span-1">ID</div>
+        <div className="lg:col-span-3">CAPABILITY</div>
+        <div className="lg:col-span-5">DESCRIPTION</div>
+        <div className="lg:col-span-3 text-right">TECHNOLOGIES</div>
+      </div>
+
             {capabilities.map((cap, i) => (
               <motion.div
                 key={i}
@@ -301,7 +310,7 @@ export default function CloudServices() {
       <section className="py-10 lg:py-16">
         <div className="container mx-auto px-5 lg:px-12">
           <RevealText>
-            <h3 className="text-2xl font-bold text-white mb-6 uppercase tracking-wider text-center">Multi-Region Kubernetes  Case Example</h3>
+            <h3 className="text-2xl font-bold text-white mb-6 uppercase tracking-wider text-center">Multi-Region Kubernetes </h3>
             <div className="relative rounded-2xl overflow-hidden" style={{ height: "clamp(280px, 50vw, 560px)" }}>
               <img
                 src={featureImage}

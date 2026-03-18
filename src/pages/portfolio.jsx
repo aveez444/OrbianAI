@@ -23,21 +23,23 @@ import datavaultImg from "../assets/portfolio/datavault.jpg";
 // ─── Project Data ──────────────────────────────────────────────────────────────
 
 const PROJECTS = [
-  {
+
+    {
     id: 1,
     index: "01",
-    title: "VehicleAxis",
-    subtitle: "Dealership Management Software",
-    category: "Enterprise SaaS",
+    title: "TelAgent",
+    subtitle: "AI Telecom Lead Generation Agent",
+    category: "AI / Conversational AI",
     year: "2024",
-    image: vehicleaxisImg,
-    shortDesc: "End-to-end platform for multi-location vehicle dealerships  inventory, sales pipeline, service scheduling, and F&I automation in one unified system.",
-    fullDesc: "VehicleAxis is a comprehensive dealership management platform engineered to unify every operational layer of modern vehicle retail. From real-time inventory syndication across 40+ listing portals to automated F&I document generation and digital contracting, the system eliminates the operational fragmentation that costs dealerships hours per deal. Built for multi-rooftop groups, it surfaces live performance dashboards per location, per salesperson, and per vehicle category  enabling management decisions grounded in actual data rather than intuition. The service module integrates OEM warranty lookup, parts ordering, and technician scheduling into a single workflow, reducing RO cycle time by an average of 31%. Role-based access, SSO, and a full audit trail make compliance straightforward.",
-    stack: ["React", "Node.js", "PostgreSQL", "Redis", "AWS", "WebSockets"],
-    highlights: ["Multi-location inventory sync", "Automated F&I documents", "Real-time sales dashboards", "OEM warranty integration", "Digital contracting"],
-    impact: ["31% reduction in RO cycle time", "40+ listing portals synced", "Zero paper F&I documents"],
+    image: telagentImg,
+    shortDesc: "Autonomous AI voice and chat agent purpose-built for telecommunications companies  qualifying leads, scheduling demos, and handling tier-1 support without human escalation.",
+    fullDesc: "TelAgent is a multi-modal AI agent system built specifically for telecom operators and ISPs. Leveraging large language models fine-tuned on telecom sales scripts and support documentation, TelAgent engages inbound prospects across voice (via SIP integration), SMS, and web chat simultaneously. The agent qualifies leads using a dynamic scoring rubric  understanding plan requirements, location feasibility, existing provider pain points, and budget range  before booking demos directly into rep calendars through calendar API integration. For tier-1 support, TelAgent resolves billing inquiries, resets accounts, and troubleshoots connectivity issues against live account data with sub-second API calls. Escalation triggers are fully configurable. Every session is transcribed, scored, and surfaced in a manager dashboard for continuous prompt refinement. Client deployments reported a 68% reduction in cost-per-qualified-lead in 90 days.",
+    stack: ["Python", "LangChain", "OpenAI", "Twilio", "FastAPI", "Redis", "PostgreSQL"],
+    highlights: ["Voice + SMS + chat simultaneously", "Real-time lead scoring", "Calendar API booking", "Live account data queries", "Manager analytics dashboard"],
+    impact: ["68% reduction in cost-per-lead", "Tier-1 support without escalation", "Sub-second live account queries"],
     color: "emerald",
   },
+
   {
     id: 2,
     index: "02",
@@ -56,16 +58,16 @@ const PROJECTS = [
   {
     id: 3,
     index: "03",
-    title: "TelAgent",
-    subtitle: "AI Telecom Lead Generation Agent",
-    category: "AI / Conversational AI",
+    title: "VehicleAxis",
+    subtitle: "Dealership Management Software",
+    category: "Enterprise SaaS",
     year: "2024",
-    image: telagentImg,
-    shortDesc: "Autonomous AI voice and chat agent purpose-built for telecommunications companies  qualifying leads, scheduling demos, and handling tier-1 support without human escalation.",
-    fullDesc: "TelAgent is a multi-modal AI agent system built specifically for telecom operators and ISPs. Leveraging large language models fine-tuned on telecom sales scripts and support documentation, TelAgent engages inbound prospects across voice (via SIP integration), SMS, and web chat simultaneously. The agent qualifies leads using a dynamic scoring rubric  understanding plan requirements, location feasibility, existing provider pain points, and budget range  before booking demos directly into rep calendars through calendar API integration. For tier-1 support, TelAgent resolves billing inquiries, resets accounts, and troubleshoots connectivity issues against live account data with sub-second API calls. Escalation triggers are fully configurable. Every session is transcribed, scored, and surfaced in a manager dashboard for continuous prompt refinement. Client deployments reported a 68% reduction in cost-per-qualified-lead in 90 days.",
-    stack: ["Python", "LangChain", "OpenAI", "Twilio", "FastAPI", "Redis", "PostgreSQL"],
-    highlights: ["Voice + SMS + chat simultaneously", "Real-time lead scoring", "Calendar API booking", "Live account data queries", "Manager analytics dashboard"],
-    impact: ["68% reduction in cost-per-lead", "Tier-1 support without escalation", "Sub-second live account queries"],
+    image: vehicleaxisImg,
+    shortDesc: "End-to-end platform for multi-location vehicle dealerships  inventory, sales pipeline, service scheduling, and F&I automation in one unified system.",
+    fullDesc: "VehicleAxis is a comprehensive dealership management platform engineered to unify every operational layer of modern vehicle retail. From real-time inventory syndication across 40+ listing portals to automated F&I document generation and digital contracting, the system eliminates the operational fragmentation that costs dealerships hours per deal. Built for multi-rooftop groups, it surfaces live performance dashboards per location, per salesperson, and per vehicle category  enabling management decisions grounded in actual data rather than intuition. The service module integrates OEM warranty lookup, parts ordering, and technician scheduling into a single workflow, reducing RO cycle time by an average of 31%. Role-based access, SSO, and a full audit trail make compliance straightforward.",
+    stack: ["React", "Node.js", "PostgreSQL", "Redis", "AWS", "WebSockets"],
+    highlights: ["Multi-location inventory sync", "Automated F&I documents", "Real-time sales dashboards", "OEM warranty integration", "Digital contracting"],
+    impact: ["31% reduction in RO cycle time", "40+ listing portals synced", "Zero paper F&I documents"],
     color: "emerald",
   },
   {
@@ -455,9 +457,7 @@ export default function Portfolio() {
             transition={{ delay: 0.3 }}
             className="flex items-center gap-3 mb-10"
           >
-            <span className="w-8 h-px bg-emerald-500" />
-            <span className="font-mono text-xs text-emerald-400 tracking-[0.3em] uppercase">Selected Work</span>
-            <span className="w-8 h-px bg-emerald-500" />
+
           </motion.div>
 
           {/* Main headline */}
@@ -600,7 +600,7 @@ export default function Portfolio() {
             From AI-native systems to enterprise platforms  let's turn your idea into something that ships and scales.
           </p>
           <motion.a
-            href="mailto:hello@example.com"
+            href="/contact"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-emerald-600/50 bg-emerald-500/10 text-emerald-300 font-medium hover:bg-emerald-500/20 hover:border-emerald-400 hover:text-white transition-all duration-300"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
