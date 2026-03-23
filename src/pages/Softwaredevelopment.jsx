@@ -253,7 +253,7 @@ export default function SoftwareDevelopment() {
           <RevealText className="mb-16">
             <SectionLabel>What We Engineer</SectionLabel>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white max-w-2xl leading-tight">
-              Four pillars of our software engineering practice
+              Four Pillars Of Our Software Engineering Practice
             </h2>
           </RevealText>
 

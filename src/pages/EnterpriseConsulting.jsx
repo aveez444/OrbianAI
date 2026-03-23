@@ -252,7 +252,7 @@ export default function EnterpriseConsulting() {
           <RevealText className="mb-16">
             <SectionLabel>What We Advise</SectionLabel>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white max-w-2xl leading-tight">
-              Four pillars of our enterprise consulting practice
+              Four Pillars Of Our Enterprise Consulting Practice
             </h2>
           </RevealText>
 

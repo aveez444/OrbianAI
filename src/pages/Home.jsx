@@ -289,19 +289,19 @@ export default function Home() {
               {
                 title: "AI Engineering",
                 desc: "Custom ML pipelines and automation frameworks for enterprise-scale deployment. We build production-ready AI systems that deliver consistent, reliable results.",
-                stats: "15+ Projects Delivered",
+                stats: "",
                 color: "blue"
               },
               {
                 title: "Data Intelligence",
                 desc: "Advanced analytics and forecasting models for real-time decision making. Transform raw data into actionable insights with our AI-powered analytics.",
-                stats: "10B+ Data Points Processed",
+                stats: "",
                 color: "blue"
               },
               {
                 title: "Web and Mobile App Development",
                 desc: "High-performance scalable applications with enterprise-grade security protocols. Build effortlessly with our battle-tested architecture patterns.",
-                stats: "99.9% Uptime SLA",
+                stats: "",
                 color: "blue"
               }
             ].map((service, idx) => (
@@ -449,7 +449,7 @@ export default function Home() {
                         <span className="text-5xl sm:text-6xl font-bold text-white">98%</span>
                         <span className="text-slate-400 text-sm">success rate</span>
                       </div>
-                      <p className="text-slate-400 text-sm mt-1">Across 500+ enterprise deployments</p>
+                      <p className="text-slate-400 text-sm mt-1">Across enterprise deployments</p>
                     </div>
                     <div className="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-2xl">
 

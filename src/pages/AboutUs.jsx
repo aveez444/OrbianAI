@@ -313,9 +313,9 @@ export default function About() {
             >
               <span className="text-emerald-400 font-mono text-sm block mb-4 tracking-widest uppercase">Technology</span>
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                services built for
+                Services Built For
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 pb-2">
-                  the intelligence era.
+                  The Intelligence Era.
                 </span>
               </h2>
               <p className="text-slate-400 text-lg mb-10 leading-relaxed">
@@ -479,7 +479,7 @@ export default function About() {
                       </svg>
                     </a>
                   </div>
-                  <p className="text-emerald-400 font-mono text-sm">Founder & CEO <span className="text-slate-500">| 15 years of management experience</span></p>
+                  <p className="text-emerald-400 font-mono text-sm">Founder & CEO <span className="text-slate-500">| 25+ Years of Experience in IT and Project Management</span></p>
                 </div>
               </div>
             </motion.div>

@@ -224,7 +224,7 @@ export default function WebAppDevelopment() {
           <RevealText className="mb-16">
             <SectionLabel>What We Build</SectionLabel>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white max-w-2xl leading-tight">
-              Four pillars of our web engineering practice
+              Four Pillars Of Our Web Engineering Practice
             </h2>
           </RevealText>
 
