@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 // Images  you’ll need to download and place these in your assets folder
 // 1. A minimalist office / team collaboration shot (well-lit, modern)   → contact-office.jpg
@@ -35,8 +36,39 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // handle form submission (console log for now)
-    console.log("Form submitted:", formData);
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        "service_ssfef2m",     // your service ID
+        "template_14cvahk",    // your template ID
+        templateParams,
+        "b0r76o247UnFwjq7f"      // 🔥 replace this
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          alert("Message sent successfully 🚀");
+
+          // reset form
+          setFormData({
+            name: "",
+            email: "",
+            company: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          alert("Something went wrong ❌");
+        }
+      );
   };
 
   return (

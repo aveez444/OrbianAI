@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import heroDashboard from "../assets/Heronew1.png";
 import aboutTeam from "../assets/image7.png";
 import servicesBg from "../assets/services-bg.png";
@@ -21,6 +23,51 @@ const staggerContainer = {
 };
 
 export default function Home() {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        "service_ssfef2m",     // ✅ your Service ID
+        "template_6ggjalq",    // ✅ your Template ID
+        templateParams,
+        "b0r76o247UnFwjq7f"      // ⚠️ REPLACE THIS with your EmailJS Public Key
+      )
+      .then(
+        () => {
+          alert("Consultation request sent 🚀");
+          setFormData({
+            name: "",
+            email: "",
+            company: "",
+            message: "",
+          });
+        },
+        () => {
+          alert("Something went wrong ❌");
+        }
+      );
+  };
+
   return (
     <main className="bg-[#020617] text-slate-200 selection:bg-emerald-500/30">
 
@@ -616,7 +663,6 @@ export default function Home() {
               </div>
             </motion.div>
 
-
             {/* ================= RIGHT SIDE FORM ================= */}
             <motion.div
               initial={{ opacity: 0, x: 60 }}
@@ -633,33 +679,49 @@ export default function Home() {
                   Start Your AI Journey
                 </h3>
 
-                <form className="grid gap-6">
+                <form onSubmit={handleSubmit} className="grid gap-6">
 
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="Full Name"
+                    required
                     className="bg-[#0f172a] border border-slate-700 focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-all rounded-xl px-4 py-3 text-white outline-none"
                   />
 
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="Business Email"
+                    required
                     className="bg-[#0f172a] border border-slate-700 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all rounded-xl px-4 py-3 text-white outline-none"
                   />
 
                   <input
                     type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
                     placeholder="Company Name"
                     className="bg-[#0f172a] border border-slate-700 focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition-all rounded-xl px-4 py-3 text-white outline-none"
                   />
 
                   <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows="4"
                     placeholder="Tell us about your AI goals..."
+                    required
                     className="bg-[#0f172a] border border-slate-700 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all rounded-xl px-4 py-3 text-white outline-none resize-none"
                   />
 
                   <motion.button
+                    type="submit"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.96 }}
                     className="relative mt-4 px-8 py-4 bg-gradient-to-r from-emerald-400 to-cyan-400 text-[#020617] font-bold rounded-xl shadow-xl overflow-hidden group"
